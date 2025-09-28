@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eksana - Every precedent, Every law, One Platform</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <!-- Header -->
@@ -65,10 +63,10 @@
                     </div>
                     <div class="stat">
                         <div class="stat-number">500+</div>
-                        <div class="stat-label">Active Laws</div>
+                        <div class="stat-label">Active Acts, Rules & Regulations</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">1000+</div>
+                        <div class="stat-number">100+</div>
                         <div class="stat-label">Legal Professionals</div>
                     </div>
                 </div>
@@ -108,10 +106,61 @@
 
             <div class="feature-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon-background">📋</div>
+                    <div class="feature-visual">
+                        <div class="search-animation-container">
+                            <div class="search-interface">
+                                <div class="search-row">
+                                    <div class="search-input-wrapper">
+                                        <input type="text" class="search-input" placeholder="Search legal documents..." readonly>
+                                        <span class="typed-text"></span>
+                                    </div>
+                                    <div class="database-dropdown">
+                                        <div class="dropdown-toggle">
+                                            <span class="dropdown-label">Select Database</span>
+                                            <span class="dropdown-arrow">▼</span>
+                                        </div>
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-option" data-value="nkp">NKP</div>
+                                            <div class="dropdown-option" data-value="supreme">Supreme Court</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="apply-filters-btn">Apply Filters</button>
+                                <div class="search-results">
+                                    <div class="result-item">
+                                        <div class="result-icon">📄</div>
+                                        <div class="result-content">
+                                            <div class="result-title">State v. Bhattarai (2078)</div>
+                                            <div class="result-snippet">Doctrine of necessity applied in constitutional...</div>
+                                        </div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-icon">📄</div>
+                                        <div class="result-content">
+                                            <div class="result-title">Constitutional Bench Decision (2077)</div>
+                                            <div class="result-snippet">Emergency powers and the doctrine of necessity...</div>
+                                        </div>
+                                    </div>
+                                    <div class="result-item">
+                                        <div class="result-icon">📄</div>
+                                        <div class="result-content">
+                                            <div class="result-title">Public Interest Litigation (2076)</div>
+                                            <div class="result-snippet">Application of necessity doctrine in public welfare...</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="animated-cursor">
+                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                     <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon-background">📋</div>
+                        </div>
                         <h3>Najir Database Search</h3>
                         <p>Access and search through over 60,000 Najirs with advanced filtering capabilities. Our search system is designed in collaboration with professional lawyers and reputed law firms to ensure precise results.</p>
                         <ul class="feature-list">
@@ -126,11 +175,75 @@
                     </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon-background">📖</div>
+                <div class="feature-card reverse">
+                    <div class="feature-visual">
+                        <div class="acts-animation-container">
+                            <div class="acts-interface">
+                                <div class="pdf-viewer">
+                                    <div class="pdf-header">
+                                        <span class="pdf-title">Civil Code Act, 2074</span>
+                                        <div class="pdf-controls">
+                                            <span>Page 45 of 286</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                    <div class="pdf-content">
+                                        <div class="pdf-page">
+                                            <h4>Chapter 5: Contract Law</h4>
+                                            <div class="pdf-section">
+                                                <strong>Section 517: Formation of Contract</strong>
+                                                <p class="pdf-text">A contract shall be formed when...</p>
+                                            </div>
+                                            <div class="pdf-section highlighted-section">
+                                                <strong>Section 518: Valid Consideration</strong>
+                                                <p class="pdf-text">For a contract to be valid, consideration must be...</p>
+                                            </div>
+                                            <div class="pdf-section">
+                                                <strong>Section 519: Capacity to Contract</strong>
+                                                <p class="pdf-text">Any person who has attained the age of...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chatbot-panel">
+                                    <div class="chat-header">
+                                        <span class="chat-icon">🤖</span>
+                                        <span>Legal Assistant</span>
+                                    </div>
+                                    <div class="chat-messages">
+                                        <div class="chat-message user-message">
+                                            <span class="message-text">What is valid consideration?</span>
+                                        </div>
+                                        <div class="chat-message bot-message">
+                                            <div class="typing-indicator">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="bot-response">
+                                                <p>According to <strong>Section 518</strong> of the Civil Code Act, valid consideration requires:</p>
+                                                <ul>
+                                                    <li>Lawful object and purpose</li>
+                                                    <li>Something of value exchanged</li>
+                                                    <li>Mutual agreement between parties</li>
+                                                </ul>
+                                                <div class="reference-tag">
+                                                    📍 Section 518, Page 45
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-input">
+                                        <input type="text" placeholder="Ask about this act..." readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon-background">📖</div>
+                        </div>
                         <h3>Legal Acts & Legislation</h3>
                         <p>Comprehensive database of Nepal's legal acts and legislation with cross-referencing capabilities. Stay updated with the latest amendments and legal changes in real-time.</p>
                         <ul class="feature-list">
@@ -146,10 +259,74 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <div class="icon-background">⚖️</div>
+                    <div class="feature-visual">
+                        <div class="regulations-animation-container">
+                            <div class="regulations-interface">
+                                <div class="regulation-viewer">
+                                    <div class="regulation-header">
+                                        <span class="regulation-title">Public Procurement Regulation, 2077</span>
+                                        <div class="regulation-controls">
+                                            <span>Rule 87 of 145</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                    <div class="regulation-content">
+                                        <div class="regulation-page">
+                                            <h4>Part VII: Tender Evaluation Process</h4>
+                                            <div class="regulation-section">
+                                                <strong>Rule 86: Technical Evaluation Criteria</strong>
+                                                <p class="regulation-text">The evaluation committee shall assess technical...</p>
+                                            </div>
+                                            <div class="regulation-section highlighted-rule">
+                                                <strong>Rule 87: Bid Security Requirements</strong>
+                                                <p class="regulation-text">Bid security shall be 2-3% of estimated cost and valid for...</p>
+                                            </div>
+                                            <div class="regulation-section">
+                                                <strong>Rule 88: Financial Evaluation Method</strong>
+                                                <p class="regulation-text">Financial proposals shall be evaluated based on...</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="regulation-chatbot">
+                                    <div class="reg-chat-header">
+                                        <span class="reg-chat-icon">🤖</span>
+                                        <span>Regulatory Assistant</span>
+                                    </div>
+                                    <div class="reg-chat-messages">
+                                        <div class="reg-chat-message reg-user-message">
+                                            <span class="reg-message-text">What are bid security requirements?</span>
+                                        </div>
+                                        <div class="reg-chat-message reg-bot-message">
+                                            <div class="reg-typing-indicator">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="reg-bot-response">
+                                                <p>According to <strong>Rule 87</strong> of Public Procurement Regulation:</p>
+                                                <ul>
+                                                    <li>Bid security: 2-3% of estimated cost</li>
+                                                    <li>Validity period: 120 days minimum</li>
+                                                    <li>Acceptable forms: Bank guarantee or cash deposit</li>
+                                                </ul>
+                                                <div class="reg-reference-tag">
+                                                    📍 Rule 87, Part VII
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reg-chat-input">
+                                        <input type="text" placeholder="Ask about regulations..." readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="feature-content">
+                        <div class="feature-icon">
+                            <div class="icon-background">⚖️</div>
+                        </div>
                         <h3>Rules & Regulations</h3>
                         <p>Navigate through complex regulatory frameworks with ease. Our organized system helps you find specific rules and regulations quickly, with detailed categorization and tagging.</p>
                         <ul class="feature-list">
@@ -278,6 +455,156 @@
                             <div class="benefit">🧠 Smart analysis</div>
                             <div class="benefit">💬 Natural conversation</div>
                             <div class="benefit">🎯 Nepal-specific insights</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-icon">⭐</span>
+                    Client Testimonials
+                </div>
+                <h2 class="section-title">Trusted by Leading Legal Professionals</h2>
+                <p class="section-subtitle">
+                    See what law firms and legal practitioners across Nepal are saying about Eksana
+                </p>
+            </div>
+        </div>
+        
+        <div class="reviews-carousel">
+            <div class="reviews-track">
+                <!-- First set of reviews -->
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Pioneer</span>
+                            <span>Law Associates</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Eksana has revolutionized our legal research process. What used to take hours now takes minutes. The Najir database is comprehensive and the search functionality is incredibly precise."</p>
+                        <div class="reviewer-info">
+                            <strong>Ramesh Sharma</strong>
+                            <span>Senior Partner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Himalayan</span>
+                            <span>Legal Consultancy</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"The AI-powered case briefs save us countless hours. Our team efficiency has increased by 40% since adopting Eksana. It's an essential tool for modern legal practice."</p>
+                        <div class="reviewer-info">
+                            <strong>Sita Poudel</strong>
+                            <span>Managing Director</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Supreme</span>
+                            <span>Law Chambers</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"The cross-referencing between Acts and Regulations is brilliant. Eksana provides context that helps us build stronger arguments and serve our clients better."</p>
+                        <div class="reviewer-info">
+                            <strong>Krishna Bhattarai</strong>
+                            <span>Legal Advisor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>National</span>
+                            <span>Law Firm</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Having access to 60,000+ Najirs with advanced filtering has transformed how we prepare cases. The legal dictionary feature is particularly helpful for our junior associates."</p>
+                        <div class="reviewer-info">
+                            <strong>Priya Adhikari</strong>
+                            <span>Partner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Capital</span>
+                            <span>Legal Services</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Eksana's collaborative features enable our team to work seamlessly on complex cases. The platform has become indispensable for our practice."</p>
+                        <div class="reviewer-info">
+                            <strong>Binod Thapa</strong>
+                            <span>Senior Advocate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate set for seamless scrolling -->
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Pioneer</span>
+                            <span>Law Associates</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"Eksana has revolutionized our legal research process. What used to take hours now takes minutes. The Najir database is comprehensive and the search functionality is incredibly precise."</p>
+                        <div class="reviewer-info">
+                            <strong>Ramesh Sharma</strong>
+                            <span>Senior Partner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Himalayan</span>
+                            <span>Legal Consultancy</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"The AI-powered case briefs save us countless hours. Our team efficiency has increased by 40% since adopting Eksana. It's an essential tool for modern legal practice."</p>
+                        <div class="reviewer-info">
+                            <strong>Sita Poudel</strong>
+                            <span>Managing Director</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="firm-logo">
+                        <div class="logo-placeholder">
+                            <span>Supreme</span>
+                            <span>Law Chambers</span>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p class="review-text">"The cross-referencing between Acts and Regulations is brilliant. Eksana provides context that helps us build stronger arguments and serve our clients better."</p>
+                        <div class="reviewer-info">
+                            <strong>Krishna Bhattarai</strong>
+                            <span>Legal Advisor</span>
                         </div>
                     </div>
                 </div>
@@ -493,18 +820,31 @@
                 rootMargin: '0px 0px -50px 0px'
             };
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-in');
+            // First, prepare elements for animation
+            const animateElements = document.querySelectorAll('.feature-card, .product-feature, .pricing-card, .stat');
+            
+            // Only add animation classes if IntersectionObserver is supported
+            if ('IntersectionObserver' in window) {
+                animateElements.forEach(el => {
+                    if (!el.classList.contains('stat')) {
+                        el.classList.add('animate-ready');
                     }
                 });
-            }, observerOptions);
 
-            // Observe elements for animations
-            document.querySelectorAll('.feature-card, .product-feature, .pricing-card, .stat').forEach(el => {
-                observer.observe(el);
-            });
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                            entry.target.classList.remove('animate-ready');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe elements for animations
+                animateElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
 
             // Header scroll effect
             let lastScrollTop = 0;
