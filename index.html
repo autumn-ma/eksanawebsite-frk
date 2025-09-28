@@ -17,10 +17,10 @@
                 </a>
                 <nav class="nav">
                     <div class="nav-links">
-                        <a href="#features" class="nav-link">Features</a>
-                        <a href="#product" class="nav-link">Product</a>
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#contact" class="nav-link">Contact</a>
+                        <a href="index.html#product" class="nav-link">Product</a>
+                        <a href="how-to-use.html" class="nav-link">How to Use & FAQ</a>
+                        <a href="#about" class="nav-link">Meet The Team</a>
+                        <a href="contact.html" class="nav-link">Contact Us</a>
                     </div>
                     <a href="#" class="login-btn">Get Started</a>
                 </nav>
@@ -90,8 +90,8 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <!-- Product Section -->
+    <section class="features" id="product">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
@@ -167,6 +167,8 @@
                             <li>Advanced keyword search</li>
                             <li>Smart filtering options</li>
                             <li>Contextual relevance ranking</li>
+                            <li>Dictionary for legal Nepali terms</li>
+                            <li>Acts, Rules & Regulation Lookup</li>
                         </ul>
                         <a href="#" class="feature-link">
                             Explore Najirs
@@ -247,9 +249,8 @@
                         <h3>Legal Acts & Legislation</h3>
                         <p>Comprehensive database of Nepal's legal acts and legislation with cross-referencing capabilities. Stay updated with the latest amendments and legal changes in real-time.</p>
                         <ul class="feature-list">
-                            <li>Complete acts database</li>
-                            <li>Amendment tracking</li>
-                            <li>Cross-reference linking</li>
+                            <li>Complete active acts database</li>
+                            <li>AI-assisted chatbot</li>
                         </ul>
                         <a href="#" class="feature-link">
                             Browse Acts
@@ -330,9 +331,8 @@
                         <h3>Rules & Regulations</h3>
                         <p>Navigate through complex regulatory frameworks with ease. Our organized system helps you find specific rules and regulations quickly, with detailed categorization and tagging.</p>
                         <ul class="feature-list">
-                            <li>Regulatory frameworks</li>
-                            <li>Categorized browsing</li>
-                            <li>Implementation guidelines</li>
+                            <li>Complete Active Rules & Regulations Database</li>
+                            <li>AI assisted chatbot</li>
                         </ul>
                         <a href="#" class="feature-link">
                             View Regulations
@@ -344,15 +344,15 @@
         </div>
     </section>
 
-    <!-- Product Showcase -->
-    <section class="product-showcase" id="product">
+    <!-- Features Showcase -->
+    <section class="product-showcase" id="features">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">
                     <span class="badge-icon">✨</span>
                     Advanced Features
                 </div>
-                <h2 class="section-title">Powerful Tools for Legal Professionals</h2>
+                <h2 class="section-title">Powerful Features for Legal Professionals</h2>
                 <p class="section-subtitle">
                     Experience cutting-edge features designed to enhance your legal research workflow
                 </p>
@@ -363,13 +363,17 @@
                     <div class="feature-visual">
                         <div class="visual-mockup brief-mockup">
                             <div class="mockup-header">
-                                <div class="mockup-title">📋 Case Brief Generator</div>
+                                <div class="mockup-title">📋 Case Brief</div>
                             </div>
                             <div class="mockup-content">
-                                <div class="brief-line"></div>
-                                <div class="brief-line short"></div>
-                                <div class="brief-line"></div>
-                                <div class="brief-highlight"></div>
+                                <div class="brief-item"><strong>Facts:</strong> A summary of the case facts...</div>
+                                <div class="brief-item"><strong>Issues:</strong> Key legal questions raised...</div>
+                                <div class="brief-item"><strong>Petitioner's Argument:</strong> Summary of arguments...</div>
+                                <div class="brief-item"><strong>Respondent's Argument:</strong> Summary of arguments...</div>
+                                <div class="brief-item highlighted"><strong>Ratio Decidendi:</strong> The core legal principle...</div>
+                                <div class="brief-item"><strong>Acts Cited:</strong> Act A, Section 12...</div>
+                                <div class="brief-item"><strong>Rule/Regulation Cited:</strong> Rule X, Clause 5...</div>
+                                <div class="brief-item"><strong>Precedents Cited:</strong> Case Y v. State...</div>
                             </div>
                         </div>
                     </div>
@@ -386,19 +390,42 @@
 
                 <div class="product-feature reverse">
                     <div class="feature-visual">
-                        <div class="visual-mockup lookup-mockup">
+                                                <div class="visual-mockup lookup-mockup">
                             <div class="mockup-header">
-                                <div class="mockup-title">🔗 Smart Lookup</div>
+                                <div class="mockup-title">🔗 Case Brief</div>
                             </div>
                             <div class="mockup-content">
-                                <div class="lookup-item">
-                                    <div class="lookup-icon">📖</div>
-                                    <div class="lookup-text">Related Act</div>
+                                <div class="lookup-item-wrapper">
+                                    <div class="lookup-item">
+                                        <div class="lookup-icon">📖</div>
+                                        <div class="lookup-text">Acts Cited</div>
+                                        <div class="lookup-arrow">▶</div>
+                                    </div>
+                                    <div class="lookup-details">
+                                        <div class="detail-item">Evidence Act, 2031</div>
+                                    </div>
                                 </div>
-                                <div class="lookup-item">
-                                    <div class="lookup-icon">⚖️</div>
-                                    <div class="lookup-text">Regulation</div>
+                                <div class="lookup-item-wrapper">
+                                    <div class="lookup-item">
+                                        <div class="lookup-icon">⚖️</div>
+                                        <div class="lookup-text">Rules/Regulation Cited</div>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="act-viewer-overlay">
+                                <div class="act-viewer">
+                                    <div class="act-header">Evidence Act, 2031</div>
+                                    <div class="act-content">
+                                        <p><strong>Section 3:</strong> Evidence to be relevant...</p>
+                                        <p><strong>Section 4:</strong> Admissibility of evidence...</p>
+                                    </div>
+                                    <div class="close-btn">×</div>
+                                </div>
+                            </div>
+                            <div class="animated-cursor-lookup">
+                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"></path>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -417,11 +444,24 @@
                     <div class="feature-visual">
                         <div class="visual-mockup dictionary-mockup">
                             <div class="mockup-header">
-                                <div class="mockup-title">📖 Legal Dictionary</div>
+                                <div class="mockup-title case-header-title">
+                                    <span><strong>उत्प्रेषणसमेत</strong></span>
+                                    <span class="case-dates">Registration Date: 2077-09-14 | Decision Date: 2077-09-14</span>
+                                </div>
                             </div>
                             <div class="mockup-content">
-                                <div class="dict-term">न्यायाधीश</div>
-                                <div class="dict-definition">A person authorized to hear and decide cases in a court of law</div>
+                                <p class="legal-text-nepali">
+                                    प्रत्येक अदालतलाई आफ्नो र आफ्नो मातहतका अदालतको <span class="highlight-word">न्यायिक</span> कार्यमा कसैले अवरोध ���रेमा वा आदेश वा फैसलाको अवज्ञा गरेमा कानून बमोजिम अवहेनामा कारबाही चलाउन र सजाय गर्न सक्नेछ।
+                                </p>
+                                <div class="definition-box">
+                                    <h4>न्यायिक (Nyayik)</h4>
+                                    <p>Relating to the administration of justice or the function of a judge.</p>
+                                </div>
+                            </div>
+                            <div class="animated-cursor-dict">
+                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
+                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"></path>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -627,7 +667,8 @@
             </div>
 
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
                     <div class="plan-header">
                         <div class="plan-icon">🌱</div>
                         <h3 class="plan-name">Starter</h3>
@@ -638,25 +679,24 @@
                     </div>
                     <div class="plan-features">
                         <ul>
-                            <li>✓ Access to 10,000 Najirs</li>
-                            <li>✓ Basic search functionality</li>
+                            <li>✓ Access to all the Najirs</li>
+                            <li>✓ Advanced search functionality</li>
                             <li>✓ Limited daily searches</li>
+                            <li>✓ Access to Active Acts</li>
+                            <li>✓ Access to Active Rules & Regulations</li>
                             <li>✓ Community support</li>
-                            <li>✗ Advanced filters</li>
-                            <li>✗ AI-powered features</li>
                         </ul>
                     </div>
                     <a href="#" class="plan-button">Get Started</a>
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
+                <div class="pricing-card blurred">
                     <div class="plan-header">
                         <div class="plan-icon">⚖️</div>
                         <h3 class="plan-name">Professional</h3>
                         <div class="plan-price">
                             <span class="currency">₹</span>
-                            <span class="amount">4,999</span>
+                            <span class="amount">0,000</span>
                             <span class="period">/month</span>
                         </div>
                         <p class="plan-description">Complete toolkit for legal professionals</p>
@@ -674,7 +714,7 @@
                     <a href="#" class="plan-button">Start Free Trial</a>
                 </div>
 
-                <div class="pricing-card">
+                <div class="pricing-card blurred">
                     <div class="plan-header">
                         <div class="plan-icon">🏢</div>
                         <h3 class="plan-name">Enterprise</h3>
@@ -720,50 +760,31 @@
                     </div>
 
                     <div class="footer-links-group">
-                        <div class="footer-section">
-                            <h4>Product</h4>
-                            <ul class="footer-links">
-                                <li><a href="#features">Features</a></li>
-                                <li><a href="#pricing">Pricing</a></li>
-                                <li><a href="#">Documentation</a></li>
-                                <li><a href="#">API Reference</a></li>
-                                <li><a href="#">Changelog</a></li>
-                            </ul>
-                        </div>
+                            <div class="footer-section">
+                                <h4>Product</h4>
+                                <ul class="footer-links">
+                                    <li><a href="#features">Features</a></li>
+                                    <li><a href="how-to-use.html">How To Use & FAQ</a></li>
+                                </ul>
+                            </div>
 
-                        <div class="footer-section">
-                            <h4>Company</h4>
-                            <ul class="footer-links">
-                                <li><a href="#about">About Us</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Press Kit</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </div>
+                            <div class="footer-section">
+                                <h4>Company</h4>
+                                <ul class="footer-links">
+                                    <li><a href="#">Our Team</a></li>
+                                </ul>
+                            </div>
 
-                        <div class="footer-section">
-                            <h4>Support</h4>
-                            <ul class="footer-links">
-                                <li><a href="#">Help Center</a></li>
-                                <li><a href="#">Contact Support</a></li>
-                                <li><a href="#">Community</a></li>
-                                <li><a href="#">Training</a></li>
-                                <li><a href="#">Status</a></li>
-                            </ul>
+                            <div class="footer-section">
+                                <h4>Legal</h4>
+                                <ul class="footer-links">
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                    <li><a href="terms.html">Terms of Use</a></li>
+                                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                                    <li><a href="security.html">Security</a></li>
+                                </ul>
+                            </div>
                         </div>
-
-                        <div class="footer-section">
-                            <h4>Legal</h4>
-                            <ul class="footer-links">
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Cookie Policy</a></li>
-                                <li><a href="#">GDPR</a></li>
-                                <li><a href="#">Security</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="footer-cta">
@@ -779,8 +800,7 @@
                 <div class="footer-bottom-content">
                     <p>&copy; 2025 Eksana. All rights reserved. Designed for Nepal's legal community.</p>
                     <div class="footer-badges">
-                        <span class="badge">🇳🇵 Made in Nepal</span>
-                        <span class="badge">🔒 SOC 2 Compliant</span>
+                        <span class="popular-badge">🇳🇵 Made in Nepal</span>
                     </div>
                 </div>
             </div>
