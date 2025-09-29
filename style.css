@@ -90,7 +90,7 @@ body {
 }
 
 .logo-image {
-    height: 3.2px;
+    height: 40px;
     transition: transform 0.2s ease;
 }
 
@@ -311,7 +311,7 @@ body {
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
-    padding: 16px 24px;
+    padding: 16px 32px;
     border-radius: 50px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
@@ -2520,7 +2520,7 @@ body {
 }
 
 .logo-image-footer {
-    height: 40px;
+    height: 120px;
     filter: brightness(0) invert(1);
 }
 
