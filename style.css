@@ -493,7 +493,7 @@ body {
     position: relative;
     overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 60px;
     align-items: center;
 }
@@ -620,16 +620,6 @@ body {
     color: var(--primary-medium);
     opacity: 1;
     transition: opacity 0.3s ease;
-    animation: fadePlaceholderOut 12s infinite;
-}
-
-@keyframes fadePlaceholderOut {
-    0%, 8% { 
-        opacity: 1;
-    }
-    10%, 100% { 
-        opacity: 0;
-    }
 }
 
 .typed-text {
@@ -638,21 +628,42 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 0.9rem;
-    color: var(--primary-darkest);
+    color: var(--primary-medium);
     font-family: 'Inter', sans-serif;
     pointer-events: none;
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
     animation: typingText 12s infinite;
+}
+
+.typed-text::before {
+    content: 'Search legal documents...';
+    color: var(--primary-medium);
+    animation: showInitialText 12s infinite;
 }
 
 .typed-text::after {
     content: 'doctrine of necessity';
+    color: var(--primary-darkest);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    animation: showTypedText 12s infinite;
 }
 
-@keyframes typingText {
-    0%, 9% { 
+@keyframes showInitialText {
+    0%, 8% {
+        opacity: 1;
+    }
+    10%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes showTypedText {
+    0%, 9% {
         width: 0;
         opacity: 0;
     }
@@ -660,9 +671,15 @@ body {
         opacity: 1;
         width: 0;
     }
-    20%, 100% { 
+    20%, 100% {
         opacity: 1;
         width: 145px;
+    }
+}
+
+@keyframes typingText {
+    0%, 100% {
+        /* Container animation - not used for width anymore */
     }
 }
 
@@ -923,13 +940,13 @@ body {
     /* Move to search input */
     8%, 10% { top: 45px; left: 50px; }
     /* Move while typing */
-    20%, 35% { top: 45px; left: 180px; }
+    20%, 35% { top: 45px; left: 190px; }
     /* Move to dropdown */
-    38%, 40% { top: 45px; left: 380px; }
+    38%, 40% { top: 45px; left: 415px; }
     /* Click dropdown to open */
-    42%, 44% { top: 45px; left: 380px; }
+    42%, 44% { top: 45px; left: 415px; }
     /* Select NKP option */
-    45%, 48% { top: 95px; left: 380px; }
+    45%, 48% { top: 95px; left: 415px; }
     /* Move to Apply Filters */
     55%, 58% { top: 100px; left: 90px; }
     /* Click Apply Filters */
@@ -959,7 +976,7 @@ body {
 .regulations-interface {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: 16px;
+    gap: 6px;
     height: 100%;
 }
 
@@ -975,11 +992,13 @@ body {
 .regulation-header {
     background: var(--primary-darkest);
     color: white;
-    padding: 10px 16px;
+    padding: 12px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
+    height: 48px;
+    box-sizing: border-box;
 }
 
 .regulation-title {
@@ -1064,6 +1083,8 @@ body {
     gap: 8px;
     font-size: 0.85rem;
     font-weight: 600;
+    height: 48px;
+    box-sizing: border-box;
 }
 
 .reg-chat-icon {
@@ -1198,7 +1219,7 @@ body {
 .acts-interface {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    gap: 16px;
+    gap: 4px;
     height: 100%;
 }
 
@@ -1214,11 +1235,13 @@ body {
 .pdf-header {
     background: var(--primary-darkest);
     color: white;
-    padding: 10px 16px;
+    padding: 12px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
+    height: 48px;
+    box-sizing: border-box;
 }
 
 .pdf-title {
@@ -1303,6 +1326,8 @@ body {
     gap: 8px;
     font-size: 0.85rem;
     font-weight: 600;
+    height: 48px;
+    box-sizing: border-box;
 }
 
 .chat-icon {
@@ -1606,6 +1631,20 @@ body {
     overflow: hidden;
 }
 
+.lookup-mockup {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.lookup-mockup .mockup-content {
+    padding: 8px;
+    flex: 1;
+    position: relative;
+    min-height: 160px;
+}
+
 .visual-mockup::before {
     content: '';
     position: absolute;
@@ -1788,23 +1827,28 @@ body {
 }
 
 @keyframes runLookupAnimation {
-    0%, 10% { /* Initial state */
+    0%, 12% { /* Initial state */
         --arrow-rotate: 0deg;
         --details-height: 0px;
         --details-padding: 0px;
         --overlay-opacity: 0;
         --viewer-scale: 0.9;
     }
-    25%, 40% { /* Expand "Acts Cited" */
+    20%, 30% { /* Expand "Acts Cited" */
         --arrow-rotate: 90deg;
         --details-height: 50px;
         --details-padding: 8px;
+        --overlay-opacity: 0;
+        --viewer-scale: 0.9;
     }
-    50%, 65% { /* Show Act Viewer */
+    50%, 68% { /* Show Act Viewer */
+        --arrow-rotate: 90deg;
+        --details-height: 50px;
+        --details-padding: 8px;
         --overlay-opacity: 1;
         --viewer-scale: 1;
     }
-    80%, 100% { /* Collapse and reset */
+    85%, 100% { /* Reset state */
         --arrow-rotate: 0deg;
         --details-height: 0px;
         --details-padding: 0px;
@@ -1815,31 +1859,37 @@ body {
 
 .lookup-mockup .lookup-arrow {
     transform: rotate(var(--arrow-rotate, 0deg));
+    transition: transform 0.3s ease;
 }
 
 .lookup-mockup .lookup-details {
     max-height: var(--details-height, 0px);
     padding-top: var(--details-padding, 0px);
     padding-bottom: var(--details-padding, 0px);
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    overflow: hidden;
 }
 
 .lookup-mockup .act-viewer-overlay {
     opacity: var(--overlay-opacity, 0);
     pointer-events: all;
+    transition: opacity 0.4s ease;
 }
 
 .lookup-mockup .act-viewer {
     transform: scale(var(--viewer-scale, 0.9));
+    transition: transform 0.4s ease;
 }
 
 .animated-cursor-lookup {
     position: absolute;
-    top: 88px;
-    left: 120px;
+    top: 90px;
+    left: 80px;
     pointer-events: none;
     z-index: 30;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
 .product-feature.animate-in .animated-cursor-lookup {
@@ -1847,40 +1897,46 @@ body {
 }
 
 @keyframes moveCursorLookup {
-    0% {
-        top: 88px;
+    /* Start position - move to Acts Cited */
+    0%, 5% {
+        top: 90px;
+        left: 80px;
+        opacity: 1;
+    }
+    /* Click "Acts Cited" arrow */
+    15%, 20% {
+        top: 110px;
+        left: 250px;
+        opacity: 1;
+    }
+    /* Move to "Evidence Act" link */
+    35%, 40% {
+        top: 170px;
         left: 120px;
         opacity: 1;
     }
-    /* Click "Acts Cited" */
-    25% {
-        top: 88px;
-        left: 120px;
-    }
-    /* Move to "Evidence Act" */
-    40% {
-        top: 135px;
-        left: 130px;
-    }
     /* Click "Evidence Act" */
-    50% {
-        top: 135px;
-        left: 130px;
+    45%, 50% {
+        top: 130px;
+        left: 120px;
+        opacity: 1;
     }
     /* Move to close button */
-    65% {
-        top: 65px;
-        left: 260px;
+    70%, 75% {
+        top: 87px;
+        left: 255px;
+        opacity: 1;
     }
     /* Click close button */
-    80% {
-        top: 65px;
-        left: 260px;
+    80%, 85% {
+        top: 70px;
+        left: 280px;
+        opacity: 1;
     }
-    /* Disappear at the end */
-    100% {
-        top: 65px;
-        left: 260px;
+    /* Fade out at the end */
+    95%, 100% {
+        top: 70px;
+        left: 280px;
         opacity: 0;
     }
 }
@@ -1923,8 +1979,8 @@ body {
 
 .definition-box {
     position: absolute;
-    top: 110px;
-    left: 120px;
+    top: 40px;
+    left: 250px;
     background: var(--accent);
     border-radius: 8px;
     box-shadow: var(--shadow-medium);
@@ -1958,20 +2014,26 @@ body {
 }
 
 @keyframes runDictionaryAnimation {
-    0%, 20% {
+    /* Initial state - no highlight, no definition */
+    0%, 35% {
         --word-bg: transparent;
         --box-opacity: 0;
         --box-transform: translateY(10px);
     }
-    30%, 40% {
+    /* Word gets highlighted when cursor approaches */
+    40%, 45% {
         --word-bg: rgba(0, 52, 132, 0.1);
+        --box-opacity: 0;
+        --box-transform: translateY(10px);
     }
-    50%, 80% {
+    /* Definition box appears when cursor clicks */
+    50%, 75% {
         --word-bg: rgba(0, 52, 132, 0.1);
         --box-opacity: 1;
-        --box-transform: translateY(0);
+        --box-transform: translateY(-40);
     }
-    90%, 100% {
+    /* Animation reset */
+    85%, 100% {
         --word-bg: transparent;
         --box-opacity: 0;
         --box-transform: translateY(10px);
@@ -2000,26 +2062,51 @@ body {
 }
 
 @keyframes moveCursorDict {
+    /* Start position - fade in */
     0%, 15% {
         opacity: 0;
         top: 85px;
         left: 40px;
     }
+    /* Appear and start moving toward the word */
     25% {
         opacity: 1;
         top: 85px;
         left: 40px;
     }
+    /* Move to the highlighted word "न्यायिक" */
+    35%, 40% {
+        opacity: 1;
+        top: 130px;
+        left: 380px;
+    }
+    /* Hover over the word (slight scale for click effect) */
     45% {
+        opacity: 1;
+        top: 130px;
+        left: 380px;
         transform: scale(0.9);
     }
-    50% {
+    /* Click effect */
+    50%, 65% {
+        opacity: 1;
+        top: 130px;
+        left: 380px;
         transform: scale(1);
     }
+    /* Move away after definition shows */
+    75% {
+        opacity: 1;
+        top: 140px;
+        left: 200px;
+        transform: scale(1);
+    }
+    /* Fade out */
     85%, 100% {
         opacity: 0;
-        top: 85px;
-        left: 40px;
+        top: 140px;
+        left: 200px;
+        transform: scale(1);
     }
 }
 
