@@ -2315,10 +2315,11 @@ body {
     transition: all 0.3s ease;
     position: relative;
     text-align: center;
+    cursor: pointer;
 }
 
 .pricing-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) !important;
     box-shadow: var(--shadow-medium);
 }
 
@@ -2330,7 +2331,7 @@ body {
 }
 
 .pricing-card.featured:hover {
-    transform: scale(1.05) translateY(-8px);
+    transform: scale(1.05) translateY(-8px) !important;
 }
 
 .popular-badge {
@@ -2467,12 +2468,6 @@ body {
     background: var(--accent);
     color: var(--primary-darkest);
     border-color: var(--accent);
-}
-
-.pricing-card.blurred {
-    filter: blur(4px);
-    pointer-events: none;
-    user-select: none;
 }
 
 /* Footer */
@@ -2881,18 +2876,159 @@ body {
     font-size: 0.9rem;
 }
 
+/* Team Page Styles */
+.team-section {
+    background: var(--background-light);
+}
 
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.team-card {
+    background: var(--accent);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.team-photo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 24px;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 24px;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.team-img-binamra {
+    object-position: center 0%;
+    transform: scale(1.9);
+}
+
+.team-img-aabhusan {
+    object-position: 100% 30%;
+    transform: scale(1);
+}
+
+.team-img-manish {
+    object-position: -5% 0%;
+    transform: scale(2.4);
+}
+
+.team-img-samit {
+    object-position: 0% -20%;
+}
+
+.team-img-sankalpa {
+    object-position: center center;
+}
+
+.team-info {
+    width: 100%;
+}
+
+.team-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-darkest);
+    margin-bottom: 8px;
+}
+
+.team-designation {
+    font-size: 0.95rem;
+    color: var(--primary-base);
+    font-weight: 600;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.team-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--primary-medium);
+    text-align: left;
+}
+
+.team-cta {
+    background: var(--gradient-primary);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.team-cta .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.team-cta p {
+    font-size: 1.1rem;
+    color: var(--primary-lightest);
+    margin-bottom: 32px;
 }
 
 /* Animation Classes */
 .animate-in {
     opacity: 1 !important;
+}
+
+.feature-card.animate-in,
+.product-feature.animate-in {
     transform: translateY(0) !important;
+}
+
+.pricing-card.animate-in {
+    transform: none;
+}
+
+.pricing-card.featured.animate-in {
+    transform: scale(1.05);
 }
 
 .feature-card,
@@ -3280,6 +3416,22 @@ body {
     .contact-btn .btn-content p {
         font-size: 0.85rem;
     }
+.team-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.team-card {
+    padding: 24px;
+}
+
+.team-cta h2 {
+    font-size: 2rem;
+}
+
+.team-cta p {
+    font-size: 1rem;
+}
 }
 
 @media (max-width: 480px) {

@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="nav-links">
                             <a href="${homePath}#product" class="nav-link">Product</a>
                             <a href="${isSubpage ? '../' : ''}how-to-use.html" class="nav-link">How to Use & FAQ</a>
-                            <a href="${homePath}#about" class="nav-link">Meet The Team</a>
+                            <a href="${isSubpage ? '../' : ''}team.html" class="nav-link">Meet The Team</a>
                             <a href="${isSubpage ? '../' : ''}contact.html" class="nav-link">Contact Us</a>
                         </div>
-                        <a href="https://eksana.org" class="login-btn">Get Started</a>
+                        <a href="https://app.eksana.org" class="login-btn">Get Started</a>
                     </nav>
                     <button class="mobile-menu-toggle" aria-label="Toggle menu">
                         <span></span>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <div class="footer-section">
                                 <h4>Company</h4>
                                 <ul class="footer-links">
-                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="${isSubpage ? '../' : ''}team.html">Our Team</a></li>
                                 </ul>
                             </div>
                             <div class="footer-section">
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <h3>Ready to transform your legal research?</h3>
                             <p>Join thousands of legal professionals already using Eksana</p>
                         </div>
-                        <a href="https://eksana.org" class="cta-button">Start Free Trial</a>
+                        <a href="https://app.eksana.org" class="cta-button">Start Free Trial</a>
                     </div>
                 </div>
                 <div class="footer-bottom">

@@ -1,891 +1,1427 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eksana - Every precedent, Every law, One Platform</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#" class="logo">
-                    <img src="Logos/eksana-logo-text.svg" alt="Eksana Logo" class="logo-image">
-                </a>
-                <nav class="nav">
-                    <div class="nav-links">
-                        <a href="index.html#product" class="nav-link">Product</a>
-                        <a href="how-to-use.html" class="nav-link">How to Use & FAQ</a>
-                        <a href="#about" class="nav-link">Meet The Team</a>
-                        <a href="contact.html" class="nav-link">Contact Us</a>
-                    </div>
-                    <a href="https://eksana.org" class="login-btn">Get Started</a>
-                </nav>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-H750735YJV"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-icon">✨</span>
-                    Nepal's Premier Legal Research Platform
-                </div>
-                <h1 class="hero-title">
-                    <span class="title-line">Every precedent,</span>
-                    <span class="title-line">Every law,</span>
-                    <span class="title-highlight">One Platform</span>
-                </h1>
-                <p class="hero-description">
-                    Eksana is a unified legal intelligence platform designed to bring clarity and accessibility to Nepal's legal system. From searching past precedents to exploring active laws and regulations, Eksana provides lawyers, judges, and researchers with a single, reliable source of truth.
-                </p>
-                <div class="hero-actions">
-                    <a href="https://eksana.org" class="cta-primary">Start Free Trial</a>
-                    <a href="#features" class="cta-secondary">
-                        <span>Learn More</span>
-                        <span class="arrow">→</span>
+            gtag("config", "G-H750735YJV");
+        </script>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-KWVBJDNQ");
+        </script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Eksana: The Reliable Hub for Legal Professionals in Nepal</title>
+        <meta
+            name="description"
+            content="Simplify legal research in Nepal with Eksana. Get instant access to statutes, case summaries, and regulations for Nepali law students and legal scholars."
+        />
+        <link rel="canonical" href="https://eksana.org/" />
+        <link rel="icon" type="image/svg+xml" href="Logos/eksana-logo.svg" />
+        <link rel="stylesheet" href="style.css" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Eksana",
+                "url": "https://eksana.org/",
+                "logo": "https://eksana.org/Logos/eksana-logo.svg",
+                "description": "AI-powered Legal Research platform in Nepal, AI tool for Legal Professional in Nepal",
+                "sameAs": [
+                    "https://www.facebook.com/profile.php?id=61580980391285",
+                    "https://www.instagram.com/eksanalegal",
+                    "https://www.linkedin.com/company/eksana/"
+                ]
+            }
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="#" class="logo">
+                        <img
+                            src="Logos/eksana-logo-text.svg"
+                            alt="Eksana Logo"
+                            class="logo-image"
+                        />
                     </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">60K+</div>
-                        <div class="stat-label">Legal Documents</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Active Acts, Rules & Regulations</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Legal Professionals</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="floating-cards">
-                <div class="legal-card card-1">
-                    <div class="card-icon">📋</div>
-                    <div class="card-text">Najir Database</div>
-                </div>
-                <div class="legal-card card-2">
-                    <div class="card-icon">📖</div>
-                    <div class="card-text">Legal Acts</div>
-                </div>
-                <div class="legal-card card-3">
-                    <div class="card-icon">⚖️</div>
-                    <div class="card-text">Regulations</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Section -->
-    <section class="features" id="product">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span class="badge-icon">🔍</span>
-                    Core Features
-                </div>
-                <h2 class="section-title">Comprehensive Legal Research Tools</h2>
-                <p class="section-subtitle">
-                    Everything you need to conduct thorough legal research in Nepal's legal system
-                </p>
-            </div>
-
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-visual">
-                        <div class="search-animation-container">
-                            <div class="search-interface">
-                                <div class="search-row">
-                                    <div class="search-input-wrapper">
-                                        <input type="text" class="search-input" readonly>
-                                        <span class="typed-text"></span>
-                                    </div>
-                                    <div class="database-dropdown">
-                                        <div class="dropdown-toggle">
-                                            <span class="dropdown-label">Select Database</span>
-                                            <span class="dropdown-arrow">▼</span>
-                                        </div>
-                                        <div class="dropdown-menu">
-                                            <div class="dropdown-option" data-value="nkp">NKP</div>
-                                            <div class="dropdown-option" data-value="supreme">Supreme Court</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="apply-filters-btn">Apply Filters</button>
-                                <div class="search-results">
-                                    <div class="result-item">
-                                        <div class="result-icon">📄</div>
-                                        <div class="result-content">
-                                            <div class="result-title">State v. Bhattarai (2078)</div>
-                                            <div class="result-snippet">Doctrine of necessity applied in constitutional...</div>
-                                        </div>
-                                    </div>
-                                    <div class="result-item">
-                                        <div class="result-icon">📄</div>
-                                        <div class="result-content">
-                                            <div class="result-title">Constitutional Bench Decision (2077)</div>
-                                            <div class="result-snippet">Emergency powers and the doctrine of necessity...</div>
-                                        </div>
-                                    </div>
-                                    <div class="result-item">
-                                        <div class="result-icon">📄</div>
-                                        <div class="result-content">
-                                            <div class="result-title">Public Interest Litigation (2076)</div>
-                                            <div class="result-snippet">Application of necessity doctrine in public welfare...</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="animated-cursor">
-                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
-                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"/>
-                                </svg>
-                            </div>
+                    <nav class="nav">
+                        <div class="nav-links">
+                            <a href="index.html#product" class="nav-link"
+                                >Product</a
+                            >
+                            <a href="how-to-use.html" class="nav-link"
+                                >How to Use & FAQ</a
+                            >
+                            <a href="team.html" class="nav-link"
+                                >Meet The Team</a
+                            >
+                            <a href="contact.html" class="nav-link"
+                                >Contact Us</a
+                            >
                         </div>
+                        <a href="https://app.eksana.org" class="login-btn"
+                            >Get Started</a
+                        >
+                    </nav>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✨</span>
+                        Nepal's Premier Legal Research Platform
                     </div>
-                    <div class="feature-content">
-                        <div class="feature-icon">
-                            <div class="icon-background">📋</div>
-                        </div>
-                        <h3>Najir Database Search</h3>
-                        <p>Access and search through over 60,000 Najirs with advanced filtering capabilities. Our search system is designed in collaboration with professional lawyers and reputed law firms to ensure precise results.</p>
-                        <ul class="feature-list">
-                            <li>Advanced keyword search</li>
-                            <li>Smart filtering options</li>
-                            <li>Contextual relevance ranking</li>
-                            <li>Dictionary for legal Nepali terms</li>
-                            <li>Acts, Rules & Regulation Lookup</li>
-                        </ul>
-                        <a href="https://eksana.org" class="feature-link">
-                            Explore Najirs
+                    <h1 class="hero-title">
+                        <span class="title-line">Every precedent,</span>
+                        <span class="title-line">Every law,</span>
+                        <span class="title-highlight">One Platform</span>
+                    </h1>
+                    <p class="hero-description">
+                        Access, search, and understand Nepal’s legal system with
+                        clarity and confidence. Eksana is designed for lawyers,
+                        judges, law students, researchers, and legal
+                        professionals, bringing the entire spectrum of legal
+                        documents, statutes, regulations, precedents, and
+                        intelligent insights into one reliable destination.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="https://app.eksana.org" class="cta-primary"
+                            >Start Free Trial</a
+                        >
+                        <a
+                            href="https://eksana.org/contact.html"
+                            class="cta-secondary"
+                        >
+                            <span>Contact Us</span>
                             <span class="arrow">→</span>
                         </a>
                     </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">350K+</div>
+                            <div class="stat-label">Legal Documents</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">
+                                Active Acts, Rules & Regulations
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Legal Professionals</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="legal-card card-1">
+                        <div class="card-icon">📋</div>
+                        <div class="card-text">Najir Database</div>
+                    </div>
+                    <div class="legal-card card-2">
+                        <div class="card-icon">📖</div>
+                        <div class="card-text">Legal Acts</div>
+                    </div>
+                    <div class="legal-card card-3">
+                        <div class="card-icon">⚖️</div>
+                        <div class="card-text">Regulations</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section class="features" id="product">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">🔍</span>
+                        Core Features
+                    </div>
+                    <h2 class="section-title">
+                        Comprehensive Legal Research Tools
+                    </h2>
+                    <p class="section-subtitle">
+                        Everything you need to conduct thorough legal research
+                        in Nepal's legal system
+                    </p>
                 </div>
 
-                <div class="feature-card reverse">
-                    <div class="feature-visual">
-                        <div class="acts-animation-container">
-                            <div class="acts-interface">
-                                <div class="pdf-viewer">
-                                    <div class="pdf-header">
-                                        <span class="pdf-title">Civil Code Act, 2074</span>
-                                        <div class="pdf-controls">
-                                            <span>Page 45 of 286</span>
-                                            <span>100%</span>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-visual">
+                            <div class="search-animation-container">
+                                <div class="search-interface">
+                                    <div class="search-row">
+                                        <div class="search-input-wrapper">
+                                            <input
+                                                type="text"
+                                                class="search-input"
+                                                readonly
+                                            />
+                                            <span class="typed-text"></span>
                                         </div>
-                                    </div>
-                                    <div class="pdf-content">
-                                        <div class="pdf-page">
-                                            <h4>Chapter 5: Contract Law</h4>
-                                            <div class="pdf-section">
-                                                <strong>Section 517: Formation of Contract</strong>
-                                                <p class="pdf-text">A contract shall be formed when...</p>
+                                        <div class="database-dropdown">
+                                            <div class="dropdown-toggle">
+                                                <span class="dropdown-label"
+                                                    >Select Database</span
+                                                >
+                                                <span class="dropdown-arrow"
+                                                    >▼</span
+                                                >
                                             </div>
-                                            <div class="pdf-section highlighted-section">
-                                                <strong>Section 518: Valid Consideration</strong>
-                                                <p class="pdf-text">For a contract to be valid, consideration must be...</p>
-                                            </div>
-                                            <div class="pdf-section">
-                                                <strong>Section 519: Capacity to Contract</strong>
-                                                <p class="pdf-text">Any person who has attained the age of...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chatbot-panel">
-                                    <div class="chat-header">
-                                        <span class="chat-icon">🤖</span>
-                                        <span>Legal Assistant</span>
-                                    </div>
-                                    <div class="chat-messages">
-                                        <div class="chat-message user-message">
-                                            <span class="message-text">What is valid consideration?</span>
-                                        </div>
-                                        <div class="chat-message bot-message">
-                                            <div class="typing-indicator">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                            <div class="bot-response">
-                                                <p>According to <strong>Section 518</strong> of the Civil Code Act, valid consideration requires:</p>
-                                                <ul>
-                                                    <li>Lawful object and purpose</li>
-                                                    <li>Something of value exchanged</li>
-                                                    <li>Mutual agreement between parties</li>
-                                                </ul>
-                                                <div class="reference-tag">
-                                                    📍 Section 518, Page 45
+                                            <div class="dropdown-menu">
+                                                <div
+                                                    class="dropdown-option"
+                                                    data-value="nkp"
+                                                >
+                                                    NKP
+                                                </div>
+                                                <div
+                                                    class="dropdown-option"
+                                                    data-value="supreme"
+                                                >
+                                                    Supreme Court
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="chat-input">
-                                        <input type="text" placeholder="Ask about this act..." readonly>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-content">
-                        <div class="feature-icon">
-                            <div class="icon-background">📖</div>
-                        </div>
-                        <h3>Legal Acts & Legislation</h3>
-                        <p>Comprehensive database of Nepal's legal acts and legislation with cross-referencing capabilities. Stay updated with the latest amendments and legal changes in real-time.</p>
-                        <ul class="feature-list">
-                            <li>Complete active acts database</li>
-                            <li>AI-assisted chatbot</li>
-                        </ul>
-                        <a href="https://eksana.org" class="feature-link">
-                            Browse Acts
-                            <span class="arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-visual">
-                        <div class="regulations-animation-container">
-                            <div class="regulations-interface">
-                                <div class="regulation-viewer">
-                                    <div class="regulation-header">
-                                        <span class="regulation-title">Public Procurement Regulation, 2077</span>
-                                        <div class="regulation-controls">
-                                            <span>Rule 87 of 145</span>
-                                            <span>100%</span>
-                                        </div>
-                                    </div>
-                                    <div class="regulation-content">
-                                        <div class="regulation-page">
-                                            <h4>Part VII: Tender Evaluation Process</h4>
-                                            <div class="regulation-section">
-                                                <strong>Rule 86: Technical Evaluation Criteria</strong>
-                                                <p class="regulation-text">The evaluation committee shall assess technical...</p>
-                                            </div>
-                                            <div class="regulation-section highlighted-rule">
-                                                <strong>Rule 87: Bid Security Requirements</strong>
-                                                <p class="regulation-text">Bid security shall be 2-3% of estimated cost and valid for...</p>
-                                            </div>
-                                            <div class="regulation-section">
-                                                <strong>Rule 88: Financial Evaluation Method</strong>
-                                                <p class="regulation-text">Financial proposals shall be evaluated based on...</p>
+                                    <button class="apply-filters-btn">
+                                        Apply Filters
+                                    </button>
+                                    <div class="search-results">
+                                        <div class="result-item">
+                                            <div class="result-icon">📄</div>
+                                            <div class="result-content">
+                                                <div class="result-title">
+                                                    State v. Bhattarai (2078)
+                                                </div>
+                                                <div class="result-snippet">
+                                                    Doctrine of necessity
+                                                    applied in constitutional...
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="regulation-chatbot">
-                                    <div class="reg-chat-header">
-                                        <span class="reg-chat-icon">🤖</span>
-                                        <span>Regulatory Assistant</span>
-                                    </div>
-                                    <div class="reg-chat-messages">
-                                        <div class="reg-chat-message reg-user-message">
-                                            <span class="reg-message-text">What are bid security requirements?</span>
-                                        </div>
-                                        <div class="reg-chat-message reg-bot-message">
-                                            <div class="reg-typing-indicator">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
+                                        <div class="result-item">
+                                            <div class="result-icon">📄</div>
+                                            <div class="result-content">
+                                                <div class="result-title">
+                                                    Constitutional Bench
+                                                    Decision (2077)
+                                                </div>
+                                                <div class="result-snippet">
+                                                    Emergency powers and the
+                                                    doctrine of necessity...
+                                                </div>
                                             </div>
-                                            <div class="reg-bot-response">
-                                                <p>According to <strong>Rule 87</strong> of Public Procurement Regulation:</p>
-                                                <ul>
-                                                    <li>Bid security: 2-3% of estimated cost</li>
-                                                    <li>Validity period: 120 days minimum</li>
-                                                    <li>Acceptable forms: Bank guarantee or cash deposit</li>
-                                                </ul>
-                                                <div class="reg-reference-tag">
-                                                    📍 Rule 87, Part VII
+                                        </div>
+                                        <div class="result-item">
+                                            <div class="result-icon">📄</div>
+                                            <div class="result-content">
+                                                <div class="result-title">
+                                                    Public Interest Litigation
+                                                    (2076)
+                                                </div>
+                                                <div class="result-snippet">
+                                                    Application of necessity
+                                                    doctrine in public
+                                                    welfare...
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="reg-chat-input">
-                                        <input type="text" placeholder="Ask about regulations..." readonly>
+                                </div>
+                                <div class="animated-cursor">
+                                    <svg
+                                        width="20"
+                                        height="24"
+                                        viewBox="0 0 20 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
+                                            fill="white"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <div class="icon-background">📋</div>
+                            </div>
+                            <h3>Najir Database Search</h3>
+                            <p>
+                                Access and search through over 60,000 Najirs
+                                with advanced filtering capabilities. Our search
+                                system is designed in collaboration with
+                                professional lawyers and reputed law firms to
+                                ensure precise results.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Advanced keyword search</li>
+                                <li>Smart filtering options</li>
+                                <li>Contextual relevance ranking</li>
+                                <li>Dictionary for legal Nepali terms</li>
+                                <li>Acts, Rules & Regulation Lookup</li>
+                            </ul>
+                            <a
+                                href="https://app.eksana.org"
+                                class="feature-link"
+                            >
+                                Explore Najirs
+                                <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="feature-card reverse">
+                        <div class="feature-visual">
+                            <div class="acts-animation-container">
+                                <div class="acts-interface">
+                                    <div class="pdf-viewer">
+                                        <div class="pdf-header">
+                                            <span class="pdf-title"
+                                                >Civil Code Act, 2074</span
+                                            >
+                                            <div class="pdf-controls">
+                                                <span>Page 45 of 286</span>
+                                                <span>100%</span>
+                                            </div>
+                                        </div>
+                                        <div class="pdf-content">
+                                            <div class="pdf-page">
+                                                <h4>Chapter 5: Contract Law</h4>
+                                                <div class="pdf-section">
+                                                    <strong
+                                                        >Section 517: Formation
+                                                        of Contract</strong
+                                                    >
+                                                    <p class="pdf-text">
+                                                        A contract shall be
+                                                        formed when...
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="pdf-section highlighted-section"
+                                                >
+                                                    <strong
+                                                        >Section 518: Valid
+                                                        Consideration</strong
+                                                    >
+                                                    <p class="pdf-text">
+                                                        For a contract to be
+                                                        valid, consideration
+                                                        must be...
+                                                    </p>
+                                                </div>
+                                                <div class="pdf-section">
+                                                    <strong
+                                                        >Section 519: Capacity
+                                                        to Contract</strong
+                                                    >
+                                                    <p class="pdf-text">
+                                                        Any person who has
+                                                        attained the age of...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chatbot-panel">
+                                        <div class="chat-header">
+                                            <span class="chat-icon">🤖</span>
+                                            <span>Legal Assistant</span>
+                                        </div>
+                                        <div class="chat-messages">
+                                            <div
+                                                class="chat-message user-message"
+                                            >
+                                                <span class="message-text"
+                                                    >What is valid
+                                                    consideration?</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="chat-message bot-message"
+                                            >
+                                                <div class="typing-indicator">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="bot-response">
+                                                    <p>
+                                                        According to
+                                                        <strong
+                                                            >Section 518</strong
+                                                        >
+                                                        of the Civil Code Act,
+                                                        valid consideration
+                                                        requires:
+                                                    </p>
+                                                    <ul>
+                                                        <li>
+                                                            Lawful object and
+                                                            purpose
+                                                        </li>
+                                                        <li>
+                                                            Something of value
+                                                            exchanged
+                                                        </li>
+                                                        <li>
+                                                            Mutual agreement
+                                                            between parties
+                                                        </li>
+                                                    </ul>
+                                                    <div class="reference-tag">
+                                                        📍 Section 518, Page 45
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat-input">
+                                            <input
+                                                type="text"
+                                                placeholder="Ask about this act..."
+                                                readonly
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="feature-content">
-                        <div class="feature-icon">
-                            <div class="icon-background">⚖️</div>
-                        </div>
-                        <h3>Rules & Regulations</h3>
-                        <p>Navigate through complex regulatory frameworks with ease. Our organized system helps you find specific rules and regulations quickly, with detailed categorization and tagging.</p>
-                        <ul class="feature-list">
-                            <li>Complete Active Rules & Regulations Database</li>
-                            <li>AI assisted chatbot</li>
-                        </ul>
-                        <a href="https://eksana.org" class="feature-link">
-                            View Regulations
-                            <span class="arrow">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Showcase -->
-    <section class="product-showcase" id="features">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span class="badge-icon">✨</span>
-                    Advanced Features
-                </div>
-                <h2 class="section-title">Powerful Features for Legal Professionals</h2>
-                <p class="section-subtitle">
-                    Experience cutting-edge features designed to enhance your legal research workflow
-                </p>
-            </div>
-
-            <div class="product-grid">
-                <div class="product-feature">
-                    <div class="feature-visual">
-                        <div class="visual-mockup brief-mockup">
-                            <div class="mockup-header">
-                                <div class="mockup-title">📋 Case Brief</div>
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <div class="icon-background">📖</div>
                             </div>
-                            <div class="mockup-content">
-                                <div class="brief-item"><strong>Facts:</strong> A summary of the case facts...</div>
-                                <div class="brief-item"><strong>Issues:</strong> Key legal questions raised...</div>
-                                <div class="brief-item"><strong>Petitioner's Argument:</strong> Summary of arguments...</div>
-                                <div class="brief-item"><strong>Respondent's Argument:</strong> Summary of arguments...</div>
-                                <div class="brief-item highlighted"><strong>Ratio Decidendi:</strong> The core legal principle...</div>
-                                <div class="brief-item"><strong>Acts Cited:</strong> Act A, Section 12...</div>
-                                <div class="brief-item"><strong>Rule/Regulation Cited:</strong> Rule X, Clause 5...</div>
-                                <div class="brief-item"><strong>Precedents Cited:</strong> Case Y v. State...</div>
-                            </div>
+                            <h3>Legal Acts & Legislation</h3>
+                            <p>
+                                Comprehensive database of Nepal's legal acts and
+                                legislation with cross-referencing capabilities.
+                                Stay updated with the latest amendments and
+                                legal changes in real-time.
+                            </p>
+                            <ul class="feature-list">
+                                <li>Complete active acts database</li>
+                                <li>AI-assisted chatbot</li>
+                            </ul>
+                            <a
+                                href="https://app.eksana.org"
+                                class="feature-link"
+                            >
+                                Browse Acts
+                                <span class="arrow">→</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="feature-info">
-                        <h3>Automated Case Briefs</h3>
-                        <p>Generate comprehensive case briefs and summaries automatically. Our AI-powered system extracts key points from each Najir, saving valuable research time and providing essential context for your legal work.</p>
-                        <div class="feature-benefits">
-                            <div class="benefit">⚡ Instant summaries</div>
-                            <div class="benefit">🎯 Key point extraction</div>
-                            <div class="benefit">📊 Structured analysis</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="product-feature reverse">
-                    <div class="feature-visual">
-                                                <div class="visual-mockup lookup-mockup">
-                            <div class="mockup-header">
-                                <div class="mockup-title">🔗 Case Brief</div>
-                            </div>
-                            <div class="mockup-content">
-                                <div class="lookup-item-wrapper">
-                                    <div class="lookup-item">
-                                        <div class="lookup-icon">📖</div>
-                                        <div class="lookup-text">Acts Cited</div>
-                                        <div class="lookup-arrow">▶</div>
+                    <div class="feature-card">
+                        <div class="feature-visual">
+                            <div class="regulations-animation-container">
+                                <div class="regulations-interface">
+                                    <div class="regulation-viewer">
+                                        <div class="regulation-header">
+                                            <span class="regulation-title"
+                                                >Public Procurement Regulation,
+                                                2077</span
+                                            >
+                                            <div class="regulation-controls">
+                                                <span>Rule 87 of 145</span>
+                                                <span>100%</span>
+                                            </div>
+                                        </div>
+                                        <div class="regulation-content">
+                                            <div class="regulation-page">
+                                                <h4>
+                                                    Part VII: Tender Evaluation
+                                                    Process
+                                                </h4>
+                                                <div class="regulation-section">
+                                                    <strong
+                                                        >Rule 86: Technical
+                                                        Evaluation
+                                                        Criteria</strong
+                                                    >
+                                                    <p class="regulation-text">
+                                                        The evaluation committee
+                                                        shall assess
+                                                        technical...
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="regulation-section highlighted-rule"
+                                                >
+                                                    <strong
+                                                        >Rule 87: Bid Security
+                                                        Requirements</strong
+                                                    >
+                                                    <p class="regulation-text">
+                                                        Bid security shall be
+                                                        2-3% of estimated cost
+                                                        and valid for...
+                                                    </p>
+                                                </div>
+                                                <div class="regulation-section">
+                                                    <strong
+                                                        >Rule 88: Financial
+                                                        Evaluation
+                                                        Method</strong
+                                                    >
+                                                    <p class="regulation-text">
+                                                        Financial proposals
+                                                        shall be evaluated based
+                                                        on...
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="lookup-details">
-                                        <div class="detail-item">Evidence Act, 2031</div>
+                                    <div class="regulation-chatbot">
+                                        <div class="reg-chat-header">
+                                            <span class="reg-chat-icon"
+                                                >🤖</span
+                                            >
+                                            <span>Regulatory Assistant</span>
+                                        </div>
+                                        <div class="reg-chat-messages">
+                                            <div
+                                                class="reg-chat-message reg-user-message"
+                                            >
+                                                <span class="reg-message-text"
+                                                    >What are bid security
+                                                    requirements?</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="reg-chat-message reg-bot-message"
+                                            >
+                                                <div
+                                                    class="reg-typing-indicator"
+                                                >
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="reg-bot-response">
+                                                    <p>
+                                                        According to
+                                                        <strong>Rule 87</strong>
+                                                        of Public Procurement
+                                                        Regulation:
+                                                    </p>
+                                                    <ul>
+                                                        <li>
+                                                            Bid security: 2-3%
+                                                            of estimated cost
+                                                        </li>
+                                                        <li>
+                                                            Validity period: 120
+                                                            days minimum
+                                                        </li>
+                                                        <li>
+                                                            Acceptable forms:
+                                                            Bank guarantee or
+                                                            cash deposit
+                                                        </li>
+                                                    </ul>
+                                                    <div
+                                                        class="reg-reference-tag"
+                                                    >
+                                                        📍 Rule 87, Part VII
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="reg-chat-input">
+                                            <input
+                                                type="text"
+                                                placeholder="Ask about regulations..."
+                                                readonly
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="lookup-item-wrapper">
-                                    <div class="lookup-item">
-                                        <div class="lookup-icon">⚖️</div>
-                                        <div class="lookup-text">Rules/Regulation Cited</div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <div class="feature-icon">
+                                <div class="icon-background">⚖️</div>
+                            </div>
+                            <h3>Rules & Regulations</h3>
+                            <p>
+                                Navigate through complex regulatory frameworks
+                                with ease. Our organized system helps you find
+                                specific rules and regulations quickly, with
+                                detailed categorization and tagging.
+                            </p>
+                            <ul class="feature-list">
+                                <li>
+                                    Complete Active Rules & Regulations Database
+                                </li>
+                                <li>AI assisted chatbot</li>
+                            </ul>
+                            <a
+                                href="https://app.eksana.org"
+                                class="feature-link"
+                            >
+                                View Regulations
+                                <span class="arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Showcase -->
+        <section class="product-showcase" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">✨</span>
+                        Advanced Features
+                    </div>
+                    <h2 class="section-title">
+                        Powerful Features for Legal Professionals
+                    </h2>
+                    <p class="section-subtitle">
+                        Experience cutting-edge features designed to enhance
+                        your legal research workflow
+                    </p>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-feature">
+                        <div class="feature-visual">
+                            <div class="visual-mockup brief-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-title">
+                                        📋 Case Brief
+                                    </div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="brief-item">
+                                        <strong>Facts:</strong> A summary of the
+                                        case facts...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Issues:</strong> Key legal
+                                        questions raised...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Petitioner's Argument:</strong>
+                                        Summary of arguments...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Respondent's Argument:</strong>
+                                        Summary of arguments...
+                                    </div>
+                                    <div class="brief-item highlighted">
+                                        <strong>Ratio Decidendi:</strong> The
+                                        core legal principle...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Acts Cited:</strong> Act A,
+                                        Section 12...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Rule/Regulation Cited:</strong>
+                                        Rule X, Clause 5...
+                                    </div>
+                                    <div class="brief-item">
+                                        <strong>Precedents Cited:</strong> Case
+                                        Y v. State...
                                     </div>
                                 </div>
                             </div>
-                            <div class="act-viewer-overlay">
-                                <div class="act-viewer">
-                                    <div class="act-header">Evidence Act, 2031</div>
-                                    <div class="act-content">
-                                        <p><strong>Section 3:</strong> Evidence to be relevant...</p>
-                                        <p><strong>Section 4:</strong> Admissibility of evidence...</p>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Automated Case Briefs</h3>
+                            <p>
+                                Generate comprehensive case briefs and summaries
+                                automatically. Our AI-powered system extracts
+                                key points from each Najir, saving valuable
+                                research time and providing essential context
+                                for your legal work.
+                            </p>
+                            <div class="feature-benefits">
+                                <div class="benefit">⚡ Instant summaries</div>
+                                <div class="benefit">
+                                    🎯 Key point extraction
+                                </div>
+                                <div class="benefit">
+                                    📊 Structured analysis
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-feature reverse">
+                        <div class="feature-visual">
+                            <div class="visual-mockup lookup-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-title">
+                                        🔗 Case Brief
                                     </div>
-                                    <div class="close-btn">×</div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="lookup-item-wrapper">
+                                        <div class="lookup-item">
+                                            <div class="lookup-icon">📖</div>
+                                            <div class="lookup-text">
+                                                Acts Cited
+                                            </div>
+                                            <div class="lookup-arrow">▶</div>
+                                        </div>
+                                        <div class="lookup-details">
+                                            <div class="detail-item">
+                                                Evidence Act, 2031
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="lookup-item-wrapper">
+                                        <div class="lookup-item">
+                                            <div class="lookup-icon">⚖️</div>
+                                            <div class="lookup-text">
+                                                Rules/Regulation Cited
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="act-viewer-overlay">
+                                    <div class="act-viewer">
+                                        <div class="act-header">
+                                            Evidence Act, 2031
+                                        </div>
+                                        <div class="act-content">
+                                            <p>
+                                                <strong>Section 3:</strong>
+                                                Evidence to be relevant...
+                                            </p>
+                                            <p>
+                                                <strong>Section 4:</strong>
+                                                Admissibility of evidence...
+                                            </p>
+                                        </div>
+                                        <div class="close-btn">×</div>
+                                    </div>
+                                </div>
+                                <div class="animated-cursor-lookup">
+                                    <svg
+                                        width="20"
+                                        height="24"
+                                        viewBox="0 0 20 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
+                                            fill="white"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        ></path>
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="animated-cursor-lookup">
-                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
-                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"></path>
-                                </svg>
-                            </div>
                         </div>
-                    </div>
-                    <div class="feature-info">
-                        <h3>Contextual Legal Lookup</h3>
-                        <p>Seamlessly access relevant Acts, Rules, and Regulations while browsing Najirs. Our intelligent system provides complete context for your legal research without disrupting your workflow.</p>
-                        <div class="feature-benefits">
-                            <div class="benefit">🔍 Instant cross-references</div>
-                            <div class="benefit">🌐 Contextual suggestions</div>
-                            <div class="benefit">📚 Comprehensive linking</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-feature">
-                    <div class="feature-visual">
-                        <div class="visual-mockup dictionary-mockup">
-                            <div class="mockup-header">
-                                <div class="mockup-title case-header-title">
-                                    <span><strong>उत्प्रेषणसमेत</strong></span>
-                                    <span class="case-dates">Registration Date: 2077-09-14 | Decision Date: 2077-09-14</span>
+                        <div class="feature-info">
+                            <h3>Contextual Legal Lookup</h3>
+                            <p>
+                                Seamlessly access relevant Acts, Rules, and
+                                Regulations while browsing Najirs. Our
+                                intelligent system provides complete context for
+                                your legal research without disrupting your
+                                workflow.
+                            </p>
+                            <div class="feature-benefits">
+                                <div class="benefit">
+                                    🔍 Instant cross-references
+                                </div>
+                                <div class="benefit">
+                                    🌐 Contextual suggestions
+                                </div>
+                                <div class="benefit">
+                                    📚 Comprehensive linking
                                 </div>
                             </div>
-                            <div class="mockup-content">
-                                <p class="legal-text-nepali">
-                                    प्रत्येक अदालतलाई आफ्नो र आफ्नो मातहतका अदालतको <span class="highlight-word">न्यायिक</span> कार्यमा कसैले अवरोध ���रेमा वा आदेश वा फैसलाको अवज्ञा गरेमा कानून बमोजिम अवहेनामा कारबाही चलाउन र सजाय गर्न सक्नेछ।
-                                </p>
-                                <div class="definition-box">
-                                    <h4>न्यायिक (Nyayik)</h4>
-                                    <p>Relating to the administration of justice or the function of a judge.</p>
+                        </div>
+                    </div>
+
+                    <div class="product-feature">
+                        <div class="feature-visual">
+                            <div class="visual-mockup dictionary-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-title case-header-title">
+                                        <span
+                                            ><strong
+                                                >उत्प्रेषणसमेत</strong
+                                            ></span
+                                        >
+                                        <span class="case-dates"
+                                            >Registration Date: 2077-09-14 |
+                                            Decision Date: 2077-09-14</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="mockup-content">
+                                    <p class="legal-text-nepali">
+                                        प्रत्येक अदालतलाई आफ्नो र आफ्नो मातहतका
+                                        अदालतको
+                                        <span class="highlight-word"
+                                            >न्यायिक</span
+                                        >
+                                        कार्यमा कसैले अवरोध ���रेमा वा आदेश वा
+                                        फैसलाको अवज्ञा गरेमा कानून बमोजिम
+                                        अवहेनामा कारबाही चलाउन र सजाय गर्न
+                                        सक्नेछ।
+                                    </p>
+                                    <div class="definition-box">
+                                        <h4>न्यायिक (Nyayik)</h4>
+                                        <p>
+                                            Relating to the administration of
+                                            justice or the function of a judge.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="animated-cursor-dict">
+                                    <svg
+                                        width="20"
+                                        height="24"
+                                        viewBox="0 0 20 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
+                                            fill="white"
+                                            stroke="black"
+                                            stroke-width="1"
+                                        ></path>
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="animated-cursor-dict">
-                                <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
-                                    <path d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z" fill="white" stroke="black" stroke-width="1"></path>
-                                </svg>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Interactive Legal Dictionary</h3>
+                            <p>
+                                Instantly access definitions and explanations of
+                                legal terminology in Nepali. Our integrated
+                                legal dictionary is accessible with a simple
+                                right-click, making complex legal language
+                                understandable.
+                            </p>
+                            <div class="feature-benefits">
+                                <div class="benefit">
+                                    📚 Comprehensive definitions
+                                </div>
+                                <div class="benefit">🔄 Bilingual support</div>
+                                <div class="benefit">⚡ Right-click access</div>
                             </div>
                         </div>
                     </div>
-                    <div class="feature-info">
-                        <h3>Interactive Legal Dictionary</h3>
-                        <p>Instantly access definitions and explanations of legal terminology in Nepali. Our integrated legal dictionary is accessible with a simple right-click, making complex legal language understandable.</p>
-                        <div class="feature-benefits">
-                            <div class="benefit">📚 Comprehensive definitions</div>
-                            <div class="benefit">🔄 Bilingual support</div>
-                            <div class="benefit">⚡ Right-click access</div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="product-feature reverse">
-                    <div class="feature-visual">
-                        <div class="visual-mockup ai-mockup">
-                            <div class="mockup-header">
-                                <div class="mockup-title">🤖 AI Legal Assistant</div>
-                            </div>
-                            <div class="mockup-content">
-                                <div class="chat-bubble user">What are the key points of this case?</div>
-                                <div class="chat-bubble ai">Based on the document, here are the key legal points...</div>
+                    <div class="product-feature reverse">
+                        <div class="feature-visual">
+                            <div class="visual-mockup ai-mockup">
+                                <div class="mockup-header">
+                                    <div class="mockup-title">
+                                        🤖 AI Legal Assistant
+                                    </div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="chat-bubble user">
+                                        What are the key points of this case?
+                                    </div>
+                                    <div class="chat-bubble ai">
+                                        Based on the document, here are the key
+                                        legal points...
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="feature-info">
-                        <h3>AI-Powered Legal Chat</h3>
-                        <p>Get personalized assistance with our AI-powered chat interface. Navigate and understand complex legal documents with intelligent responses tailored specifically to Nepal's legal system.</p>
-                        <div class="feature-benefits">
-                            <div class="benefit">🧠 Smart analysis</div>
-                            <div class="benefit">💬 Natural conversation</div>
-                            <div class="benefit">🎯 Nepal-specific insights</div>
+                        <div class="feature-info">
+                            <h3>AI-Powered Legal Chat</h3>
+                            <p>
+                                Get personalized assistance with our AI-powered
+                                chat interface. Navigate and understand complex
+                                legal documents with intelligent responses
+                                tailored specifically to Nepal's legal system.
+                            </p>
+                            <div class="feature-benefits">
+                                <div class="benefit">🧠 Smart analysis</div>
+                                <div class="benefit">
+                                    💬 Natural conversation
+                                </div>
+                                <div class="benefit">
+                                    🎯 Nepal-specific insights
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews" id="reviews">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span class="badge-icon">⭐</span>
-                    Client Testimonials
-                </div>
-                <h2 class="section-title">Trusted by Leading Legal Professionals</h2>
-                <p class="section-subtitle">
-                    See what law firms and legal practitioners across Nepal are saying about Eksana
-                </p>
-            </div>
-        </div>
-        
-        <div class="reviews-carousel">
-            <div class="reviews-track">
-                <!-- First set of reviews -->
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Pioneer</span>
-                            <span>Law Associates</span>
-                        </div>
+        <!-- Reviews Section -->
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">⭐</span>
+                        Client Testimonials
                     </div>
-                    <div class="review-content">
-                        <p class="review-text">"Eksana has revolutionized our legal research process. What used to take hours now takes minutes. The Najir database is comprehensive and the search functionality is incredibly precise."</p>
-                        <div class="reviewer-info">
-                            <strong>Ramesh Sharma</strong>
-                            <span>Senior Partner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Himalayan</span>
-                            <span>Legal Consultancy</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"The AI-powered case briefs save us countless hours. Our team efficiency has increased by 40% since adopting Eksana. It's an essential tool for modern legal practice."</p>
-                        <div class="reviewer-info">
-                            <strong>Sita Poudel</strong>
-                            <span>Managing Director</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Supreme</span>
-                            <span>Law Chambers</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"The cross-referencing between Acts and Regulations is brilliant. Eksana provides context that helps us build stronger arguments and serve our clients better."</p>
-                        <div class="reviewer-info">
-                            <strong>Krishna Bhattarai</strong>
-                            <span>Legal Advisor</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>National</span>
-                            <span>Law Firm</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"Having access to 60,000+ Najirs with advanced filtering has transformed how we prepare cases. The legal dictionary feature is particularly helpful for our junior associates."</p>
-                        <div class="reviewer-info">
-                            <strong>Priya Adhikari</strong>
-                            <span>Partner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Capital</span>
-                            <span>Legal Services</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"Eksana's collaborative features enable our team to work seamlessly on complex cases. The platform has become indispensable for our practice."</p>
-                        <div class="reviewer-info">
-                            <strong>Binod Thapa</strong>
-                            <span>Senior Advocate</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Duplicate set for seamless scrolling -->
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Pioneer</span>
-                            <span>Law Associates</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"Eksana has revolutionized our legal research process. What used to take hours now takes minutes. The Najir database is comprehensive and the search functionality is incredibly precise."</p>
-                        <div class="reviewer-info">
-                            <strong>Ramesh Sharma</strong>
-                            <span>Senior Partner</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Himalayan</span>
-                            <span>Legal Consultancy</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"The AI-powered case briefs save us countless hours. Our team efficiency has increased by 40% since adopting Eksana. It's an essential tool for modern legal practice."</p>
-                        <div class="reviewer-info">
-                            <strong>Sita Poudel</strong>
-                            <span>Managing Director</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="firm-logo">
-                        <div class="logo-placeholder">
-                            <span>Supreme</span>
-                            <span>Law Chambers</span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p class="review-text">"The cross-referencing between Acts and Regulations is brilliant. Eksana provides context that helps us build stronger arguments and serve our clients better."</p>
-                        <div class="reviewer-info">
-                            <strong>Krishna Bhattarai</strong>
-                            <span>Legal Advisor</span>
-                        </div>
-                    </div>
+                    <h2 class="section-title">
+                        Trusted by Leading Legal Professionals
+                    </h2>
+                    <p class="section-subtitle">
+                        See what law firms and legal practitioners across Nepal
+                        are saying about Eksana
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <span class="badge-icon">💎</span>
-                    Pricing Plans
+            <div class="reviews-carousel">
+                <div class="reviews-track">
+                    <!-- First set of reviews -->
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Pioneer</span>
+                                <span>Law Associates</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "Eksana has revolutionized our legal research
+                                process. What used to take hours now takes
+                                minutes. The Najir database is comprehensive and
+                                the search functionality is incredibly precise."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Ramesh Sharma</strong>
+                                <span>Senior Partner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Himalayan</span>
+                                <span>Legal Consultancy</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "The AI-powered case briefs save us countless
+                                hours. Our team efficiency has increased by 40%
+                                since adopting Eksana. It's an essential tool
+                                for modern legal practice."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Sita Poudel</strong>
+                                <span>Managing Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Supreme</span>
+                                <span>Law Chambers</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "The cross-referencing between Acts and
+                                Regulations is brilliant. Eksana provides
+                                context that helps us build stronger arguments
+                                and serve our clients better."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Krishna Bhattarai</strong>
+                                <span>Legal Advisor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>National</span>
+                                <span>Law Firm</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "Having access to 60,000+ Najirs with advanced
+                                filtering has transformed how we prepare cases.
+                                The legal dictionary feature is particularly
+                                helpful for our junior associates."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Priya Adhikari</strong>
+                                <span>Partner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Capital</span>
+                                <span>Legal Services</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "Eksana's collaborative features enable our team
+                                to work seamlessly on complex cases. The
+                                platform has become indispensable for our
+                                practice."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Binod Thapa</strong>
+                                <span>Senior Advocate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate set for seamless scrolling -->
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Pioneer</span>
+                                <span>Law Associates</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "Eksana has revolutionized our legal research
+                                process. What used to take hours now takes
+                                minutes. The Najir database is comprehensive and
+                                the search functionality is incredibly precise."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Ramesh Sharma</strong>
+                                <span>Senior Partner</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Himalayan</span>
+                                <span>Legal Consultancy</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "The AI-powered case briefs save us countless
+                                hours. Our team efficiency has increased by 40%
+                                since adopting Eksana. It's an essential tool
+                                for modern legal practice."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Sita Poudel</strong>
+                                <span>Managing Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="firm-logo">
+                            <div class="logo-placeholder">
+                                <span>Supreme</span>
+                                <span>Law Chambers</span>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <p class="review-text">
+                                "The cross-referencing between Acts and
+                                Regulations is brilliant. Eksana provides
+                                context that helps us build stronger arguments
+                                and serve our clients better."
+                            </p>
+                            <div class="reviewer-info">
+                                <strong>Krishna Bhattarai</strong>
+                                <span>Legal Advisor</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="section-title">Choose Your Plan</h2>
-                <p class="section-subtitle">
-                    Flexible pricing options designed for legal professionals at every stage
-                </p>
             </div>
+        </section>
 
-            <div class="pricing-grid">
-                <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
-                    <div class="plan-header">
-                        <div class="plan-icon">🌱</div>
-                        <h3 class="plan-name">Starter</h3>
-                        <div class="plan-price">
-                            <span class="currency">Free</span>
-                        </div>
-                        <p class="plan-description">Perfect for getting started with legal research</p>
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-badge">
+                        <span class="badge-icon">💎</span>
+                        Pricing Plans
                     </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>✓ Access to all the Najirs</li>
-                            <li>✓ Advanced search functionality</li>
-                            <li>✓ Limited daily searches</li>
-                            <li>✓ Access to Active Acts</li>
-                            <li>✓ Access to Active Rules & Regulations</li>
-                            <li>✓ Community support</li>
-                        </ul>
-                    </div>
-                    <a href="https://eksana.org" class="plan-button">Get Started</a>
+                    <h2 class="section-title">Choose Your Plan</h2>
+                    <p class="section-subtitle">
+                        Flexible pricing options designed for legal
+                        professionals at every stage
+                    </p>
                 </div>
 
-                <div class="pricing-card blurred">
-                    <div class="plan-header">
-                        <div class="plan-icon">⚖️</div>
-                        <h3 class="plan-name">Professional</h3>
-                        <div class="plan-price">
-                            <span class="currency">₹</span>
-                            <span class="amount">0,000</span>
-                            <span class="period">/month</span>
+                <div class="pricing-grid">
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <div class="plan-header">
+                            <div class="plan-icon">⚖️</div>
+                            <h3 class="plan-name">General</h3>
+                            <div class="plan-price">
+                                <span class="currency">Rs.</span>
+                                <span class="amount">499</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="plan-description">
+                                Annual: Rs. 4,999/year
+                            </p>
                         </div>
-                        <p class="plan-description">Complete toolkit for legal professionals</p>
+                        <div class="plan-features">
+                            <ul>
+                                <li>✓ Supreme Court & NKP Judgments</li>
+                                <li>✓ High Court Judgments</li>
+                                <li>✓ Special Court</li>
+                                <li>✓ Revenue Tribunals</li>
+                                <li>✓ Administrative Court</li>
+                                <li>✓ Foreign Employment Tribunal</li>
+                                <li>
+                                    ✓ Side-by-Side Viewer for Judgments & Legal
+                                    Texts
+                                </li>
+                                <li>✓ Insurance Authority</li>
+                                <li>✓ Debt Recovery Tribunal</li>
+                                <li>✓ In-App Legal Definitions</li>
+                                <li>✓ Updated Acts</li>
+                                <li>✓ Updated Rules & Regulations</li>
+                                <li>✓ AI-Powered Legal Research Assistant</li>
+                                <li>✓ AI-Generated Case Brief</li>
+                            </ul>
+                        </div>
+                        <a href="https://app.eksana.org" class="plan-button"
+                            >Get Started</a
+                        >
                     </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>✓ Full access to 60,000+ Najirs</li>
-                            <li>✓ Advanced search & filters</li>
-                            <li>✓ AI-powered case briefs</li>
-                            <li>✓ Legal dictionary</li>
-                            <li>✓ Priority support</li>
-                            <li>✓ Export & download options</li>
-                        </ul>
-                    </div>
-                    <a href="https://eksana.org" class="plan-button">Start Free Trial</a>
-                </div>
 
-                <div class="pricing-card blurred">
-                    <div class="plan-header">
-                        <div class="plan-icon">🏢</div>
-                        <h3 class="plan-name">Enterprise</h3>
-                        <div class="plan-price">
-                            <span class="currency">Custom</span>
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <div class="plan-icon">🏢</div>
+                            <h3 class="plan-name">Enterprise</h3>
+                            <p class="plan-description">
+                                Tailored solutions for organizations
+                            </p>
                         </div>
-                        <p class="plan-description">Tailored solutions for organizations</p>
+                        <div class="plan-features">
+                            <ul>
+                                <li>✓ Cheaper pricing than General Plan</li>
+                                <li>✓ Supreme Court & NKP Judgments</li>
+                                <li>✓ High Court Judgments</li>
+                                <li>✓ Special Court</li>
+                                <li>✓ Revenue Tribunals</li>
+                                <li>✓ Administrative Court</li>
+                                <li>✓ Foreign Employment Tribunal</li>
+                                <li>
+                                    ✓ Side-by-Side Viewer for Judgments & Legal
+                                    Texts
+                                </li>
+                                <li>✓ Insurance Authority</li>
+                                <li>✓ Debt Recovery Tribunal</li>
+                                <li>✓ In-App Legal Definitions</li>
+                                <li>✓ Updated Acts</li>
+                                <li>✓ Updated Rules & Regulations</li>
+                                <li>✓ AI-Powered Legal Research Assistant</li>
+                                <li>✓ AI-Generated Case Brief</li>
+                                <li>✓ Custom Integration</li>
+                                <li>✓ Dedicated account manager</li>
+                                <li>✓ SLA guarantee</li>
+                            </ul>
+                        </div>
+                        <a href="mailto:mail@eksana.org" class="plan-button"
+                            >Contact Sales</a
+                        >
                     </div>
-                    <div class="plan-features">
-                        <ul>
-                            <li>✓ Everything in Professional</li>
-                            <li>✓ Team collaboration tools</li>
-                            <li>✓ Custom integrations</li>
-                            <li>✓ Dedicated account manager</li>
-                            <li>✓ Advanced analytics</li>
-                            <li>✓ SLA guarantee</li>
-                        </ul>
-                    </div>
-                    <a href="https://eksana.org" class="plan-button">Contact Sales</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-main">
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                           <img src="Logos/eksana-logo-text.svg" alt="Eksana Logo" class="logo-image-footer">
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-main">
+                        <div class="footer-brand">
+                            <div class="footer-logo">
+                                <img
+                                    src="Logos/eksana-logo-text.svg"
+                                    alt="Eksana Logo"
+                                    class="logo-image-footer"
+                                />
+                            </div>
+                            <p class="footer-description">
+                                Navigating Nepal's legal system with clarity and
+                                accessibility. Transforming scattered legal
+                                information into actionable insights for
+                                lawyers, judges, and researchers.
+                            </p>
+                            <div class="footer-social">
+                                <a
+                                    href="https://www.linkedin.com/company/eksana/"
+                                    class="social-link"
+                                    >LinkedIn</a
+                                >
+                                <a href="#" class="social-link">Twitter</a>
+                                <a
+                                    href="https://www.facebook.com/profile.php?id=61580980391285"
+                                    class="social-link"
+                                    >Facebook</a
+                                >
+                                <a
+                                    href="https://www.instagram.com/eksanalegal"
+                                    class="social-link"
+                                    >Instagram</a
+                                >
+                            </div>
                         </div>
-                        <p class="footer-description">
-                            Navigating Nepal's legal system with clarity and accessibility. Transforming scattered legal information into actionable insights for lawyers, judges, and researchers.
-                        </p>
-                        <div class="footer-social">
-                            <a href="#" class="social-link">LinkedIn</a>
-                            <a href="#" class="social-link">Twitter</a>
-                            <a href="#" class="social-link">Facebook</a>
-                        </div>
-                    </div>
 
-                    <div class="footer-links-group">
+                        <div class="footer-links-group">
                             <div class="footer-section">
                                 <h4>Product</h4>
                                 <ul class="footer-links">
                                     <li><a href="#features">Features</a></li>
-                                    <li><a href="how-to-use.html">How To Use & FAQ</a></li>
+                                    <li>
+                                        <a href="how-to-use.html"
+                                            >How To Use & FAQ</a
+                                        >
+                                    </li>
                                 </ul>
                             </div>
 
                             <div class="footer-section">
                                 <h4>Company</h4>
                                 <ul class="footer-links">
-                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="team.html">Our Team</a></li>
                                 </ul>
                             </div>
 
                             <div class="footer-section">
                                 <h4>Legal</h4>
                                 <ul class="footer-links">
-                                    <li><a href="privacy.html">Privacy Policy</a></li>
-                                    <li><a href="terms.html">Terms of Use</a></li>
-                                    <li><a href="disclaimer.html">Disclaimer</a></li>
-                                    <li><a href="security.html">Security</a></li>
+                                    <li>
+                                        <a href="privacy.html"
+                                            >Privacy Policy</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="terms.html">Terms of Use</a>
+                                    </li>
+                                    <li>
+                                        <a href="disclaimer.html">Disclaimer</a>
+                                    </li>
+                                    <li>
+                                        <a href="security.html">Security</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
-                </div>
-
-                <div class="footer-cta">
-                    <div class="cta-content">
-                        <h3>Ready to transform your legal research?</h3>
-                        <p>Join thousands of legal professionals already using Eksana</p>
                     </div>
-                    <a href="https://eksana.org" class="cta-button">Start Free Trial</a>
-                </div>
-            </div>
 
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Eksana. All rights reserved. Designed for Nepal's legal community.</p>
-                    <div class="footer-badges">
-                        <span class="popular-badge">🇳🇵 Made in Nepal</span>
+                    <div class="footer-cta">
+                        <div class="cta-content">
+                            <h3>Ready to transform your legal research?</h3>
+                            <p>
+                                Join thousands of legal professionals already
+                                using Eksana
+                            </p>
+                        </div>
+                        <a href="https://app.eksana.org" class="cta-button"
+                            >Start Free Trial</a
+                        >
                     </div>
                 </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <p>
+                            &copy; 2025 Eksana. All rights reserved. Designed
+                            for Nepal's legal community.
+                        </p>
+                        <div class="footer-badges">
+                            <span class="popular-badge">🇳🇵 Made in Nepal</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            const nav = document.querySelector('.nav');
+        <script>
+            // Mobile menu functionality
+            document.addEventListener("DOMContentLoaded", function () {
+                const mobileMenuToggle = document.querySelector(
+                    ".mobile-menu-toggle",
+                );
+                const nav = document.querySelector(".nav");
 
-            if (mobileMenuToggle && nav) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    nav.classList.toggle('active');
-                    mobileMenuToggle.classList.toggle('active');
-                });
-            }
+                if (mobileMenuToggle && nav) {
+                    mobileMenuToggle.addEventListener("click", function () {
+                        nav.classList.toggle("active");
+                        mobileMenuToggle.classList.toggle("active");
+                    });
+                }
 
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            // First, prepare elements for animation
-            const animateElements = document.querySelectorAll('.feature-card, .product-feature, .pricing-card, .stat');
-            
-            // Only add animation classes if IntersectionObserver is supported
-            if ('IntersectionObserver' in window) {
-                animateElements.forEach(el => {
-                    if (!el.classList.contains('stat')) {
-                        el.classList.add('animate-ready');
-                    }
-                });
-
-                const observer = new IntersectionObserver(function(entries) {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('animate-in');
-                            entry.target.classList.remove('animate-ready');
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(
+                            this.getAttribute("href"),
+                        );
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start",
+                            });
                         }
                     });
-                }, observerOptions);
-
-                // Observe elements for animations
-                animateElements.forEach(el => {
-                    observer.observe(el);
                 });
-            }
 
-            // Header scroll effect
-            let lastScrollTop = 0;
-            const header = document.querySelector('.header');
+                // Intersection Observer for animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                };
 
-            window.addEventListener('scroll', function() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                // First, prepare elements for animation
+                const animateElements = document.querySelectorAll(
+                    ".feature-card, .product-feature, .stat",
+                );
+                const pricingCards = document.querySelectorAll(".pricing-card");
 
-                if (scrollTop > lastScrollTop && scrollTop > 100) {
-                    header.classList.add('scrolled-up');
-                } else {
-                    header.classList.remove('scrolled-up');
+                // Only add animation classes if IntersectionObserver is supported
+                if ("IntersectionObserver" in window) {
+                    // Prepare regular elements
+                    animateElements.forEach((el) => {
+                        if (!el.classList.contains("stat")) {
+                            el.classList.add("animate-ready");
+                        }
+                    });
+
+                    // Prepare pricing cards
+                    pricingCards.forEach((card) => {
+                        card.classList.add("animate-ready");
+                    });
+
+                    // Observer for regular elements
+                    const observer = new IntersectionObserver(function (
+                        entries,
+                    ) {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("animate-in");
+                                entry.target.classList.remove("animate-ready");
+                            }
+                        });
+                    }, observerOptions);
+
+                    // Observer for pricing cards with staggered animation
+                    const pricingObserver = new IntersectionObserver(function (
+                        entries,
+                    ) {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                const cards = Array.from(pricingCards);
+                                const index = cards.indexOf(entry.target);
+                                // Add staggered delay for smoother animation
+                                setTimeout(() => {
+                                    entry.target.classList.add("animate-in");
+                                    entry.target.classList.remove(
+                                        "animate-ready",
+                                    );
+                                }, index * 100);
+                            }
+                        });
+                    }, observerOptions);
+
+                    // Observe regular elements
+                    animateElements.forEach((el) => {
+                        observer.observe(el);
+                    });
+
+                    // Observe pricing cards
+                    pricingCards.forEach((card) => {
+                        pricingObserver.observe(card);
+                    });
                 }
 
-                if (scrollTop > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
+                // Header scroll effect
+                let lastScrollTop = 0;
+                const header = document.querySelector(".header");
 
-                lastScrollTop = scrollTop;
+                window.addEventListener("scroll", function () {
+                    const scrollTop =
+                        window.pageYOffset ||
+                        document.documentElement.scrollTop;
+
+                    if (scrollTop > lastScrollTop && scrollTop > 100) {
+                        header.classList.add("scrolled-up");
+                    } else {
+                        header.classList.remove("scrolled-up");
+                    }
+
+                    if (scrollTop > 50) {
+                        header.classList.add("scrolled");
+                    } else {
+                        header.classList.remove("scrolled");
+                    }
+
+                    lastScrollTop = scrollTop;
+                });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>

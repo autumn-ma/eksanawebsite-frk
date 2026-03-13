@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-H750735YJV"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-H750735YJV");
+        </script>
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-KWVBJDNQ");
+        </script>
+        <!-- End Google Tag Manager -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pricing Plans - Eksana</title>
+        <meta
+            name="description"
+            content="Choose the perfect plan for your legal research needs. Flexible pricing options for professionals, and enterprises."
+        />
+        <link rel="canonical" href="https://eksana.org/pricing.html" />
+        <link rel="icon" type="image/svg+xml" href="Logos/eksana-logo.svg" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+            <!-- Pricing Section -->
+            <section class="pricing" id="pricing">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-badge">
+                            <span class="badge-icon">💎</span>
+                            Pricing Plans
+                        </div>
+                        <h2 class="section-title">Choose Your Plan</h2>
+                        <p class="section-subtitle">
+                            Flexible pricing options designed for legal
+                            professionals at every stage
+                        </p>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <div class="pricing-card featured">
+                            <div class="popular-badge">Most Popular</div>
+                            <div class="plan-header">
+                                <div class="plan-icon">⚖️</div>
+                                <h3 class="plan-name">General</h3>
+                                <div class="plan-price">
+                                    <span class="currency">Rs.</span>
+                                    <span class="amount">499</span>
+                                    <span class="period">/month</span>
+                                </div>
+                                <p class="plan-description">
+                                    Annual: Rs. 4,999/year
+                                </p>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li>
+                                        ✓ Side-by-Side Viewer for Judgments &
+                                        Legal Texts
+                                    </li>
+                                    <li>✓ Supreme Court & NKP Judgments</li>
+                                    <li>✓ High Court Judgments</li>
+                                    <li>✓ In-App Legal Definitions</li>
+                                    <li>✓ Updated Acts</li>
+                                    <li>✓ Updated Rules & Regulations</li>
+                                    <li>
+                                        ✓ AI-Powered Legal Research Assistant
+                                    </li>
+                                    <li>✓ AI-Generated Case Brief</li>
+                                </ul>
+                            </div>
+                            <a href="https://app.eksana.org" class="plan-button"
+                                >Get Started</a
+                            >
+                        </div>
+
+                        <div class="pricing-card">
+                            <div class="plan-header">
+                                <div class="plan-icon">🏢</div>
+                                <h3 class="plan-name">Enterprise</h3>
+                                <div class="plan-price">
+                                    <span class="currency">Coming Soon</span>
+                                </div>
+                                <p class="plan-description">
+                                    Tailored solutions for organizations
+                                </p>
+                            </div>
+                            <div class="plan-features">
+                                <ul>
+                                    <li>✓ Everything in General Plan</li>
+                                    <li>✓ Team collaboration tools</li>
+                                    <li>✓ Custom integrations</li>
+                                    <li>✓ Dedicated account manager</li>
+                                    <li>✓ Advanced analytics</li>
+                                    <li>✓ SLA guarantee</li>
+                                </ul>
+                            </div>
+                            <a href="mailto:mail@eksana.org" class="plan-button"
+                                >Contact Sales</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <script src="includes/include.js"></script>
+        <script>
+            // Pricing card animations and effects
+            document.addEventListener("DOMContentLoaded", function () {
+                const pricingCards = document.querySelectorAll(".pricing-card");
+
+                // Intersection Observer for scroll animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: "0px 0px -50px 0px",
+                };
+
+                if ("IntersectionObserver" in window) {
+                    pricingCards.forEach((card) => {
+                        card.classList.add("animate-ready");
+                    });
+
+                    const observer = new IntersectionObserver(function (
+                        entries,
+                    ) {
+                        entries.forEach((entry, index) => {
+                            if (entry.isIntersecting) {
+                                // Add staggered delay for smoother animation
+                                setTimeout(() => {
+                                    entry.target.classList.add("animate-in");
+                                    entry.target.classList.remove(
+                                        "animate-ready",
+                                    );
+                                }, index * 100);
+                            }
+                        });
+                    }, observerOptions);
+
+                    pricingCards.forEach((card) => {
+                        observer.observe(card);
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
