@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us | Get in Touch with the Eksana</title>
+        <meta
+            name="description"
+            content="Have questions or feedback about Eksana? Whether you are a lawyer, student, or researcher, we are here to help you. Contact Us!"
+        />
+        <link rel="canonical" href="https://eksana.org/pages/contact" />
+        <link rel="icon" type="image/svg+xml" href="../assets/images/eksana-logo.svg" />
+        <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+        <style>
+            /* ─── CONTACT PAGE VARIABLES ─────────────────────────────── */
+            :root {
+                --c-navy:     #000D2D;
+                --c-blue:     #0047AC;
+                --c-accent:   #ffffff;
+                --c-accent-sub: rgba(255,255,255,0.65);
+                --c-bronze:   #594A36;
+                --c-paper:    #E8DEE7;
+                --c-slate:    #4D4D53;
+                --c-near-black: #0F0F11;
+                --c-white:    #ffffff;
+                --c-border:   rgba(255,255,255,0.08);
+            }
+
+            /* ─── RESET OVERRIDES FOR THIS PAGE ─────────────────────── */
+            body { background: #fff; }
+
+            /* ─── HERO ───────────────────────────────────────────────── */
+            .contact-hero {
+                background: var(--c-navy);
+                background-image:
+                    linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+                background-size: 28px 28px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                padding: 120px 0 80px;
+            }
+
+            /* Dot-grid texture */
+            .contact-hero::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+                background-size: 32px 32px;
+                pointer-events: none;
+            }
+
+            /* Grain overlay */
+            .contact-hero::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+                opacity: 0.4;
+                pointer-events: none;
+            }
+
+            /* Ghost decorative word */
+            .contact-hero-ghost {
+                position: absolute;
+                right: -60px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: 'DM Serif Display', serif;
+                font-size: clamp(180px, 22vw, 340px);
+                font-weight: 400;
+                color: transparent;
+                -webkit-text-stroke: 1px rgba(255,255,255,0.05);
+                line-height: 1;
+                pointer-events: none;
+                user-select: none;
+                white-space: nowrap;
+            }
+
+            /* Horizontal accent line */
+            .contact-hero-accent-line {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(90deg, transparent 0%, rgba(0,71,172,0.35) 30%, rgba(0,71,172,0.15) 70%, transparent 100%);
+                pointer-events: none;
+            }
+
+            .contact-hero-inner {
+                position: relative;
+                z-index: 2;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 24px;
+                display: grid;
+                grid-template-columns: 1fr 400px;
+                gap: 80px;
+                align-items: center;
+            }
+            @media (max-width: 1400px) {
+                .contact-hero-inner {
+                    grid-template-columns: 1fr 340px;
+                    gap: 48px;
+                }
+            }
+
+            /* Left — headline block */
+            .contact-hero-left {}
+
+            .contact-hero-eyebrow {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                color: var(--c-accent);
+                font-family: 'DM Sans', sans-serif;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                margin-bottom: 32px;
+                opacity: 0;
+                animation: fadeUp 0.6s ease forwards 0.1s;
+            }
+
+            .contact-hero-eyebrow::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 1px;
+                background: var(--c-accent);
+            }
+
+            .contact-hero-headline {
+                font-family: 'DM Serif Display', serif;
+                font-size: clamp(52px, 7vw, 100px);
+                font-weight: 400;
+                line-height: 1.0;
+                letter-spacing: -0.02em;
+                color: var(--c-white);
+                margin-bottom: 32px;
+                opacity: 0;
+                animation: fadeUp 0.7s ease forwards 0.2s;
+            }
+
+            .contact-hero-headline em {
+                font-style: italic;
+                color: var(--c-accent);
+            }
+
+            .contact-hero-sub {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 1.75;
+                color: rgba(255,255,255,0.55);
+                max-width: 420px;
+                margin-bottom: 48px;
+                opacity: 0;
+                animation: fadeUp 0.7s ease forwards 0.35s;
+            }
+
+            .contact-hero-email-row {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                opacity: 0;
+                animation: fadeUp 0.7s ease forwards 0.5s;
+            }
+
+            .contact-hero-email-label {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.3);
+                margin-bottom: 4px;
+            }
+
+            .contact-hero-email-link {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                color: rgba(255,255,255,0.7);
+                text-decoration: none;
+                transition: color 0.2s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .contact-hero-email-link:hover { color: var(--c-white); }
+
+            .contact-hero-email-link::before {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--c-blue);
+                flex-shrink: 0;
+            }
+
+            /* Right — info card */
+            .contact-hero-card {
+                background: rgba(255,255,255,0.04);
+                border: 1px solid rgba(255,255,255,0.08);
+                border-radius: 2px;
+                padding: 40px;
+                backdrop-filter: blur(8px);
+                opacity: 0;
+                animation: fadeUp 0.8s ease forwards 0.45s;
+            }
+
+            .contact-hero-card-label {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--c-accent);
+                margin-bottom: 24px;
+            }
+
+            .contact-info-item {
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .contact-info-item:last-child { border-bottom: none; }
+
+            .contact-info-item-title {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: rgba(255,255,255,0.3);
+                margin-bottom: 8px;
+            }
+
+            .contact-info-item-value {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                color: rgba(255,255,255,0.8);
+                line-height: 1.6;
+            }
+
+            .contact-info-item-value a {
+                color: rgba(255,255,255,0.8);
+                text-decoration: none;
+                transition: color 0.2s ease;
+                display: block;
+            }
+
+            .contact-info-item-value a:hover { color: var(--c-white); }
+
+            .contact-location-flag {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 13px;
+                color: rgba(255,255,255,0.5);
+                margin-top: 16px;
+                padding: 8px 16px;
+                border: 1px solid rgba(255,255,255,0.07);
+                border-radius: 1px;
+            }
+
+            /* ─── CHANNELS SECTION ───────────────────────────────────── */
+            .contact-channels {
+                background: var(--c-paper);
+                padding: 100px 0 120px;
+            }
+
+            .contact-channels-inner {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            .contact-channels-header {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+                margin-bottom: 64px;
+                gap: 40px;
+            }
+
+            .contact-channels-title-group {}
+
+            .contact-channels-eyebrow {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                color: var(--c-blue);
+                margin-bottom: 16px;
+            }
+
+            .contact-channels-title {
+                font-family: 'DM Serif Display', serif;
+                font-size: clamp(36px, 4vw, 56px);
+                font-weight: 400;
+                line-height: 1.05;
+                letter-spacing: -0.02em;
+                color: var(--c-navy);
+            }
+
+            .contact-channels-title em {
+                font-style: italic;
+                color: var(--c-blue);
+            }
+
+            .contact-channels-desc {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.7;
+                color: var(--c-slate);
+                max-width: 320px;
+                text-align: right;
+            }
+
+            /* Channel cards grid */
+            .contact-channels-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2px;
+            }
+
+            .contact-channel-card {
+                background: var(--c-white);
+                padding: 48px 48px 48px 0;
+                display: flex;
+                gap: 32px;
+                align-items: flex-start;
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+                overflow: hidden;
+                transition: background 0.3s ease;
+                border-left: 3px solid transparent;
+            }
+
+            .contact-channel-card:hover {
+                background: var(--c-navy);
+                border-left-color: var(--c-accent);
+            }
+
+            /* Number */
+            .channel-num {
+                font-family: 'DM Serif Display', serif;
+                font-size: 13px;
+                font-weight: 400;
+                color: var(--c-blue);
+                letter-spacing: 0.05em;
+                min-width: 48px;
+                padding-top: 4px;
+                transition: color 0.3s ease;
+                padding-left: 32px;
+            }
+
+            .contact-channel-card:hover .channel-num {
+                color: rgba(255,255,255,0.25);
+            }
+
+            /* Icon */
+            .channel-icon-wrap {
+                width: 52px;
+                height: 52px;
+                border-radius: 2px;
+                background: rgba(0, 71, 172, 0.06);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                transition: background 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-icon-wrap {
+                background: rgba(255,255,255,0.1);
+            }
+
+            .channel-icon-wrap svg {
+                transition: stroke 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-icon-wrap svg {
+                stroke: var(--c-accent);
+            }
+
+            /* Content */
+            .channel-content { flex: 1; }
+
+            .channel-tag {
+                display: inline-block;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 9px;
+                font-weight: 600;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--c-blue);
+                background: rgba(0,71,172,0.07);
+                padding: 3px 8px;
+                border-radius: 1px;
+                margin-bottom: 14px;
+                transition: color 0.3s ease, background 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-tag {
+                color: rgba(255,255,255,0.7);
+                background: rgba(255,255,255,0.1);
+            }
+
+            .channel-title {
+                font-family: 'DM Serif Display', serif;
+                font-size: 26px;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+                color: var(--c-navy);
+                margin-bottom: 10px;
+                transition: color 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-title {
+                color: var(--c-white);
+            }
+
+            .channel-desc {
+                font-family: 'DM Sans', sans-serif;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.65;
+                color: var(--c-slate);
+                margin-bottom: 24px;
+                transition: color 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-desc {
+                color: rgba(255,255,255,0.5);
+            }
+
+            .channel-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: var(--c-blue);
+                transition: gap 0.2s ease, color 0.3s ease;
+            }
+
+            .contact-channel-card:hover .channel-cta {
+                color: rgba(255,255,255,0.85);
+                gap: 14px;
+            }
+
+            .channel-cta-arrow {
+                width: 20px;
+                height: 1px;
+                background: currentColor;
+                position: relative;
+                flex-shrink: 0;
+                transition: width 0.2s ease;
+            }
+
+            .channel-cta-arrow::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -3px;
+                width: 6px;
+                height: 6px;
+                border-right: 1px solid currentColor;
+                border-top: 1px solid currentColor;
+                transform: rotate(45deg);
+            }
+
+            .contact-channel-card:hover .channel-cta-arrow {
+                width: 28px;
+            }
+
+            /* ─── BOTTOM STRIP ───────────────────────────────────────── */
+            .contact-strip {
+                background: var(--c-navy);
+                background-image:
+                    linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+                background-size: 28px 28px;
+                padding: 60px 0;
+            }
+
+            .contact-strip-inner {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 40px;
+            }
+
+            .contact-strip-text {
+                font-family: 'DM Serif Display', serif;
+                font-size: clamp(22px, 3vw, 36px);
+                font-weight: 400;
+                color: var(--c-white);
+                letter-spacing: -0.01em;
+            }
+
+            .contact-strip-text em {
+                font-style: italic;
+                color: var(--c-accent);
+            }
+
+            .contact-strip-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 12px;
+                background: var(--c-blue);
+                color: var(--c-white);
+                font-family: 'DM Sans', sans-serif;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 0.06em;
+                padding: 16px 32px;
+                text-decoration: none;
+                border-radius: 1px;
+                transition: background 0.2s ease, gap 0.2s ease;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .contact-strip-btn:hover {
+                background: #003a8c;
+                gap: 18px;
+            }
+
+            /* ─── KEYFRAMES ──────────────────────────────────────────── */
+            @keyframes fadeUp {
+                from { opacity: 0; transform: translateY(24px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            /* ─── RESPONSIVE ─────────────────────────────────────────── */
+            @media (max-width: 900px) {
+                .contact-hero-inner {
+                    grid-template-columns: 1fr;
+                    gap: 48px;
+                }
+
+                .contact-hero-ghost { display: none; }
+
+                .contact-channels-header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .contact-channels-desc { text-align: left; }
+
+                .contact-channels-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .contact-channel-card {
+                    padding: 40px 32px 40px 0;
+                }
+
+                .contact-strip-inner {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+
+            @media (max-width: 600px) {
+                .contact-hero { padding: 100px 0 60px; }
+
+                .contact-channel-card {
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 32px 24px 32px 0;
+                }
+
+                .channel-num { padding-left: 24px; }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header-placeholder"></div>
+
+        <main>
+
+            <!-- ── HERO ─────────────────────────────────────────────── -->
+            <section class="contact-hero">
+                <div class="contact-hero-ghost">REACH</div>
+                <div class="contact-hero-accent-line"></div>
+
+                <div class="contact-hero-inner">
+                    <!-- Left -->
+                    <div class="contact-hero-left">
+                        <div class="contact-hero-eyebrow">Eksana Legal Research</div>
+
+                        <h1 class="contact-hero-headline">
+                            Let's<br>
+                            <em>Connect.</em>
+                        </h1>
+
+                        <p class="contact-hero-sub">
+                            Our team is available to answer your questions,
+                            discuss partnerships, or help you navigate
+                            Nepal's legal research platform.
+                        </p>
+
+                        <div class="contact-hero-email-row">
+                            <div class="contact-hero-email-label">Direct Email</div>
+                            <a href="mailto:mail@eksana.org" class="contact-hero-email-link">
+                                mail@eksana.org
+                            </a>
+                            <a href="mailto:eksanalegal@gmail.com" class="contact-hero-email-link">
+                                eksanalegal@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right card -->
+                    <div class="contact-hero-card">
+                        <div class="contact-hero-card-label">Quick Reference</div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item-title">Primary Contact</div>
+                            <div class="contact-info-item-value">
+                                <a href="mailto:mail@eksana.org">mail@eksana.org</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item-title">Support &amp; Technical</div>
+                            <div class="contact-info-item-value">
+                                <a href="mailto:eksanalegal@gmail.com">eksanalegal@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-item-title">Response Time</div>
+                            <div class="contact-info-item-value">
+                                Within 24–48 business hours
+                            </div>
+                        </div>
+
+                        <div class="contact-location-flag">
+                            <span>🇳🇵</span>
+                            <span>Kathmandu, Nepal</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── CHANNELS ──────────────────────────────────────────── -->
+            <section class="contact-channels">
+                <div class="contact-channels-inner">
+                    <div class="contact-channels-header">
+                        <div class="contact-channels-title-group">
+                            <div class="contact-channels-eyebrow">How to Reach Us</div>
+                            <h2 class="contact-channels-title">
+                                Choose your<br><em>channel.</em>
+                            </h2>
+                        </div>
+                        <p class="contact-channels-desc">
+                            Each inquiry type reaches the right team directly.
+                            Select the channel that fits your need.
+                        </p>
+                    </div>
+
+                    <div class="contact-channels-grid">
+
+                        <!-- General Inquiry -->
+                        <a
+                            href="mailto:mail@eksana.org?subject=General%20Inquiry&body=Hello%20Eksana%20Team,%0A%0AI%20would%20like%20to%20inquire%20about:%0A%0A[Please%20describe%20your%20inquiry%20here]%0A%0ABest%20regards,"
+                            class="contact-channel-card"
+                        >
+                            <div class="channel-num">01</div>
+                            <div class="channel-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <div class="channel-content">
+                                <div class="channel-tag">General</div>
+                                <div class="channel-title">General Inquiry</div>
+                                <p class="channel-desc">
+                                    Questions about the Eksana platform, subscriptions, features, or anything else on your mind.
+                                </p>
+                                <div class="channel-cta">
+                                    Send a message
+                                    <span class="channel-cta-arrow"></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Technical Support -->
+                        <a
+                            href="mailto:eksanalegal@gmail.com?subject=Technical%20Support&body=Hello%20Eksana%20Support%20Team,%0A%0AI%20need%20assistance%20with:%0A%0A[Please%20describe%20your%20technical%20issue]%0A%0ADevice/Browser:%20%0AError%20message%20(if%20any):%20%0A%0AThank%20you,"
+                            class="contact-channel-card"
+                        >
+                            <div class="channel-num">02</div>
+                            <div class="channel-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+                                </svg>
+                            </div>
+                            <div class="channel-content">
+                                <div class="channel-tag">Support</div>
+                                <div class="channel-title">Technical Support</div>
+                                <p class="channel-desc">
+                                    Experiencing an issue with the platform? Our technical team will help you resolve it promptly.
+                                </p>
+                                <div class="channel-cta">
+                                    Get support
+                                    <span class="channel-cta-arrow"></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Partnership -->
+                        <a
+                            href="mailto:mail@eksana.org?subject=Partnership%20Opportunity&body=Hello%20Eksana%20Team,%0A%0AI%20am%20interested%20in%20exploring%20a%20partnership%20opportunity:%0A%0AOrganization:%20%0AType%20of%20partnership:%20%0A%0A[Please%20provide%20more%20details]%0A%0ABest%20regards,"
+                            class="contact-channel-card"
+                        >
+                            <div class="channel-num">03</div>
+                            <div class="channel-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="channel-content">
+                                <div class="channel-tag">Business</div>
+                                <div class="channel-title">Partnership</div>
+                                <p class="channel-desc">
+                                    Interested in partnering with Eksana? Reach out to explore collaboration and integration opportunities.
+                                </p>
+                                <div class="channel-cta">
+                                    Explore partnership
+                                    <span class="channel-cta-arrow"></span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- Feedback -->
+                        <a
+                            href="mailto:mail@eksana.org?subject=Feedback&body=Hello%20Eksana%20Team,%0A%0AI%20would%20like%20to%20share%20my%20feedback:%0A%0A[Please%20share%20your%20thoughts%20and%20suggestions]%0A%0AThank%20you,"
+                            class="contact-channel-card"
+                        >
+                            <div class="channel-num">04</div>
+                            <div class="channel-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0047AC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <div class="channel-content">
+                                <div class="channel-tag">Feedback</div>
+                                <div class="channel-title">Share Feedback</div>
+                                <p class="channel-desc">
+                                    Your insights help us improve. Share what's working, what's not, and what you'd like to see next.
+                                </p>
+                                <div class="channel-cta">
+                                    Share thoughts
+                                    <span class="channel-cta-arrow"></span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ── BOTTOM STRIP ──────────────────────────────────────── -->
+            <section class="contact-strip">
+                <div class="contact-strip-inner">
+                    <div class="contact-strip-text">
+                        Ready to transform your<br>
+                        <em>legal research?</em>
+                    </div>
+                    <a href="https://app.eksana.org" class="contact-strip-btn">
+                        Start Free Trial
+                        <span style="width:16px;height:1px;background:currentColor;display:inline-block;position:relative;">
+                            <span style="position:absolute;right:0;top:-3px;width:6px;height:6px;border-right:1px solid currentColor;border-top:1px solid currentColor;transform:rotate(45deg);"></span>
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <div id="footer-placeholder"></div>
+
+        <script src="../includes/include.js"></script>
+    </body>
+</html>

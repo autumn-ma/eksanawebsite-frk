@@ -1,1427 +1,1341 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-H750735YJV"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eksana — Nepal's Legal Intelligence Platform</title>
+    <meta name="description" content="Eksana is Nepal's premier legal research platform. Search 60,000+ Judgements, explore Active Acts & Regulations, and use our bilingual legal dictionary — all in one place.">
+    <meta property="og:title" content="Eksana — Nepal's Legal Intelligence Platform">
+    <meta property="og:description" content="Search 60,000+ Judgements, Acts, Regulations, and a bilingual Legal Dictionary. Built for Nepal's legal professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eksana.org">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="" class="logo" id="home-logo-link">
+                    <img src="assets/images/eksana-logo-text.svg" alt="Eksana Logo" class="logo-image">
+                </a>
+                <nav class="nav">
+                    <div class="nav-links">
+                        <a href="" class="nav-link" id="home-product-link">Product</a>
+                        <a href="pages/free-tools.html" class="nav-link">Free Tools</a>
+                        <a href="pages/how-to-use.html" class="nav-link">How to Use</a>
+                        <a href="pages/blog.html" class="nav-link">Blog</a>
+                        <a href="pages/team.html" class="nav-link">Meet The Team</a>
+                        <a href="pages/contact.html" class="nav-link">Contact Us</a>
+                        <a href="https://app.eksana.org" class="nav-link nav-link-cta">Get Started</a>
+                    </div>
+                    <a href="https://eksana.org" class="login-btn">Get Started</a>
+                </nav>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-            gtag("config", "G-H750735YJV");
-        </script>
-        <!-- Google Tag Manager -->
-        <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || [];
-                w[l].push({
-                    "gtm.start": new Date().getTime(),
-                    event: "gtm.js",
-                });
-                var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s),
-                    dl = l != "dataLayer" ? "&l=" + l : "";
-                j.async = true;
-                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                f.parentNode.insertBefore(j, f);
-            })(window, document, "script", "dataLayer", "GTM-KWVBJDNQ");
-        </script>
-        <!-- End Google Tag Manager -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Eksana: The Reliable Hub for Legal Professionals in Nepal</title>
-        <meta
-            name="description"
-            content="Simplify legal research in Nepal with Eksana. Get instant access to statutes, case summaries, and regulations for Nepali law students and legal scholars."
-        />
-        <link rel="canonical" href="https://eksana.org/" />
-        <link rel="icon" type="image/svg+xml" href="Logos/eksana-logo.svg" />
-        <link rel="stylesheet" href="style.css" />
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Eksana",
-                "url": "https://eksana.org/",
-                "logo": "https://eksana.org/Logos/eksana-logo.svg",
-                "description": "AI-powered Legal Research platform in Nepal, AI tool for Legal Professional in Nepal",
-                "sameAs": [
-                    "https://www.facebook.com/profile.php?id=61580980391285",
-                    "https://www.instagram.com/eksanalegal",
-                    "https://www.linkedin.com/company/eksana/"
-                ]
-            }
-        </script>
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <div class="header-content">
-                    <a href="#" class="logo">
-                        <img
-                            src="Logos/eksana-logo-text.svg"
-                            alt="Eksana Logo"
-                            class="logo-image"
-                        />
-                    </a>
-                    <nav class="nav">
-                        <div class="nav-links">
-                            <a href="index.html#product" class="nav-link"
-                                >Product</a
-                            >
-                            <a href="how-to-use.html" class="nav-link"
-                                >How to Use & FAQ</a
-                            >
-                            <a href="team.html" class="nav-link"
-                                >Meet The Team</a
-                            >
-                            <a href="contact.html" class="nav-link"
-                                >Contact Us</a
-                            >
+    <!-- Hero Section -->
+    <section class="hero-v2">
+        <div class="container">
+            <canvas id="heroGrid" aria-hidden="true"></canvas>
+            <div class="hero-v2-content">
+                <div class="hero-v2-badge">
+                    <span class="badge-dot"></span>
+                    Nepal's Premier Legal Research Platform
+                </div>
+                <h1 class="hero-v2-title">
+                    Every precedent, Every law,<br><em>One Platform.</em>
+                </h1>
+                <p class="hero-v2-desc">
+                    Access, search, and understand Nepal's legal system with clarity and confidence. Eksana is designed for lawyers, judges, law students, researchers, and legal professionals, bringing the entire spectrum of legal documents, statutes, regulations, precedents, and intelligent insights into one reliable destination.
+                </p>
+                <a href="https://eksana.org" class="btn-dark">Start for Free</a>
+
+                <!-- Social Proof -->
+                <div class="hero-social-proof">
+                    <div class="hero-avatars">
+                        <img src="assets/images/pushpa.png" alt="Pushpa" class="hero-avatar">
+                        <img src="assets/images/sankalpa.jpg" alt="Sankalpa" class="hero-avatar">
+                        <img src="assets/images/samit1.jpg" alt="Samit" class="hero-avatar">
+                    </div>
+                    <div class="hero-social-text">
+                        <div class="hero-stars">
+                            <span class="hero-star">★</span>
+                            <span class="hero-star">★</span>
+                            <span class="hero-star">★</span>
+                            <span class="hero-star">★</span>
+                            <span class="hero-star hero-star-half">★</span>
                         </div>
-                        <a href="https://app.eksana.org" class="login-btn"
-                            >Get Started</a
-                        >
-                    </nav>
-                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                        <p class="hero-social-label">Trusted by Nepal's legal professionals</p>
+                    </div>
                 </div>
             </div>
-        </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-icon">✨</span>
-                        Nepal's Premier Legal Research Platform
+            <!-- Browser Mockups -->
+            <div class="hero-browsers">
+                <!-- Judgement Mockup -->
+                <div class="browser-window mockup-left">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                        </div>
+                        <div class="browser-url-bar">eksana.org/Judgement</div>
                     </div>
-                    <h1 class="hero-title">
-                        <span class="title-line">Every precedent,</span>
-                        <span class="title-line">Every law,</span>
-                        <span class="title-highlight">One Platform</span>
-                    </h1>
-                    <p class="hero-description">
-                        Access, search, and understand Nepal’s legal system with
-                        clarity and confidence. Eksana is designed for lawyers,
-                        judges, law students, researchers, and legal
-                        professionals, bringing the entire spectrum of legal
-                        documents, statutes, regulations, precedents, and
-                        intelligent insights into one reliable destination.
-                    </p>
-                    <div class="hero-actions">
-                        <a href="https://app.eksana.org" class="cta-primary"
-                            >Start Free Trial</a
-                        >
-                        <a
-                            href="https://eksana.org/contact.html"
-                            class="cta-secondary"
-                        >
-                            <span>Contact Us</span>
-                            <span class="arrow">→</span>
+                    <div class="browser-body">
+                        <div class="mock-search">
+                            <span class="mock-search-icon">🔍</span>
+                            doctrine of necessity
+                        </div>
+                        <div class="mock-result-list">
+                            <div class="mock-result-item active">
+                                <div class="mock-result-title">State v. Bhattarai (2078)</div>
+                                <div class="mock-result-snippet">Doctrine of necessity applied in constitutional...</div>
+                            </div>
+                            <div class="mock-result-item">
+                                <div class="mock-result-title">Constitutional Bench (2077)</div>
+                                <div class="mock-result-snippet">Emergency powers and the doctrine...</div>
+                            </div>
+                            <div class="mock-result-item">
+                                <div class="mock-result-title">PIL Decision (2076)</div>
+                                <div class="mock-result-snippet">Application of necessity doctrine...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Acts Mockup (center, elevated) -->
+                <div class="browser-window mockup-center">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                        </div>
+                        <div class="browser-url-bar">eksana.org/acts</div>
+                    </div>
+                    <div class="browser-body">
+                        <div class="mock-acts-content">
+                            <div class="mock-acts-title">मुलुकी देवानी संहिता, २०७४</div>
+                            <div class="mock-line w-full"></div>
+                            <div class="mock-line w-90"></div>
+                            <div class="mock-line w-80"></div>
+                            <div class="mock-line highlighted"></div>
+                            <div class="mock-line w-full"></div>
+                            <div class="mock-line w-60"></div>
+                            <div class="mock-line w-80"></div>
+                            <div class="mock-line highlighted"></div>
+                            <div class="mock-line w-90"></div>
+                            <div class="mock-line w-full"></div>
+                            <div class="mock-line w-60"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dictionary Mockup -->
+                <div class="browser-window mockup-right">
+                    <div class="browser-chrome">
+                        <div class="browser-dots">
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                            <span class="browser-dot-el"></span>
+                        </div>
+                        <div class="browser-url-bar">eksana.org/dictionary</div>
+                    </div>
+                    <div class="browser-body">
+                        <div class="mock-dict-entry-main">
+                            <span class="mock-dict-nep">फैसला</span>
+                            <span class="mock-dict-rom">→ Decision, Judgement</span>
+                            <p class="mock-dict-def">मुद्दाको छानबिन गरेर अदालतले दिने निर्णय; वादी प्रतिवादीको उजुरी उपर अदालतले गरेको ठहर, निर्णय।</p>
+                        </div>
+                        <div class="mock-dict-divider"></div>
+                        <div class="mock-dict-entry-main">
+                            <span class="mock-dict-nep">वकिल</span>
+                            <span class="mock-dict-rom">→ Lawyer, Legal Practitioner</span>
+                            <p class="mock-dict-def">अदालतमा कसैको तर्फबाट बहस गर्ने व्यक्ति; कानून व्यवसायी।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="hero-v2-stats">
+                <div class="hero-v2-stat">
+                    <div class="hero-v2-stat-num">350K+</div>
+                    <div class="hero-v2-stat-lbl">Legal Documents</div>
+                </div>
+                <div class="hero-v2-stat-divider"></div>
+                <div class="hero-v2-stat">
+                    <div class="hero-v2-stat-num">500+</div>
+                    <div class="hero-v2-stat-lbl">Acts &amp; Regulations</div>
+                </div>
+                <div class="hero-v2-stat-divider"></div>
+                <div class="hero-v2-stat">
+                    <div class="hero-v2-stat-num">200+</div>
+                    <div class="hero-v2-stat-lbl">Law Professionals</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+
+    <!-- Core Features -->
+    <section class="core-features" id="product">
+        <div class="container">
+            <div class="cf-header">
+                <p class="section-eyebrow">Comprehensive Legal Research Tools</p>
+                <h2 class="cf-title">Everything you need for thorough legal research</h2>
+                <p class="cf-subtitle">Everything you need to conduct thorough legal research in Nepal's legal system — unified into one reliable platform.</p>
+            </div>
+
+            <!-- Orbital Feature Explorer -->
+            <div class="orbital-layout" id="orbitalTimeline">
+
+                <!-- Left: animated orbital stage -->
+                <div class="orbital-stage-wrap">
+                    <div class="orbital-stage" id="orbitalStage">
+                        <!-- Orbit ring -->
+                        <div class="ot-ring"></div>
+                        <!-- Center pulsing element -->
+                        <div class="ot-center">
+                            <span class="ot-ping-a"></span>
+                            <span class="ot-ping-b"></span>
+                            <span class="ot-core">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                            </span>
+                        </div>
+                        <!-- Node 1: Judgement Search -->
+                        <button class="ot-node" data-id="1" aria-label="Judgement Database Search">
+                            <span class="ot-node-glow"></span>
+                            <span class="ot-node-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            </span>
+                            <span class="ot-node-label">Judgement Search</span>
+                        </button>
+                        <!-- Node 2: Legal Acts -->
+                        <button class="ot-node" data-id="2" aria-label="Legal Acts and Legislation">
+                            <span class="ot-node-glow"></span>
+                            <span class="ot-node-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                            </span>
+                            <span class="ot-node-label">Legal Acts</span>
+                        </button>
+                        <!-- Node 3: Regulations -->
+                        <button class="ot-node" data-id="3" aria-label="Rules and Regulations">
+                            <span class="ot-node-glow"></span>
+                            <span class="ot-node-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                            </span>
+                            <span class="ot-node-label">Regulations</span>
+                        </button>
+                        <!-- Node 4: Dictionary -->
+                        <button class="ot-node" data-id="4" aria-label="Legal Dictionary">
+                            <span class="ot-node-glow"></span>
+                            <span class="ot-node-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="12" y2="11"/></svg>
+                            </span>
+                            <span class="ot-node-label">Dictionary</span>
+                        </button>
+                        <!-- Node 5: Ordinances -->
+                        <button class="ot-node" data-id="5" aria-label="Active Ordinances of Nepal">
+                            <span class="ot-node-glow"></span>
+                            <span class="ot-node-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            </span>
+                            <span class="ot-node-label">Ordinances</span>
+                        </button>
+                    </div>
+                    <p class="ot-hint">Click any node to explore</p>
+                </div>
+
+                <!-- Right: info panel -->
+                <div class="ot-panel" id="otPanel">
+                    <!-- Idle: list all features -->
+                    <div id="otPanelIdle">
+                        <p class="section-eyebrow">All Tools</p>
+                        <h3 class="ot-idle-title">Five powerful tools, one platform</h3>
+                        <ul class="ot-idle-list">
+                            <li class="ot-idle-item" data-target="1"><span class="ot-idle-dot" style="background:#0047AC"></span><span>Judgement Database Search</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BBBBBD" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></li>
+                            <li class="ot-idle-item" data-target="2"><span class="ot-idle-dot" style="background:#000D2D"></span><span>Legal Acts &amp; Legislation</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BBBBBD" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></li>
+                            <li class="ot-idle-item" data-target="3"><span class="ot-idle-dot" style="background:#594A36"></span><span>Rules &amp; Regulations</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BBBBBD" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></li>
+                            <li class="ot-idle-item" data-target="4"><span class="ot-idle-dot" style="background:#0047AC"></span><span>Legal Dictionary</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BBBBBD" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></li>
+                            <li class="ot-idle-item" data-target="5"><span class="ot-idle-dot" style="background:#884455"></span><span>Active Ordinances of Nepal</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#BBBBBD" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></li>
+                        </ul>
+                    </div>
+                    <!-- Active: feature detail (populated by JS) -->
+                    <div id="otPanelDetail" style="display:none;opacity:0"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="feat6-section">
+        <div class="container">
+
+            <!-- Header: 2-col -->
+            <div class="feat6-header">
+                <h2 class="feat6-title">Powerful Features for<br><em>Legal Professionals</em></h2>
+                <p class="feat6-subtitle">Experience cutting-edge tools designed to enhance your legal research workflow — from AI-generated case briefs to contextual lookups and intelligent legal chat.</p>
+            </div>
+
+            <!-- Large animated visual panel -->
+            <div class="feat6-visual-wrap">
+                <div class="feat6-visual-fade"></div>
+
+                <!-- Panel 0: Automated Case Briefs -->
+                <div class="feat6-panel feat6-active" id="feat6P0">
+                    <div class="feat6-cb-card">
+                        <div class="feat6-cb-header">
+                            <span class="feat6-cb-badge">📋 Automated Case Brief</span>
+                            <span class="feat6-cb-title">निर्णय नं. ७८१७ — बन्दीप्रत्यक्षीकरण</span>
+                            <span class="feat6-cb-court">सर्वोच्च अदालत संयुक्त इजलास · २०६४</span>
+                        </div>
+                        <div class="feat6-cb-rows">
+                            <div class="feat6-cb-row" style="--d:0.3s">
+                                <span class="feat6-cb-lbl">Facts</span>
+                                <span class="feat6-cb-val">निवेदकहरू राजेन्द्रप्रसाद ढकाल लगायतका तर्फबाट बन्दीप्रत्यक्षीकरणको माग गर्दै नेपाल सरकार विरूद्ध रिट दायर गरिएको।</span>
+                            </div>
+                            <div class="feat6-cb-row" style="--d:0.7s">
+                                <span class="feat6-cb-lbl">Issues</span>
+                                <span class="feat6-cb-val">बेपत्ता पारिएका व्यक्तिहरूको संरक्षण सम्बन्धी ऐन बमोजिम छानविन आयोग गठन गरी अनुसन्धान गर्नुपर्ने हो?</span>
+                            </div>
+                            <div class="feat6-cb-row feat6-cb-row-hi" style="--d:1.1s">
+                                <span class="feat6-cb-lbl">Ratio</span>
+                                <span class="feat6-cb-val">बन्दीप्रत्यक्षीकरण आदेश जारी गर्दै छानविन आयोग गठन र अभियोजन सम्बन्धी निर्देशात्मक आदेश जारी हुने।</span>
+                            </div>
+                            <div class="feat6-cb-row" style="--d:1.5s">
+                                <span class="feat6-cb-lbl">Acts Cited</span>
+                                <span class="feat6-cb-val">नेपालको संविधान २०७२ · बेपत्ता पारिएको व्यक्तिहरूको संरक्षण सम्बन्धी ऐन</span>
+                            </div>
+                        </div>
+                        <div class="feat6-cb-typing">
+                            <span class="feat6-cb-cursor"></span> Generating summary...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 1: Contextual Legal Lookup -->
+                <div class="feat6-panel" id="feat6P1">
+                    <div class="feat6-cl-wrap">
+                        <div class="feat6-cl-doc">
+                            <p class="feat6-cl-para">...अदालतले उक्त मुद्दामा <span class="feat6-cl-hl">धारा २० को उपधारा (५)</span> बमोजिम व्यक्तिको नजरबन्दको सम्बन्धमा प्रावधान लागू हुने ठहर गर्‍यो। यस निर्णयको आधारमा <span class="feat6-cl-hl2">मुलुकी फौजदारी संहिता</span> को दफा ७३ को व्याख्या गरिएको...</p>
+                        </div>
+                        <div class="feat6-cl-popup" id="feat6ClPopup">
+                            <div class="feat6-cl-popup-header">🔗 Related Act</div>
+                            <div class="feat6-cl-popup-title">मुलुकी फौजदारी संहिता, २०७४</div>
+                            <div class="feat6-cl-popup-sec">दफा ७३ — नजरबन्द सम्बन्धी व्यवस्था</div>
+                            <div class="feat6-cl-popup-desc">नजरबन्द गर्न मिल्ने अवस्था, अवधि र प्रक्रियाको व्यवस्था यस दफामा गरिएको छ।</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2: Interactive Legal Dictionary -->
+                <div class="feat6-panel" id="feat6P2">
+                    <div class="feat6-dict-wrap">
+                        <div class="feat6-dict-doc">
+                            <p class="feat6-dict-para">...फौज्दारी अनुसन्धान पुरा गरी आवश्यकता र उपयुक्तता अनुसार सम्बन्धित व्यक्तिको हकमा <span class="feat6-dict-hl">अभियोजन</span> लगायतको निर्णय गर्नु गराउनु भनी विपक्षी नेपाल सरकारको नाममा निर्देशात्मक आदेश जारी हुने।</p>
+                            <div class="feat6-dict-menu" id="feat6DictMenu">
+                                <div class="feat6-dict-menu-item feat6-dict-menu-active">🔍 Define "अभियोजन"</div>
+                                <div class="feat6-dict-menu-item">📋 Copy text</div>
+                            </div>
+                        </div>
+                        <div class="feat6-dict-card" id="feat6DictCard">
+                            <div class="feat6-dict-card-nep">अभियोजन</div>
+                            <div class="feat6-dict-card-eng">→ Prosecution</div>
+                            <div class="feat6-dict-card-def">अभियोग लगाउने काम; अभियोगपत्र अदालतसमक्ष प्रस्तुत गरी कसुरदारउपर मुद्दा चलाउने काम।</div>
+                            <div class="feat6-dict-card-ref">📚 Eksana Legal Dictionary · 5,700+ terms</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3: AI Legal Assistant -->
+                <div class="feat6-panel" id="feat6P3">
+                    <div class="feat6-chat-wrap">
+                        <div class="feat6-chat-header">
+                            <span class="feat6-chat-icon">🤖</span>
+                            <span>Eksana AI · मुलुकी देवानी संहिता, २०७४</span>
+                        </div>
+                        <div class="feat6-chat-messages">
+                            <div class="feat6-chat-msg feat6-chat-user" style="--d:0.2s">
+                                नाबालक वा मानसिक अवस्था ठिक नभएको व्यक्तिको सम्पत्ति हस्तान्तरण कसरी अमान्य हुन्छ?
+                            </div>
+                            <div class="feat6-chat-msg feat6-chat-bot" style="--d:1.0s">
+                                <div class="feat6-chat-typing" id="feat6ChatTyping"><span></span><span></span><span></span></div>
+                                <div class="feat6-chat-answer" id="feat6ChatAnswer">संहिताको <strong>दफा ३५(२)</strong> अनुसार, नाबालक वा होस ठेगानमा नभएका व्यक्तिको तर्फबाट लिखत गराउँदा संरक्षक वा माथवरको उपस्थिति र सहीछाप अनिवार्य हुन्छ। यसो नगरिएमा उक्त लिखत <strong>कानुनी रूपमा त्रुटिपूर्ण</strong> मानिन्छ।</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Feature Cards (click to switch panel) -->
+            <div class="feat6-cards">
+                <div class="feat6-card feat6-card-active" data-feat="0">
+                    <div class="feat6-card-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3 class="feat6-card-title">Automated Case Briefs</h3>
+                    <p class="feat6-card-desc">Generate comprehensive case briefs instantly. Extracts key facts, issues, ratio decidendi, and cited acts — saving valuable research time.</p>
+                </div>
+                <div class="feat6-card" data-feat="1">
+                    <div class="feat6-card-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <h3 class="feat6-card-title">Contextual Legal Lookup</h3>
+                    <p class="feat6-card-desc">Seamlessly access relevant Acts, Rules, and Regulations while browsing Judgements without disrupting your research workflow.</p>
+                </div>
+                <div class="feat6-card" data-feat="2">
+                    <div class="feat6-card-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="12" y2="11"/></svg>
+                    </div>
+                    <h3 class="feat6-card-title">Interactive Legal Dictionary</h3>
+                    <p class="feat6-card-desc">Instantly access 5,700+ Nepali legal term definitions with a simple right-click. Bilingual support built directly into your reading experience.</p>
+                </div>
+                <div class="feat6-card" data-feat="3">
+                    <div class="feat6-card-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3 class="feat6-card-title">AI Legal Assistant</h3>
+                    <p class="feat6-card-desc">Get personalized assistance through natural conversation. Navigate complex legal documents with AI insights tailored to Nepal's legal system.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="steps-layout">
+                <!-- Left: Steps Content -->
+                <div class="steps-content">
+                    <p class="section-eyebrow">Get Started</p>
+                    <h2 class="steps-title">5 Easy Steps<br>To Get Started</h2>
+                    <ol class="steps-list">
+                        <li class="step-item animate-ready">
+                            <span class="step-num">01</span>
+                            <div class="step-body">
+                                <strong>Create Your Account</strong>
+                                <p>Sign up for free at eksana.org — no credit card required.</p>
+                            </div>
+                        </li>
+                        <li class="step-item animate-ready">
+                            <span class="step-num">02</span>
+                            <div class="step-body">
+                                <strong>Choose Your Research Area</strong>
+                                <p>Browse Judgements, Acts, Regulations, or the Legal Dictionary.</p>
+                            </div>
+                        </li>
+                        <li class="step-item animate-ready">
+                            <span class="step-num">03</span>
+                            <div class="step-body">
+                                <strong>Search with Precision</strong>
+                                <p>Use keywords, filters, and subject categories to find exactly what you need.</p>
+                            </div>
+                        </li>
+                        <li class="step-item animate-ready">
+                            <span class="step-num">04</span>
+                            <div class="step-body">
+                                <strong>Analyze with AI Tools</strong>
+                                <p>Get instant case briefs, cross-references, and AI-assisted explanations.</p>
+                            </div>
+                        </li>
+                        <li class="step-item animate-ready">
+                            <span class="step-num">05</span>
+                            <div class="step-body">
+                                <strong>Build Stronger Arguments</strong>
+                                <p>Export, bookmark, and cite legal materials with confidence.</p>
+                            </div>
+                        </li>
+                    </ol>
+                    <a href="https://eksana.org" class="btn-dark">Get Started Free</a>
+                </div>
+
+                <!-- Right: Static Mockup -->
+                <div class="steps-mockup">
+                    <div class="steps-mockup-inner">
+                        <div class="steps-mock-header">
+                            <div class="steps-mock-dots">
+                                <span class="steps-mock-dot"></span>
+                                <span class="steps-mock-dot"></span>
+                                <span class="steps-mock-dot"></span>
+                            </div>
+                            <div class="steps-mock-url">eksana.org/Judgement</div>
+                        </div>
+                        <div class="steps-mock-body">
+                            <div class="steps-mock-title">Judgement Search</div>
+                            <div class="steps-mock-search">
+                                <span>🔍</span> doctrine of necessity
+                            </div>
+                            <div class="steps-mock-filters">
+                                <span class="step-filter active">All Courts</span>
+                                <span class="step-filter">Supreme Court</span>
+                                <span class="step-filter">2070–2080</span>
+                            </div>
+                            <div class="steps-mock-results">
+                                <div class="steps-mock-result active-result">
+                                    <span class="steps-mock-result-icon">📄</span>
+                                    <div>
+                                        <div class="steps-mock-result-title">State v. Bhattarai (2078)</div>
+                                        <div class="steps-mock-result-snippet">Doctrine of necessity applied in...</div>
+                                    </div>
+                                </div>
+                                <div class="steps-mock-result">
+                                    <span class="steps-mock-result-icon">📄</span>
+                                    <div>
+                                        <div class="steps-mock-result-title">Constitutional Bench (2077)</div>
+                                        <div class="steps-mock-result-snippet">Emergency powers and doctrine...</div>
+                                    </div>
+                                </div>
+                                <div class="steps-mock-result">
+                                    <span class="steps-mock-result-icon">📄</span>
+                                    <div>
+                                        <div class="steps-mock-result-title">PIL Decision (2076)</div>
+                                        <div class="steps-mock-result-snippet">Necessity in public welfare cases...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metric Section -->
+    <section class="metric-section">
+        <div class="container">
+            <div class="metric-layout">
+                <!-- Left -->
+                <div class="metric-left">
+                    <p class="metric-big">350,000<span>+</span></p>
+                    <p class="metric-desc">Legal documents, precedents, acts, regulations and dictionary terms — all indexed, searchable, and accessible on Eksana.</p>
+                    <div class="metric-items">
+                        <div class="metric-item animate-ready">
+                            <div class="metric-item-num">500+</div>
+                            <div class="metric-item-lbl">Acts &amp; Regulations</div>
+                        </div>
+                        <div class="metric-item animate-ready">
+                            <div class="metric-item-num">5,700+</div>
+                            <div class="metric-item-lbl">Dictionary Terms</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Card -->
+                <div class="metric-card">
+                    <div class="metric-percent">100%</div>
+                    <p class="metric-card-desc">Eksana is built exclusively for Nepal's legal system — every feature, every dataset, every search is optimized for Nepali law.</p>
+                    <div class="metric-checks">
+                        <div class="metric-check">Nepal-specific Judgement database</div>
+                        <div class="metric-check">Bilingual Nepali–English interface</div>
+                        <div class="metric-check">Designed with Nepal's legal professionals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pct-section" id="pricing">
+        <div class="container">
+            <div class="pct-header">
+                <span class="pct-badge">Pricing Plans</span>
+                <h2 class="pct-title">Simple, transparent pricing</h2>
+                <p class="pct-subtitle">Choose the plan that works best for your legal research needs.</p>
+            </div>
+
+            <div class="pct-table">
+                <!-- Plan header row -->
+                <div class="pct-row pct-row-plans">
+                    <div class="pct-col-label"></div>
+
+                    <!-- Starter -->
+                    <div class="pct-col-plan">
+                        <p class="pct-plan-name">Starter</p>
+                        <p class="pct-plan-desc">Perfect for getting started with legal research</p>
+                        <div class="pct-plan-price">
+                            <span class="pct-price-main">Free</span>
+                        </div>
+                        <p class="pct-plan-note">20 searches or 1 week</p>
+                        <a href="https://eksana.org" class="pct-btn pct-btn-outline">Get Started
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <div class="stat-number">350K+</div>
-                            <div class="stat-label">Legal Documents</div>
+
+                    <!-- Professional -->
+                    <div class="pct-col-plan pct-col-featured">
+                        <p class="pct-plan-name">Professional</p>
+                        <p class="pct-plan-desc">Complete toolkit for legal professionals</p>
+                        <div class="pct-plan-price">
+                            <span class="pct-price-main pct-price-blur">₹X,XXX</span>
+                            <span class="pct-price-period">&nbsp;/ month</span>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">
-                                Active Acts, Rules & Regulations
-                            </div>
+                        <p class="pct-plan-note">Sign in to view pricing</p>
+                        <a href="https://eksana.org" class="pct-btn pct-btn-primary">Start Free Trial
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pct-col-plan">
+                        <p class="pct-plan-name">Enterprise</p>
+                        <p class="pct-plan-desc">Tailored solutions for organizations</p>
+                        <div class="pct-plan-price">
+                            <span class="pct-price-main">Custom</span>
                         </div>
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Legal Professionals</div>
-                        </div>
+                        <p class="pct-plan-note">&nbsp;</p>
+                        <a href="pages/contact.html" class="pct-btn pct-btn-outline">Contact Sales
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .9h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.73a16 16 0 006.18 6.18l1.19-1.19a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Features section divider -->
+                <div class="pct-row pct-row-section-label">
+                    <div class="pct-col-label"><span>Features</span></div>
+                    <div></div><div></div><div></div>
+                </div>
+
+                <!-- Feature: Judgement Access -->
+                <div class="pct-row">
+                    <div class="pct-col-label">350,000+ Judgements</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Acts & Regulations -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Active Acts &amp; Regulations</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Legal Dictionary -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Legal Dictionary</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Daily Searches -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Search Limit</div>
+                    <div class="pct-col-val"><span class="pct-text-val">Limited (20/week)</span></div>
+                    <div class="pct-col-val"><span class="pct-text-val">Unlimited</span></div>
+                    <div class="pct-col-val"><span class="pct-text-val">Unlimited</span></div>
+                </div>
+
+                <!-- Feature: AI Case Briefs -->
+                <div class="pct-row">
+                    <div class="pct-col-label">AI-Powered Case Briefs</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Export & Download -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Export &amp; Download</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Priority Support -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Priority Support</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Team Collaboration -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Additional Productivity Features</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: SMS Pesi -->
+                <div class="pct-row">
+                    <div class="pct-col-label">SMS Pesi Notifications</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: SMS Rajpatra -->
+                <div class="pct-row">
+                    <div class="pct-col-label">SMS Rajpatra Notifications</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                </div>
+
+                <!-- Feature: Custom Integrations -->
+                <div class="pct-row">
+                    <div class="pct-col-label">Custom Integrations</div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    </div>
+                    <div class="pct-col-val">
+                        <svg class="pct-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="floating-cards">
-                    <div class="legal-card card-1">
-                        <div class="card-icon">📋</div>
-                        <div class="card-text">Najir Database</div>
-                    </div>
-                    <div class="legal-card card-2">
-                        <div class="card-icon">📖</div>
-                        <div class="card-text">Legal Acts</div>
-                    </div>
-                    <div class="legal-card card-3">
-                        <div class="card-icon">⚖️</div>
-                        <div class="card-text">Regulations</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Product Section -->
-        <section class="features" id="product">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span class="badge-icon">🔍</span>
-                        Core Features
-                    </div>
-                    <h2 class="section-title">
-                        Comprehensive Legal Research Tools
-                    </h2>
-                    <p class="section-subtitle">
-                        Everything you need to conduct thorough legal research
-                        in Nepal's legal system
-                    </p>
-                </div>
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="final-cta-title">Nepal's Legal Research Platform.<br><em>All in One Place.</em></h2>
+            <p class="final-cta-desc">Start your free account today and access Nepal's most comprehensive legal database — no credit card required.</p>
+            <a href="https://eksana.org" class="btn-dark">Start for Free</a>
+        </div>
+    </section>
 
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-visual">
-                            <div class="search-animation-container">
-                                <div class="search-interface">
-                                    <div class="search-row">
-                                        <div class="search-input-wrapper">
-                                            <input
-                                                type="text"
-                                                class="search-input"
-                                                readonly
-                                            />
-                                            <span class="typed-text"></span>
-                                        </div>
-                                        <div class="database-dropdown">
-                                            <div class="dropdown-toggle">
-                                                <span class="dropdown-label"
-                                                    >Select Database</span
-                                                >
-                                                <span class="dropdown-arrow"
-                                                    >▼</span
-                                                >
-                                            </div>
-                                            <div class="dropdown-menu">
-                                                <div
-                                                    class="dropdown-option"
-                                                    data-value="nkp"
-                                                >
-                                                    NKP
-                                                </div>
-                                                <div
-                                                    class="dropdown-option"
-                                                    data-value="supreme"
-                                                >
-                                                    Supreme Court
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="apply-filters-btn">
-                                        Apply Filters
-                                    </button>
-                                    <div class="search-results">
-                                        <div class="result-item">
-                                            <div class="result-icon">📄</div>
-                                            <div class="result-content">
-                                                <div class="result-title">
-                                                    State v. Bhattarai (2078)
-                                                </div>
-                                                <div class="result-snippet">
-                                                    Doctrine of necessity
-                                                    applied in constitutional...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="result-item">
-                                            <div class="result-icon">📄</div>
-                                            <div class="result-content">
-                                                <div class="result-title">
-                                                    Constitutional Bench
-                                                    Decision (2077)
-                                                </div>
-                                                <div class="result-snippet">
-                                                    Emergency powers and the
-                                                    doctrine of necessity...
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="result-item">
-                                            <div class="result-icon">📄</div>
-                                            <div class="result-content">
-                                                <div class="result-title">
-                                                    Public Interest Litigation
-                                                    (2076)
-                                                </div>
-                                                <div class="result-snippet">
-                                                    Application of necessity
-                                                    doctrine in public
-                                                    welfare...
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="animated-cursor">
-                                    <svg
-                                        width="20"
-                                        height="24"
-                                        viewBox="0 0 20 24"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
-                                            fill="white"
-                                            stroke="black"
-                                            stroke-width="1"
-                                        />
-                                    </svg>
-                                </div>
-                            </div>
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                           <img src="assets/images/eksana-logo-text.svg" alt="Eksana Logo" class="logo-image-footer">
                         </div>
-                        <div class="feature-content">
-                            <div class="feature-icon">
-                                <div class="icon-background">📋</div>
-                            </div>
-                            <h3>Najir Database Search</h3>
-                            <p>
-                                Access and search through over 60,000 Najirs
-                                with advanced filtering capabilities. Our search
-                                system is designed in collaboration with
-                                professional lawyers and reputed law firms to
-                                ensure precise results.
-                            </p>
-                            <ul class="feature-list">
-                                <li>Advanced keyword search</li>
-                                <li>Smart filtering options</li>
-                                <li>Contextual relevance ranking</li>
-                                <li>Dictionary for legal Nepali terms</li>
-                                <li>Acts, Rules & Regulation Lookup</li>
-                            </ul>
-                            <a
-                                href="https://app.eksana.org"
-                                class="feature-link"
-                            >
-                                Explore Najirs
-                                <span class="arrow">→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="feature-card reverse">
-                        <div class="feature-visual">
-                            <div class="acts-animation-container">
-                                <div class="acts-interface">
-                                    <div class="pdf-viewer">
-                                        <div class="pdf-header">
-                                            <span class="pdf-title"
-                                                >Civil Code Act, 2074</span
-                                            >
-                                            <div class="pdf-controls">
-                                                <span>Page 45 of 286</span>
-                                                <span>100%</span>
-                                            </div>
-                                        </div>
-                                        <div class="pdf-content">
-                                            <div class="pdf-page">
-                                                <h4>Chapter 5: Contract Law</h4>
-                                                <div class="pdf-section">
-                                                    <strong
-                                                        >Section 517: Formation
-                                                        of Contract</strong
-                                                    >
-                                                    <p class="pdf-text">
-                                                        A contract shall be
-                                                        formed when...
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="pdf-section highlighted-section"
-                                                >
-                                                    <strong
-                                                        >Section 518: Valid
-                                                        Consideration</strong
-                                                    >
-                                                    <p class="pdf-text">
-                                                        For a contract to be
-                                                        valid, consideration
-                                                        must be...
-                                                    </p>
-                                                </div>
-                                                <div class="pdf-section">
-                                                    <strong
-                                                        >Section 519: Capacity
-                                                        to Contract</strong
-                                                    >
-                                                    <p class="pdf-text">
-                                                        Any person who has
-                                                        attained the age of...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="chatbot-panel">
-                                        <div class="chat-header">
-                                            <span class="chat-icon">🤖</span>
-                                            <span>Legal Assistant</span>
-                                        </div>
-                                        <div class="chat-messages">
-                                            <div
-                                                class="chat-message user-message"
-                                            >
-                                                <span class="message-text"
-                                                    >What is valid
-                                                    consideration?</span
-                                                >
-                                            </div>
-                                            <div
-                                                class="chat-message bot-message"
-                                            >
-                                                <div class="typing-indicator">
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <div class="bot-response">
-                                                    <p>
-                                                        According to
-                                                        <strong
-                                                            >Section 518</strong
-                                                        >
-                                                        of the Civil Code Act,
-                                                        valid consideration
-                                                        requires:
-                                                    </p>
-                                                    <ul>
-                                                        <li>
-                                                            Lawful object and
-                                                            purpose
-                                                        </li>
-                                                        <li>
-                                                            Something of value
-                                                            exchanged
-                                                        </li>
-                                                        <li>
-                                                            Mutual agreement
-                                                            between parties
-                                                        </li>
-                                                    </ul>
-                                                    <div class="reference-tag">
-                                                        📍 Section 518, Page 45
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="chat-input">
-                                            <input
-                                                type="text"
-                                                placeholder="Ask about this act..."
-                                                readonly
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-content">
-                            <div class="feature-icon">
-                                <div class="icon-background">📖</div>
-                            </div>
-                            <h3>Legal Acts & Legislation</h3>
-                            <p>
-                                Comprehensive database of Nepal's legal acts and
-                                legislation with cross-referencing capabilities.
-                                Stay updated with the latest amendments and
-                                legal changes in real-time.
-                            </p>
-                            <ul class="feature-list">
-                                <li>Complete active acts database</li>
-                                <li>AI-assisted chatbot</li>
-                            </ul>
-                            <a
-                                href="https://app.eksana.org"
-                                class="feature-link"
-                            >
-                                Browse Acts
-                                <span class="arrow">→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-visual">
-                            <div class="regulations-animation-container">
-                                <div class="regulations-interface">
-                                    <div class="regulation-viewer">
-                                        <div class="regulation-header">
-                                            <span class="regulation-title"
-                                                >Public Procurement Regulation,
-                                                2077</span
-                                            >
-                                            <div class="regulation-controls">
-                                                <span>Rule 87 of 145</span>
-                                                <span>100%</span>
-                                            </div>
-                                        </div>
-                                        <div class="regulation-content">
-                                            <div class="regulation-page">
-                                                <h4>
-                                                    Part VII: Tender Evaluation
-                                                    Process
-                                                </h4>
-                                                <div class="regulation-section">
-                                                    <strong
-                                                        >Rule 86: Technical
-                                                        Evaluation
-                                                        Criteria</strong
-                                                    >
-                                                    <p class="regulation-text">
-                                                        The evaluation committee
-                                                        shall assess
-                                                        technical...
-                                                    </p>
-                                                </div>
-                                                <div
-                                                    class="regulation-section highlighted-rule"
-                                                >
-                                                    <strong
-                                                        >Rule 87: Bid Security
-                                                        Requirements</strong
-                                                    >
-                                                    <p class="regulation-text">
-                                                        Bid security shall be
-                                                        2-3% of estimated cost
-                                                        and valid for...
-                                                    </p>
-                                                </div>
-                                                <div class="regulation-section">
-                                                    <strong
-                                                        >Rule 88: Financial
-                                                        Evaluation
-                                                        Method</strong
-                                                    >
-                                                    <p class="regulation-text">
-                                                        Financial proposals
-                                                        shall be evaluated based
-                                                        on...
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="regulation-chatbot">
-                                        <div class="reg-chat-header">
-                                            <span class="reg-chat-icon"
-                                                >🤖</span
-                                            >
-                                            <span>Regulatory Assistant</span>
-                                        </div>
-                                        <div class="reg-chat-messages">
-                                            <div
-                                                class="reg-chat-message reg-user-message"
-                                            >
-                                                <span class="reg-message-text"
-                                                    >What are bid security
-                                                    requirements?</span
-                                                >
-                                            </div>
-                                            <div
-                                                class="reg-chat-message reg-bot-message"
-                                            >
-                                                <div
-                                                    class="reg-typing-indicator"
-                                                >
-                                                    <span></span>
-                                                    <span></span>
-                                                    <span></span>
-                                                </div>
-                                                <div class="reg-bot-response">
-                                                    <p>
-                                                        According to
-                                                        <strong>Rule 87</strong>
-                                                        of Public Procurement
-                                                        Regulation:
-                                                    </p>
-                                                    <ul>
-                                                        <li>
-                                                            Bid security: 2-3%
-                                                            of estimated cost
-                                                        </li>
-                                                        <li>
-                                                            Validity period: 120
-                                                            days minimum
-                                                        </li>
-                                                        <li>
-                                                            Acceptable forms:
-                                                            Bank guarantee or
-                                                            cash deposit
-                                                        </li>
-                                                    </ul>
-                                                    <div
-                                                        class="reg-reference-tag"
-                                                    >
-                                                        📍 Rule 87, Part VII
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="reg-chat-input">
-                                            <input
-                                                type="text"
-                                                placeholder="Ask about regulations..."
-                                                readonly
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-content">
-                            <div class="feature-icon">
-                                <div class="icon-background">⚖️</div>
-                            </div>
-                            <h3>Rules & Regulations</h3>
-                            <p>
-                                Navigate through complex regulatory frameworks
-                                with ease. Our organized system helps you find
-                                specific rules and regulations quickly, with
-                                detailed categorization and tagging.
-                            </p>
-                            <ul class="feature-list">
-                                <li>
-                                    Complete Active Rules & Regulations Database
-                                </li>
-                                <li>AI assisted chatbot</li>
-                            </ul>
-                            <a
-                                href="https://app.eksana.org"
-                                class="feature-link"
-                            >
-                                View Regulations
-                                <span class="arrow">→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Features Showcase -->
-        <section class="product-showcase" id="features">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span class="badge-icon">✨</span>
-                        Advanced Features
-                    </div>
-                    <h2 class="section-title">
-                        Powerful Features for Legal Professionals
-                    </h2>
-                    <p class="section-subtitle">
-                        Experience cutting-edge features designed to enhance
-                        your legal research workflow
-                    </p>
-                </div>
-
-                <div class="product-grid">
-                    <div class="product-feature">
-                        <div class="feature-visual">
-                            <div class="visual-mockup brief-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-title">
-                                        📋 Case Brief
-                                    </div>
-                                </div>
-                                <div class="mockup-content">
-                                    <div class="brief-item">
-                                        <strong>Facts:</strong> A summary of the
-                                        case facts...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Issues:</strong> Key legal
-                                        questions raised...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Petitioner's Argument:</strong>
-                                        Summary of arguments...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Respondent's Argument:</strong>
-                                        Summary of arguments...
-                                    </div>
-                                    <div class="brief-item highlighted">
-                                        <strong>Ratio Decidendi:</strong> The
-                                        core legal principle...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Acts Cited:</strong> Act A,
-                                        Section 12...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Rule/Regulation Cited:</strong>
-                                        Rule X, Clause 5...
-                                    </div>
-                                    <div class="brief-item">
-                                        <strong>Precedents Cited:</strong> Case
-                                        Y v. State...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-info">
-                            <h3>Automated Case Briefs</h3>
-                            <p>
-                                Generate comprehensive case briefs and summaries
-                                automatically. Our AI-powered system extracts
-                                key points from each Najir, saving valuable
-                                research time and providing essential context
-                                for your legal work.
-                            </p>
-                            <div class="feature-benefits">
-                                <div class="benefit">⚡ Instant summaries</div>
-                                <div class="benefit">
-                                    🎯 Key point extraction
-                                </div>
-                                <div class="benefit">
-                                    📊 Structured analysis
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-feature reverse">
-                        <div class="feature-visual">
-                            <div class="visual-mockup lookup-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-title">
-                                        🔗 Case Brief
-                                    </div>
-                                </div>
-                                <div class="mockup-content">
-                                    <div class="lookup-item-wrapper">
-                                        <div class="lookup-item">
-                                            <div class="lookup-icon">📖</div>
-                                            <div class="lookup-text">
-                                                Acts Cited
-                                            </div>
-                                            <div class="lookup-arrow">▶</div>
-                                        </div>
-                                        <div class="lookup-details">
-                                            <div class="detail-item">
-                                                Evidence Act, 2031
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="lookup-item-wrapper">
-                                        <div class="lookup-item">
-                                            <div class="lookup-icon">⚖️</div>
-                                            <div class="lookup-text">
-                                                Rules/Regulation Cited
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="act-viewer-overlay">
-                                    <div class="act-viewer">
-                                        <div class="act-header">
-                                            Evidence Act, 2031
-                                        </div>
-                                        <div class="act-content">
-                                            <p>
-                                                <strong>Section 3:</strong>
-                                                Evidence to be relevant...
-                                            </p>
-                                            <p>
-                                                <strong>Section 4:</strong>
-                                                Admissibility of evidence...
-                                            </p>
-                                        </div>
-                                        <div class="close-btn">×</div>
-                                    </div>
-                                </div>
-                                <div class="animated-cursor-lookup">
-                                    <svg
-                                        width="20"
-                                        height="24"
-                                        viewBox="0 0 20 24"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
-                                            fill="white"
-                                            stroke="black"
-                                            stroke-width="1"
-                                        ></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-info">
-                            <h3>Contextual Legal Lookup</h3>
-                            <p>
-                                Seamlessly access relevant Acts, Rules, and
-                                Regulations while browsing Najirs. Our
-                                intelligent system provides complete context for
-                                your legal research without disrupting your
-                                workflow.
-                            </p>
-                            <div class="feature-benefits">
-                                <div class="benefit">
-                                    🔍 Instant cross-references
-                                </div>
-                                <div class="benefit">
-                                    🌐 Contextual suggestions
-                                </div>
-                                <div class="benefit">
-                                    📚 Comprehensive linking
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-feature">
-                        <div class="feature-visual">
-                            <div class="visual-mockup dictionary-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-title case-header-title">
-                                        <span
-                                            ><strong
-                                                >उत्प्रेषणसमेत</strong
-                                            ></span
-                                        >
-                                        <span class="case-dates"
-                                            >Registration Date: 2077-09-14 |
-                                            Decision Date: 2077-09-14</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="mockup-content">
-                                    <p class="legal-text-nepali">
-                                        प्रत्येक अदालतलाई आफ्नो र आफ्नो मातहतका
-                                        अदालतको
-                                        <span class="highlight-word"
-                                            >न्यायिक</span
-                                        >
-                                        कार्यमा कसैले अवरोध ���रेमा वा आदेश वा
-                                        फैसलाको अवज्ञा गरेमा कानून बमोजिम
-                                        अवहेनामा कारबाही चलाउन र सजाय गर्न
-                                        सक्नेछ।
-                                    </p>
-                                    <div class="definition-box">
-                                        <h4>न्यायिक (Nyayik)</h4>
-                                        <p>
-                                            Relating to the administration of
-                                            justice or the function of a judge.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="animated-cursor-dict">
-                                    <svg
-                                        width="20"
-                                        height="24"
-                                        viewBox="0 0 20 24"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M0 0L0 20.5L5.5 15L9.5 24L13 22.5L9 13.5L16 13.5L0 0Z"
-                                            fill="white"
-                                            stroke="black"
-                                            stroke-width="1"
-                                        ></path>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-info">
-                            <h3>Interactive Legal Dictionary</h3>
-                            <p>
-                                Instantly access definitions and explanations of
-                                legal terminology in Nepali. Our integrated
-                                legal dictionary is accessible with a simple
-                                right-click, making complex legal language
-                                understandable.
-                            </p>
-                            <div class="feature-benefits">
-                                <div class="benefit">
-                                    📚 Comprehensive definitions
-                                </div>
-                                <div class="benefit">🔄 Bilingual support</div>
-                                <div class="benefit">⚡ Right-click access</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-feature reverse">
-                        <div class="feature-visual">
-                            <div class="visual-mockup ai-mockup">
-                                <div class="mockup-header">
-                                    <div class="mockup-title">
-                                        🤖 AI Legal Assistant
-                                    </div>
-                                </div>
-                                <div class="mockup-content">
-                                    <div class="chat-bubble user">
-                                        What are the key points of this case?
-                                    </div>
-                                    <div class="chat-bubble ai">
-                                        Based on the document, here are the key
-                                        legal points...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="feature-info">
-                            <h3>AI-Powered Legal Chat</h3>
-                            <p>
-                                Get personalized assistance with our AI-powered
-                                chat interface. Navigate and understand complex
-                                legal documents with intelligent responses
-                                tailored specifically to Nepal's legal system.
-                            </p>
-                            <div class="feature-benefits">
-                                <div class="benefit">🧠 Smart analysis</div>
-                                <div class="benefit">
-                                    💬 Natural conversation
-                                </div>
-                                <div class="benefit">
-                                    🎯 Nepal-specific insights
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews Section -->
-        <section class="reviews" id="reviews">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span class="badge-icon">⭐</span>
-                        Client Testimonials
-                    </div>
-                    <h2 class="section-title">
-                        Trusted by Leading Legal Professionals
-                    </h2>
-                    <p class="section-subtitle">
-                        See what law firms and legal practitioners across Nepal
-                        are saying about Eksana
-                    </p>
-                </div>
-            </div>
-
-            <div class="reviews-carousel">
-                <div class="reviews-track">
-                    <!-- First set of reviews -->
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Pioneer</span>
-                                <span>Law Associates</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "Eksana has revolutionized our legal research
-                                process. What used to take hours now takes
-                                minutes. The Najir database is comprehensive and
-                                the search functionality is incredibly precise."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Ramesh Sharma</strong>
-                                <span>Senior Partner</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Himalayan</span>
-                                <span>Legal Consultancy</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "The AI-powered case briefs save us countless
-                                hours. Our team efficiency has increased by 40%
-                                since adopting Eksana. It's an essential tool
-                                for modern legal practice."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Sita Poudel</strong>
-                                <span>Managing Director</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Supreme</span>
-                                <span>Law Chambers</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "The cross-referencing between Acts and
-                                Regulations is brilliant. Eksana provides
-                                context that helps us build stronger arguments
-                                and serve our clients better."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Krishna Bhattarai</strong>
-                                <span>Legal Advisor</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>National</span>
-                                <span>Law Firm</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "Having access to 60,000+ Najirs with advanced
-                                filtering has transformed how we prepare cases.
-                                The legal dictionary feature is particularly
-                                helpful for our junior associates."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Priya Adhikari</strong>
-                                <span>Partner</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Capital</span>
-                                <span>Legal Services</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "Eksana's collaborative features enable our team
-                                to work seamlessly on complex cases. The
-                                platform has become indispensable for our
-                                practice."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Binod Thapa</strong>
-                                <span>Senior Advocate</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Duplicate set for seamless scrolling -->
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Pioneer</span>
-                                <span>Law Associates</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "Eksana has revolutionized our legal research
-                                process. What used to take hours now takes
-                                minutes. The Najir database is comprehensive and
-                                the search functionality is incredibly precise."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Ramesh Sharma</strong>
-                                <span>Senior Partner</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Himalayan</span>
-                                <span>Legal Consultancy</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "The AI-powered case briefs save us countless
-                                hours. Our team efficiency has increased by 40%
-                                since adopting Eksana. It's an essential tool
-                                for modern legal practice."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Sita Poudel</strong>
-                                <span>Managing Director</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="firm-logo">
-                            <div class="logo-placeholder">
-                                <span>Supreme</span>
-                                <span>Law Chambers</span>
-                            </div>
-                        </div>
-                        <div class="review-content">
-                            <p class="review-text">
-                                "The cross-referencing between Acts and
-                                Regulations is brilliant. Eksana provides
-                                context that helps us build stronger arguments
-                                and serve our clients better."
-                            </p>
-                            <div class="reviewer-info">
-                                <strong>Krishna Bhattarai</strong>
-                                <span>Legal Advisor</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
-        <section class="pricing" id="pricing">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-badge">
-                        <span class="badge-icon">💎</span>
-                        Pricing Plans
-                    </div>
-                    <h2 class="section-title">Choose Your Plan</h2>
-                    <p class="section-subtitle">
-                        Flexible pricing options designed for legal
-                        professionals at every stage
-                    </p>
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="pricing-card featured">
-                        <div class="popular-badge">Most Popular</div>
-                        <div class="plan-header">
-                            <div class="plan-icon">⚖️</div>
-                            <h3 class="plan-name">General</h3>
-                            <div class="plan-price">
-                                <span class="currency">Rs.</span>
-                                <span class="amount">499</span>
-                                <span class="period">/month</span>
-                            </div>
-                            <p class="plan-description">
-                                Annual: Rs. 4,999/year
-                            </p>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>✓ Supreme Court & NKP Judgments</li>
-                                <li>✓ High Court Judgments</li>
-                                <li>✓ Special Court</li>
-                                <li>✓ Revenue Tribunals</li>
-                                <li>✓ Administrative Court</li>
-                                <li>✓ Foreign Employment Tribunal</li>
-                                <li>
-                                    ✓ Side-by-Side Viewer for Judgments & Legal
-                                    Texts
-                                </li>
-                                <li>✓ Insurance Authority</li>
-                                <li>✓ Debt Recovery Tribunal</li>
-                                <li>✓ In-App Legal Definitions</li>
-                                <li>✓ Updated Acts</li>
-                                <li>✓ Updated Rules & Regulations</li>
-                                <li>✓ AI-Powered Legal Research Assistant</li>
-                                <li>✓ AI-Generated Case Brief</li>
-                            </ul>
-                        </div>
-                        <a href="https://app.eksana.org" class="plan-button"
-                            >Get Started</a
-                        >
-                    </div>
-
-                    <div class="pricing-card">
-                        <div class="plan-header">
-                            <div class="plan-icon">🏢</div>
-                            <h3 class="plan-name">Enterprise</h3>
-                            <p class="plan-description">
-                                Tailored solutions for organizations
-                            </p>
-                        </div>
-                        <div class="plan-features">
-                            <ul>
-                                <li>✓ Cheaper pricing than General Plan</li>
-                                <li>✓ Supreme Court & NKP Judgments</li>
-                                <li>✓ High Court Judgments</li>
-                                <li>✓ Special Court</li>
-                                <li>✓ Revenue Tribunals</li>
-                                <li>✓ Administrative Court</li>
-                                <li>✓ Foreign Employment Tribunal</li>
-                                <li>
-                                    ✓ Side-by-Side Viewer for Judgments & Legal
-                                    Texts
-                                </li>
-                                <li>✓ Insurance Authority</li>
-                                <li>✓ Debt Recovery Tribunal</li>
-                                <li>✓ In-App Legal Definitions</li>
-                                <li>✓ Updated Acts</li>
-                                <li>✓ Updated Rules & Regulations</li>
-                                <li>✓ AI-Powered Legal Research Assistant</li>
-                                <li>✓ AI-Generated Case Brief</li>
-                                <li>✓ Custom Integration</li>
-                                <li>✓ Dedicated account manager</li>
-                                <li>✓ SLA guarantee</li>
-                            </ul>
-                        </div>
-                        <a href="mailto:mail@eksana.org" class="plan-button"
-                            >Contact Sales</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer" id="contact">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-main">
-                        <div class="footer-brand">
-                            <div class="footer-logo">
-                                <img
-                                    src="Logos/eksana-logo-text.svg"
-                                    alt="Eksana Logo"
-                                    class="logo-image-footer"
-                                />
-                            </div>
-                            <p class="footer-description">
-                                Navigating Nepal's legal system with clarity and
-                                accessibility. Transforming scattered legal
-                                information into actionable insights for
-                                lawyers, judges, and researchers.
-                            </p>
-                            <div class="footer-social">
-                                <a
-                                    href="https://www.linkedin.com/company/eksana/"
-                                    class="social-link"
-                                    >LinkedIn</a
-                                >
-                                <a href="#" class="social-link">Twitter</a>
-                                <a
-                                    href="https://www.facebook.com/profile.php?id=61580980391285"
-                                    class="social-link"
-                                    >Facebook</a
-                                >
-                                <a
-                                    href="https://www.instagram.com/eksanalegal"
-                                    class="social-link"
-                                    >Instagram</a
-                                >
-                            </div>
-                        </div>
-
-                        <div class="footer-links-group">
-                            <div class="footer-section">
-                                <h4>Product</h4>
-                                <ul class="footer-links">
-                                    <li><a href="#features">Features</a></li>
-                                    <li>
-                                        <a href="how-to-use.html"
-                                            >How To Use & FAQ</a
-                                        >
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="footer-section">
-                                <h4>Company</h4>
-                                <ul class="footer-links">
-                                    <li><a href="team.html">Our Team</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="footer-section">
-                                <h4>Legal</h4>
-                                <ul class="footer-links">
-                                    <li>
-                                        <a href="privacy.html"
-                                            >Privacy Policy</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="terms.html">Terms of Use</a>
-                                    </li>
-                                    <li>
-                                        <a href="disclaimer.html">Disclaimer</a>
-                                    </li>
-                                    <li>
-                                        <a href="security.html">Security</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-cta">
-                        <div class="cta-content">
-                            <h3>Ready to transform your legal research?</h3>
-                            <p>
-                                Join thousands of legal professionals already
-                                using Eksana
-                            </p>
-                        </div>
-                        <a href="https://app.eksana.org" class="cta-button"
-                            >Start Free Trial</a
-                        >
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <div class="footer-bottom-content">
-                        <p>
-                            &copy; 2025 Eksana. All rights reserved. Designed
-                            for Nepal's legal community.
+                        <p class="footer-description">
+                            Navigating Nepal's legal system with clarity and accessibility. Transforming scattered legal information into actionable insights for lawyers, judges, and researchers.
                         </p>
-                        <div class="footer-badges">
-                            <span class="popular-badge">🇳🇵 Made in Nepal</span>
+                        <div class="footer-social">
+                            <div class="si-wrap">
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/company/eksana/" class="si-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                    <span class="si-bg"></span>
+                                    <span class="si-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    </span>
+                                    <span class="si-indicator"></span>
+                                    <span class="si-tooltip">LinkedIn<span class="si-tooltip-arrow"></span></span>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/share/1DT9chiZpL/?mibextid=wwXIfr" class="si-btn" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <span class="si-bg"></span>
+                                    <span class="si-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </span>
+                                    <span class="si-indicator"></span>
+                                    <span class="si-tooltip">Facebook<span class="si-tooltip-arrow"></span></span>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/eksanalegal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="si-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                    <span class="si-bg"></span>
+                                    <span class="si-icon">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                                    </span>
+                                    <span class="si-indicator"></span>
+                                    <span class="si-tooltip">Instagram<span class="si-tooltip-arrow"></span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-links-group">
+                        <div class="footer-section">
+                            <h4>Product</h4>
+                            <ul class="footer-links">
+                                <li><a href="#product">Features</a></li>
+                                <li><a href="pages/how-to-use.html">How To Use</a></li>
+                                <li><a href="pages/free-tools.html">Free Tools</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4>Company</h4>
+                            <ul class="footer-links">
+                                <li><a href="pages/team.html">Our Team</a></li>
+                                <li><a href="pages/blog.html">Blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h4>Legal</h4>
+                            <ul class="footer-links">
+                                <li><a href="pages/legal/privacy.html">Privacy Policy</a></li>
+                                <li><a href="pages/legal/terms.html">Terms of Use</a></li>
+                                <li><a href="pages/legal/disclaimer.html">Disclaimer</a></li>
+                                <li><a href="pages/legal/security.html">Security</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+
+                <div class="footer-cta">
+                    <div class="cta-content">
+                        <h3>Ready to transform your legal research?</h3>
+                        <p>Join thousands of legal professionals already using Eksana</p>
+                    </div>
+                    <a href="https://eksana.org" class="cta-button">Start Free Trial</a>
+                </div>
             </div>
-        </footer>
 
-        <script>
-            // Mobile menu functionality
-            document.addEventListener("DOMContentLoaded", function () {
-                const mobileMenuToggle = document.querySelector(
-                    ".mobile-menu-toggle",
-                );
-                const nav = document.querySelector(".nav");
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Eksana. All rights reserved. Designed for Nepal's legal community.</p>
+                    <div class="footer-badges">
+                        <span class="popular-badge">🇳🇵 Made in Nepal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-                if (mobileMenuToggle && nav) {
-                    mobileMenuToggle.addEventListener("click", function () {
-                        nav.classList.toggle("active");
-                        mobileMenuToggle.classList.toggle("active");
-                    });
-                }
+    <script>
+        // Fix logo/home links for GitHub Pages subdirectory hosting
+        (function() {
+            var base = window.location.hostname.endsWith('github.io')
+                ? '/' + window.location.pathname.split('/').filter(Boolean)[0]
+                : '';
+            document.getElementById('home-logo-link').href = base + '/';
+            document.getElementById('home-product-link').href = base + '/#product';
+        })();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
 
-                // Smooth scrolling for anchor links
-                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                    anchor.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(
-                            this.getAttribute("href"),
-                        );
-                        if (target) {
-                            target.scrollIntoView({
-                                behavior: "smooth",
-                                block: "start",
-                            });
-                        }
-                    });
+            if (mobileMenuToggle && nav) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                    mobileMenuToggle.classList.toggle('active');
                 });
+            }
 
-                // Intersection Observer for animations
-                const observerOptions = {
-                    threshold: 0.1,
-                    rootMargin: "0px 0px -50px 0px",
-                };
-
-                // First, prepare elements for animation
-                const animateElements = document.querySelectorAll(
-                    ".feature-card, .product-feature, .stat",
-                );
-                const pricingCards = document.querySelectorAll(".pricing-card");
-
-                // Only add animation classes if IntersectionObserver is supported
-                if ("IntersectionObserver" in window) {
-                    // Prepare regular elements
-                    animateElements.forEach((el) => {
-                        if (!el.classList.contains("stat")) {
-                            el.classList.add("animate-ready");
-                        }
-                    });
-
-                    // Prepare pricing cards
-                    pricingCards.forEach((card) => {
-                        card.classList.add("animate-ready");
-                    });
-
-                    // Observer for regular elements
-                    const observer = new IntersectionObserver(function (
-                        entries,
-                    ) {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add("animate-in");
-                                entry.target.classList.remove("animate-ready");
-                            }
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
                         });
-                    }, observerOptions);
-
-                    // Observer for pricing cards with staggered animation
-                    const pricingObserver = new IntersectionObserver(function (
-                        entries,
-                    ) {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                const cards = Array.from(pricingCards);
-                                const index = cards.indexOf(entry.target);
-                                // Add staggered delay for smoother animation
-                                setTimeout(() => {
-                                    entry.target.classList.add("animate-in");
-                                    entry.target.classList.remove(
-                                        "animate-ready",
-                                    );
-                                }, index * 100);
-                            }
-                        });
-                    }, observerOptions);
-
-                    // Observe regular elements
-                    animateElements.forEach((el) => {
-                        observer.observe(el);
-                    });
-
-                    // Observe pricing cards
-                    pricingCards.forEach((card) => {
-                        pricingObserver.observe(card);
-                    });
-                }
-
-                // Header scroll effect
-                let lastScrollTop = 0;
-                const header = document.querySelector(".header");
-
-                window.addEventListener("scroll", function () {
-                    const scrollTop =
-                        window.pageYOffset ||
-                        document.documentElement.scrollTop;
-
-                    if (scrollTop > lastScrollTop && scrollTop > 100) {
-                        header.classList.add("scrolled-up");
-                    } else {
-                        header.classList.remove("scrolled-up");
                     }
-
-                    if (scrollTop > 50) {
-                        header.classList.add("scrolled");
-                    } else {
-                        header.classList.remove("scrolled");
-                    }
-
-                    lastScrollTop = scrollTop;
                 });
             });
-        </script>
-    </body>
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            // Prepare elements for animation
+            const animateElements = document.querySelectorAll('.feature-card, .product-feature, .pricing-card, .stat, .cf-card, .step-item, .ai-feat, .metric-item');
+
+            if ('IntersectionObserver' in window) {
+                animateElements.forEach(el => {
+                    if (!el.classList.contains('stat')) {
+                        el.classList.add('animate-ready');
+                    }
+                });
+
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                            entry.target.classList.add('in-view');
+                            entry.target.classList.remove('animate-ready');
+                        }
+                    });
+                }, observerOptions);
+
+                animateElements.forEach(el => {
+                    observer.observe(el);
+                });
+            }
+
+            // Header scroll effect
+            let lastScrollTop = 0;
+            const header = document.querySelector(".header");
+
+            window.addEventListener("scroll", function () {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    header.classList.add("scrolled-up");
+                } else {
+                    header.classList.remove("scrolled-up");
+                }
+
+                if (scrollTop > 50) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+
+    <!-- Features Section Script -->
+    <script>
+    (function () {
+        var cards = document.querySelectorAll('.feat6-card');
+        var panels = document.querySelectorAll('.feat6-panel');
+        var autoTimer = null;
+        var currentFeat = 0;
+
+        function triggerCaseBriefs() {
+            var rows = document.querySelectorAll('#feat6P0 .feat6-cb-row');
+            rows.forEach(function (r) { r.classList.remove('feat6-cb-show'); });
+            rows.forEach(function (r, i) {
+                setTimeout(function () { r.classList.add('feat6-cb-show'); }, i * 400 + 300);
+            });
+        }
+
+        function triggerLookup() {
+            var popup = document.getElementById('feat6ClPopup');
+            if (!popup) return;
+            popup.classList.remove('feat6-cl-popup-show');
+            setTimeout(function () { popup.classList.add('feat6-cl-popup-show'); }, 800);
+        }
+
+        function triggerDict() {
+            var menu = document.getElementById('feat6DictMenu');
+            var card = document.getElementById('feat6DictCard');
+            if (menu) { menu.classList.remove('feat6-dict-show'); setTimeout(function () { menu.classList.add('feat6-dict-show'); }, 500); }
+            if (card) { card.classList.remove('feat6-dict-show'); setTimeout(function () { card.classList.add('feat6-dict-show'); }, 1300); }
+        }
+
+        function triggerChat() {
+            var msgs = document.querySelectorAll('#feat6P3 .feat6-chat-msg');
+            var typing = document.getElementById('feat6ChatTyping');
+            var answer = document.getElementById('feat6ChatAnswer');
+            msgs.forEach(function (m) { m.classList.remove('feat6-chat-show'); });
+            if (typing) { typing.style.display = 'flex'; }
+            if (answer) { answer.style.display = 'none'; }
+            msgs.forEach(function (m, i) {
+                setTimeout(function () { m.classList.add('feat6-chat-show'); }, i * 900 + 200);
+            });
+            if (typing && answer) {
+                setTimeout(function () { typing.style.display = 'none'; answer.style.display = 'block'; }, 2600);
+            }
+        }
+
+        var triggers = [triggerCaseBriefs, triggerLookup, triggerDict, triggerChat];
+
+        function activate(feat) {
+            currentFeat = feat;
+            cards.forEach(function (c) { c.classList.remove('feat6-card-active'); });
+            panels.forEach(function (p) { p.classList.remove('feat6-active'); });
+            if (cards[feat]) cards[feat].classList.add('feat6-card-active');
+            var panel = document.getElementById('feat6P' + feat);
+            if (panel) panel.classList.add('feat6-active');
+            triggers[feat]();
+        }
+
+        cards.forEach(function (card, i) {
+            card.addEventListener('click', function () {
+                clearInterval(autoTimer);
+                activate(i);
+                autoTimer = setInterval(function () { activate((currentFeat + 1) % 4); }, 5500);
+            });
+        });
+
+        // Initial trigger
+        triggerCaseBriefs();
+
+        // Auto-cycle every 5.5s
+        autoTimer = setInterval(function () { activate((currentFeat + 1) % 4); }, 5500);
+    })();
+    </script>
+
+    <!-- Orbital Feature Explorer Script -->
+    <script>
+    (function () {
+        var ORBITAL_DATA = [
+            {
+                id: 1, title: 'Judgement Search', fullTitle: 'Judgement Database Search',
+                badge: 'Research Tool', badgeClass: 'ot-badge-blue',
+                desc: 'Over 350,000 court decisions curated from the Supreme Court, Special Court, all High Courts, Administrative Court, Foreign Employment Court, and Revenue Tribunals — with more courts and tribunals being added continuously. The database is updated every 15 days with new judgements for supported courts and tribunals.',
+                features: ['Supreme Court, High Courts &amp; Special Courts', 'Admin, Foreign Employment &amp; Revenue Tribunals', 'More courts &amp; tribunals being added'],
+                related: [2, 4], linkHref: 'https://eksana.org', linkLabel: 'Explore Judgements'
+            },
+            {
+                id: 2, title: 'Legal Acts', fullTitle: 'Legal Acts &amp; Legislation',
+                badge: 'Legislation', badgeClass: 'ot-badge-navy',
+                desc: 'Comprehensive database of Nepal\'s legal acts with cross-referencing capabilities, AI-assisted chatbot, and real-time updates on amendments.',
+                features: ['Complete active acts database', 'AI-assisted chatbot', 'Real-time amendment tracking'],
+                related: [1, 3, 5], linkHref: 'https://eksana.org', linkLabel: 'Browse Acts'
+            },
+            {
+                id: 3, title: 'Regulations', fullTitle: 'Rules &amp; Regulations',
+                badge: 'Regulatory', badgeClass: 'ot-badge-bronze',
+                desc: 'Navigate complex regulatory frameworks with ease — complete active rules database, AI-assisted chatbot, and detailed categorization and tagging.',
+                features: ['Complete active rules database', 'AI-assisted chatbot support', 'Detailed categorization &amp; tagging'],
+                related: [2, 4, 5], linkHref: 'https://eksana.org', linkLabel: 'View Regulations'
+            },
+            {
+                id: 4, title: 'Dictionary', fullTitle: 'Legal Dictionary',
+                badge: 'AI-Enhanced', badgeClass: 'ot-badge-violet',
+                desc: '5,700+ Nepali legal terms with bilingual definitions. Accessible via right-click while reading any Judgement or Act. The dictionary is sourced from Nepal Law Commission.',
+                features: ['5,700+ Nepali legal terms', 'Bilingual definitions', 'Right-click while reading'],
+                related: [1, 3], linkHref: 'dictionary.html', linkLabel: 'Open Dictionary'
+            },
+            {
+                id: 5, title: 'Ordinances', fullTitle: 'Active Ordinances of Nepal',
+                badge: 'Legislative', badgeClass: 'ot-badge-maroon',
+                desc: 'Complete collection of all currently active ordinances of Nepal — temporary legislative measures promulgated by the President, kept current as new ordinances are issued or lapse.',
+                features: ['All active ordinances of Nepal', 'Promulgation date &amp; validity status', 'Cross-referenced with related acts'],
+                related: [2, 3], linkHref: 'https://eksana.org', linkLabel: 'View Ordinances'
+            }
+        ];
+
+        var stage = document.getElementById('orbitalStage');
+        if (!stage) return;
+
+        var nodes = stage.querySelectorAll('.ot-node');
+        var panelIdle = document.getElementById('otPanelIdle');
+        var panelDetail = document.getElementById('otPanelDetail');
+
+        var rotationAngle = -90; // first node starts at top
+        var autoRotate = true;
+        var activeId = null;
+        var lastTs = 0;
+
+        function getRadius() {
+            var w = stage.offsetWidth;
+            if (w < 290) return 95;
+            if (w < 360) return 120;
+            return 205;
+        }
+
+        function getPos(index, total) {
+            var base = (index / total) * 360;
+            var angle = ((base + rotationAngle) % 360 + 360) % 360;
+            var rad = angle * Math.PI / 180;
+            var r = getRadius();
+            var x = r * Math.cos(rad);
+            var y = r * Math.sin(rad);
+            var depth = (Math.sin(rad) + 1) / 2;
+            return { x: x, y: y, opacity: 0.38 + 0.62 * depth, scale: 0.78 + 0.22 * depth, z: Math.round(depth * 80) };
+        }
+
+        function update() {
+            nodes.forEach(function (node, i) {
+                var id = parseInt(node.dataset.id);
+                var isActive = id === activeId;
+                var data = ORBITAL_DATA[i];
+                var isRelated = activeId && data.related.indexOf(activeId) !== -1;
+                var pos = getPos(i, nodes.length);
+
+                node.style.transform = 'translate(' + pos.x + 'px,' + pos.y + 'px)' + (isActive ? ' scale(1)' : ' scale(' + pos.scale + ')');
+                node.style.opacity = isActive ? '1' : String(pos.opacity);
+                node.style.zIndex = isActive ? '50' : String(pos.z + 1);
+                node.classList.toggle('ot-node-active', isActive);
+                node.classList.toggle('ot-node-related', !isActive && !!isRelated);
+            });
+        }
+
+        function tick(ts) {
+            if (autoRotate) {
+                if (lastTs) rotationAngle = (rotationAngle + (ts - lastTs) * 0.016) % 360;
+                lastTs = ts;
+            } else { lastTs = 0; }
+            update();
+            requestAnimationFrame(tick);
+        }
+
+        function activateNode(id) {
+            if (activeId === id) { deactivate(); return; }
+            activeId = id;
+            autoRotate = false;
+            var idx = ORBITAL_DATA.findIndex(function (d) { return d.id === id; });
+            rotationAngle = 90 - (idx / nodes.length) * 360;
+            showDetail(id);
+            update();
+        }
+
+        function deactivate() {
+            activeId = null;
+            autoRotate = true;
+            showIdle();
+            update();
+        }
+
+        function showIdle() {
+            panelDetail.style.display = 'none';
+            panelDetail.style.opacity = '0';
+            panelIdle.style.display = '';
+            panelIdle.style.opacity = '0';
+            requestAnimationFrame(function () {
+                panelIdle.style.transition = 'opacity 0.3s ease';
+                panelIdle.style.opacity = '1';
+            });
+        }
+
+        function showDetail(id) {
+            var data = ORBITAL_DATA.find(function (d) { return d.id === id; });
+            if (!data) return;
+            panelIdle.style.display = 'none';
+
+            var relChips = data.related.map(function (rId) {
+                var rel = ORBITAL_DATA.find(function (d) { return d.id === rId; });
+                return '<button class="ot-related-chip" data-target="' + rId + '">' + rel.title + '</button>';
+            }).join('');
+
+            var feats = data.features.map(function (f) {
+                return '<li><span class="ot-check">&#10003;</span>' + f + '</li>';
+            }).join('');
+
+            panelDetail.innerHTML =
+                '<div class="ot-detail-badge ' + data.badgeClass + '">' + data.badge + '</div>' +
+                '<h3 class="ot-detail-title">' + data.fullTitle + '</h3>' +
+                '<p class="ot-detail-desc">' + data.desc + '</p>' +
+                '<ul class="ot-detail-features">' + feats + '</ul>' +
+                '<div class="ot-detail-footer">' + relChips +
+                '<a href="' + data.linkHref + '" class="ot-detail-link">' + data.linkLabel + ' &rarr;</a></div>' +
+                '<button class="ot-back-btn" id="otBackBtn">&#8592; All features</button>';
+
+            panelDetail.querySelectorAll('.ot-related-chip').forEach(function (chip) {
+                chip.addEventListener('click', function () { activateNode(parseInt(chip.dataset.target)); });
+            });
+            document.getElementById('otBackBtn').addEventListener('click', deactivate);
+
+            panelDetail.style.display = '';
+            panelDetail.style.opacity = '0';
+            requestAnimationFrame(function () {
+                panelDetail.style.transition = 'opacity 0.3s ease';
+                panelDetail.style.opacity = '1';
+            });
+        }
+
+        nodes.forEach(function (node) {
+            node.addEventListener('click', function (e) {
+                e.stopPropagation();
+                activateNode(parseInt(node.dataset.id));
+            });
+        });
+
+        document.querySelectorAll('.ot-idle-item').forEach(function (item) {
+            item.addEventListener('click', function () { activateNode(parseInt(item.dataset.target)); });
+        });
+
+        stage.addEventListener('click', function () { if (activeId) deactivate(); });
+
+        requestAnimationFrame(tick);
+    })();
+    </script>
+
+    <!-- Hero Grid Displacement -->
+    <script>
+    (function () {
+        var canvas = document.getElementById('heroGrid');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+
+        // ── Tunables ──────────────────────────────────────────────────
+        var CELL   = 28;   // grid cell size (px)
+        var MAX_Z  = 200;  // max depth at cursor centre
+        var RADIUS = 210;  // influence radius (px)
+        var FOCAL  = 460;  // perspective focal length — smaller = more dramatic
+        var LERP   = 0.08; // mouse smoothing (lower = silkier)
+
+        var W = 0, H = 0, dpr = 1;
+        var mouse  = { x: -9999, y: -9999 }; // smoothed
+        var target = { x: -9999, y: -9999 }; // raw
+        var canvasRect = null;
+
+        // ── Resize ────────────────────────────────────────────────────
+        function resize() {
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+            canvasRect = canvas.getBoundingClientRect();
+            W = canvasRect.width;
+            H = canvasRect.height;
+            canvas.width  = Math.round(W * dpr);
+            canvas.height = Math.round(H * dpr);
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        // ── Perspective project from cursor as vanishing point ────────
+        // When z > 0 (sinking into screen), grid points converge toward cursor.
+        function project(gx, gy) {
+            var dx = gx - mouse.x;
+            var dy = gy - mouse.y;
+            var distSq = dx * dx + dy * dy;
+            var z = 0;
+            if (distSq < RADIUS * RADIUS) {
+                var t = 1 - Math.sqrt(distSq) / RADIUS;
+                z = MAX_Z * t * t; // parabolic bowl
+            }
+            var s = FOCAL / (FOCAL + z);
+            return { px: mouse.x + dx * s, py: mouse.y + dy * s, z: z };
+        }
+
+        // ── Draw ──────────────────────────────────────────────────────
+        function draw() {
+            if (W === 0 || H === 0) return;
+            ctx.clearRect(0, 0, W, H);
+
+            // Centre the grid within the canvas
+            var offX = (W % CELL) / 2;
+            var offY = (H % CELL) / 2;
+            var cols = Math.ceil(W / CELL) + 2;
+            var rows = Math.ceil(H / CELL) + 2;
+
+            // Pre-project all intersection points
+            var pts = [];
+            for (var r = 0; r <= rows; r++) {
+                pts[r] = [];
+                for (var c = 0; c <= cols; c++) {
+                    pts[r][c] = project(offX + (c - 1) * CELL, offY + (r - 1) * CELL);
+                }
+            }
+
+            ctx.lineWidth = 0.8;
+
+            // ── Pass 1: base grid (all lines, low opacity) ────────────
+            ctx.strokeStyle = 'rgba(160, 215, 255, 0.07)';
+
+            for (var r = 0; r <= rows; r++) {
+                ctx.beginPath();
+                for (var c = 0; c <= cols; c++) {
+                    var p = pts[r][c];
+                    if (c === 0) ctx.moveTo(p.px, p.py);
+                    else ctx.lineTo(p.px, p.py);
+                }
+                ctx.stroke();
+            }
+            for (var c = 0; c <= cols; c++) {
+                ctx.beginPath();
+                for (var r = 0; r <= rows; r++) {
+                    var p = pts[r][c];
+                    if (r === 0) ctx.moveTo(p.px, p.py);
+                    else ctx.lineTo(p.px, p.py);
+                }
+                ctx.stroke();
+            }
+
+            // ── Ambient glow at depression centre ─────────────────────
+            var mx = mouse.x, my = mouse.y;
+            if (mx > -RADIUS && mx < W + RADIUS && my > -RADIUS && my < H + RADIUS) {
+                var grad = ctx.createRadialGradient(mx, my, 0, mx, my, RADIUS * 0.5);
+                grad.addColorStop(0, 'rgba(100, 180, 255, 0.035)');
+                grad.addColorStop(1, 'rgba(100, 180, 255, 0)');
+                ctx.fillStyle = grad;
+                ctx.beginPath();
+                ctx.arc(mx, my, RADIUS * 0.5, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // ── Animation loop ────────────────────────────────────────────
+        function tick() {
+            mouse.x += (target.x - mouse.x) * LERP;
+            mouse.y += (target.y - mouse.y) * LERP;
+            draw();
+            requestAnimationFrame(tick);
+        }
+
+        // ── Events ────────────────────────────────────────────────────
+        var hero = canvas.parentElement;
+
+        hero.addEventListener('mousemove', function (e) {
+            if (canvasRect) {
+                target.x = e.clientX - canvasRect.left;
+                target.y = e.clientY - canvasRect.top;
+            }
+        });
+
+        hero.addEventListener('mouseleave', function () {
+            target.x = -9999;
+            target.y = -9999;
+        });
+
+        var ro = window.ResizeObserver ? new ResizeObserver(resize) : null;
+        if (ro) ro.observe(hero);
+        window.addEventListener('resize', resize);
+
+        resize();
+        tick();
+    })();
+    </script>
+
+</body>
 </html>

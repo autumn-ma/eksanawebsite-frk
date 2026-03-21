@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Nepal Needs Smarter Legal Research | Eksana Blog</title>
+    <meta name="description" content="Legal research in Nepal is still heavily dependent on manual searches. Here's the problem Eksana is trying to solve.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        :root {
+            --bp-navy:   #000D2D;
+            --bp-blue:   #0047AC;
+            --bp-paper:  #E8DEE7;
+            --bp-near-black: #0F0F11;
+            --bp-slate:  #4D4D53;
+            --bp-gray:   #BBBBBD;
+            --bp-doc-gray: #2D2D31;
+        }
+        .bp-hero {
+            background: var(--bp-navy);
+            padding: 120px 0 72px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bp-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 28px 28px;
+        }
+        .bp-hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .bp-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 24px;
+        }
+        .bp-breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.15s; }
+        .bp-breadcrumb a:hover { color: rgba(255,255,255,0.75); }
+        .bp-cat-pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: rgba(0,71,172,0.25);
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 18px;
+        }
+        .bp-hero-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.2;
+            color: #ffffff;
+            margin: 0 0 20px;
+            letter-spacing: -0.02em;
+        }
+        .bp-hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .bp-hero-meta-item {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            color: rgba(255,255,255,0.45);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .bp-hero-meta-sep { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,0.25); }
+        .bp-article-wrap { background: #fff; padding: 64px 0 96px; }
+        .bp-article { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+        .bp-article p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--bp-doc-gray);
+            margin: 0 0 1.4em;
+        }
+        .bp-article h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.7rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: var(--bp-navy);
+            margin: 2.4em 0 0.7em;
+            letter-spacing: -0.01em;
+        }
+        .bp-article h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--bp-near-black);
+            margin: 1.8em 0 0.5em;
+        }
+        .bp-article ul, .bp-article ol {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--bp-doc-gray);
+            padding-left: 1.4em;
+            margin: 0 0 1.4em;
+        }
+        .bp-article li { margin-bottom: 0.4em; }
+        .bp-article strong { color: var(--bp-near-black); font-weight: 600; }
+        .bp-article hr { border: none; border-top: 1px solid rgba(0,13,45,0.1); margin: 2.4em 0; }
+        .bp-disclaimer {
+            margin-top: 2.4em;
+            padding: 16px 20px;
+            background: rgba(0,71,172,0.05);
+            border-radius: 8px;
+            border-left: 3px solid var(--bp-blue);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            color: var(--bp-slate);
+            font-style: italic;
+        }
+        .bp-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--bp-blue);
+            text-decoration: none;
+            margin-bottom: 48px;
+            transition: gap 0.15s;
+        }
+        .bp-back:hover { gap: 11px; }
+        .bp-back-arrow { font-size: 16px; transition: transform 0.15s; }
+        .bp-back:hover .bp-back-arrow { transform: translateX(-3px); }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <section class="bp-hero">
+        <div class="bp-hero-inner">
+            <div class="bp-breadcrumb">
+                <a href="../blog.html">Blog</a>
+                <span>›</span>
+                <span>Legal Tech</span>
+            </div>
+            <span class="bp-cat-pill">Legal Tech</span>
+            <h1 class="bp-hero-title">Why Nepal Needs Smarter Legal Research: The Problem Eksana Is Trying to Solve</h1>
+            <div class="bp-hero-meta">
+                <span class="bp-hero-meta-item">March 5, 2026</span>
+                <span class="bp-hero-meta-sep"></span>
+                <span class="bp-hero-meta-item">3 min read</span>
+                <span class="bp-hero-meta-sep"></span>
+                <span class="bp-hero-meta-item">Eksana Editorial Team</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="bp-article-wrap">
+        <article class="bp-article">
+            <a href="../blog.html" class="bp-back"><span class="bp-back-arrow">←</span> Back to Blog</a>
+
+            <h2>Introduction</h2>
+            <p>Legal research in Nepal is still heavily dependent on manual searches through print volumes, scattered PDFs, and fragmented online resources. Lawyers, judges, and students often spend hours locating a single Najir, relevant section of an Act, or recent Supreme Court judgment, leaving less time for actual analysis and strategy.</p>
+            <p>This blog explains why smarter legal research matters for Nepal's justice system and how digital tools are starting to change day-to-day practice.</p>
+
+            <h2>The Current Research Pain Points</h2>
+            <p>Nepal's legal professionals face several recurring challenges in research:</p>
+            <ul>
+                <li><strong>Fragmented sources:</strong> Supreme Court judgments, NKP Najirs, Acts, Rules, and Regulations are spread across different books, websites, and offline archives.</li>
+                <li><strong>Time-consuming manual searches:</strong> Without reliable keyword search and filters, lawyers often rely on memory, informal networks, or trial-and-error browsing through volumes.</li>
+                <li><strong>Limited access outside major cities:</strong> Practitioners in districts far from Kathmandu often lack up-to-date law reports and rely on outdated texts or photocopies.</li>
+                <li><strong>Difficult cross-referencing:</strong> When a case cites an Act or Rule, tracking down the exact section or page can take significant time.</li>
+            </ul>
+            <p>These pain points do not just slow down work; they can also affect the quality and consistency of legal arguments presented in court.</p>
+
+            <h2>The Context: Rapidly Evolving Nepali Law</h2>
+            <p>Nepal's legal framework is not static. The government has announced plans to introduce <strong>121 new laws</strong> in Fiscal Year 2082/83 (2025/26), reflecting shifting policies, international obligations, and sectoral priorities. At the same time, new regulations, directives, and work procedures are regularly registered with the Ministry of Law, Justice and Parliamentary Affairs.</p>
+            <p>On the judicial side, the Supreme Court continues to issue decisions that reshape major areas of law — from environmental protection to indigenous rights and corporate regulation. These decisions interact with existing statutes and international treaties, creating a dense web of precedents that practitioners must keep up with.</p>
+            <p>In this environment, relying only on manual, paper-based research tools is no longer sustainable.</p>
+
+            <h2>Landmark Decisions and the Need for Quick Access</h2>
+            <p>Recent Supreme Court decisions show why fast, reliable access to updated case law is essential:</p>
+            <ul>
+                <li>In June 2025, the Supreme Court issued a directive requiring all levels of government to align laws, policies, and programmes with ILO Convention No. 169 and UNDRIP, significantly strengthening protections for indigenous peoples' rights.</li>
+                <li>In January 2025, the Court struck down measures that would have allowed infrastructure development inside national parks, widely described as a historic win for conservation.</li>
+            </ul>
+            <p>Each such judgment can affect dozens of ongoing and future cases. If lawyers cannot quickly find and interpret these decisions, there is a real risk that arguments, legal opinions, and even lower court judgments lag behind the current state of the law.</p>
+
+            <h2>How Digital Platforms Are Changing the Game</h2>
+            <p>New legal tech tools are emerging in Nepal to address these pain points. Eksana is an AI-powered legal research platform designed specifically for Nepali law.</p>
+            <p>Eksana brings several core features together in one place:</p>
+            <ul>
+                <li><strong>Comprehensive case and Najir access:</strong> Access to a wide collection of NKP Najirs and Supreme Court judgments in a single searchable platform.</li>
+                <li><strong>Keyword search with filters:</strong> Intuitive keyword search combined with filters such as case type, registration number, bench, and year, allowing practitioners to quickly narrow down relevant cases.</li>
+                <li><strong>Integrated Acts and Rules:</strong> When a judgment cites an Act or Rule, users can jump directly to the relevant statutory provision.</li>
+                <li><strong>AI-generated case briefs:</strong> Automatic summaries that extract facts and ratio decidendi, tailored for students and busy practitioners who need to understand a case quickly.</li>
+            </ul>
+            <p>Instead of spending hours searching, users can retrieve relevant materials in seconds and devote more time to analysis, drafting, and client strategy.</p>
+
+            <h2>Why Smarter Research Matters for Access to Justice</h2>
+            <p>Efficient legal research is not just a convenience for lawyers; it is tied to broader questions of access to justice:</p>
+            <ul>
+                <li><strong>Better arguments and more consistent jurisprudence:</strong> When lawyers on all sides can access the same body of case law and statutes, courts receive better-researched submissions, leading to clearer, more consistent judgments.</li>
+                <li><strong>Stronger protection of rights:</strong> Landmark decisions on environmental law, indigenous rights, or business regulation only have real impact when they are widely known and applied.</li>
+                <li><strong>Reduced inequality between urban and rural practice:</strong> Digital platforms can help narrow the gap between lawyers in Kathmandu and those practicing in other districts by offering equal access to updated resources.</li>
+            </ul>
+            <p>In a period of rapid legislative change and expanding rights discourse, tools that make law easier to find and understand play a direct role in strengthening the rule of law.</p>
+
+            <h2>Looking Ahead: Building a Culture of Research</h2>
+            <p>Technology alone is not enough. Nepal also needs a stronger culture of legal research in law schools, bar associations, and courts:</p>
+            <ul>
+                <li>Law faculties can integrate online databases and AI tools into research and moot court training.</li>
+                <li>Bar associations can conduct workshops on effective digital research strategies.</li>
+                <li>Courts can encourage citations to authoritative electronic sources and landmark decisions.</li>
+            </ul>
+            <p>Platforms like Eksana provide the infrastructure, but it is up to the legal community to use these tools to raise research standards across the system.</p>
+
+            <div class="bp-disclaimer">Disclaimer: This blog is for general informational purposes only and does not constitute legal advice. For specific legal matters, please consult a qualified legal professional.</div>
+        </article>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../../includes/include.js"></script>
+</body>
+</html>

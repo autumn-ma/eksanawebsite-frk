@@ -1,52 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://eksana.org/</loc>
-  <lastmod>2025-10-03T10:08:55+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://eksana.org/index.html</loc>
-  <lastmod>2025-10-03T10:08:55+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/how-to-use.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/contact.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/privacy.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/terms.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/disclaimer.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://eksana.org/security.html</loc>
-  <lastmod>2025-10-03T10:08:48+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+              http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url><loc>https://eksana.org/</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>1.00</priority></url>
+<url><loc>https://eksana.org/pages/how-to-use</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://eksana.org/pages/free-tools</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://eksana.org/pages/contact</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://eksana.org/pages/team</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://eksana.org/pages/blog</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.80</priority></url>
+<url><loc>https://eksana.org/pages/blogs/blog-business-registration</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://eksana.org/pages/blogs/blog-election-commission</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://eksana.org/pages/blogs/blog-legal-developments</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://eksana.org/pages/blogs/blog-national-id</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://eksana.org/pages/blogs/blog-why-eksana</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.64</priority></url>
+<url><loc>https://eksana.org/pages/legal/privacy</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.50</priority></url>
+<url><loc>https://eksana.org/pages/legal/terms</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.50</priority></url>
+<url><loc>https://eksana.org/pages/legal/disclaimer</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.50</priority></url>
+<url><loc>https://eksana.org/pages/legal/security</loc><lastmod>2026-03-19T00:00:00+00:00</lastmod><priority>0.50</priority></url>
 </urlset>

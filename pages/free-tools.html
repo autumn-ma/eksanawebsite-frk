@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Legal Tools | Eksana</title>
+    <meta name="description" content="Free tools for Nepal's legal community — Preeti to Unicode converter, Nepali legal dictionary, and BS ↔ AD date converter. All browser-based, no login required.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --navy: #000D2D;
+            --blue: #0047AC;
+            --paper: #E8DEE7;
+            --near-black: #0F0F11;
+            --slate: #4D4D53;
+            --doc-gray: #2D2D31;
+            --gray: #BBBBBD;
+            --violet: #B171D6;
+            --magenta: #D15792;
+            --bronze: #594A36;
+            --success: #1a7a4a;
+            --error: #c0392b;
+        }
+
+        /* ── Hero ── */
+        .ft-hero {
+            background: var(--navy);
+            background-image:
+                linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            padding: 120px 0 56px;
+            position: relative;
+            overflow: hidden;
+        }
+        .ft-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+        .ft-hero-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+        .ft-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 18px;
+        }
+        .ft-eyebrow-dot {
+            width: 5px; height: 5px;
+            border-radius: 50%;
+            background: var(--blue);
+        }
+        .ft-hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 400;
+            line-height: 1.15;
+            color: #fff;
+            margin: 0 0 14px;
+            letter-spacing: -0.02em;
+        }
+        .ft-hero h1 em {
+            font-style: italic;
+            color: rgba(255,255,255,0.45);
+        }
+        .ft-hero-desc {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.96rem;
+            color: rgba(255,255,255,0.45);
+            margin: 0;
+            line-height: 1.65;
+            max-width: 500px;
+        }
+
+        /* ── Page body ── */
+        .ft-body {
+            background: #f5f4f2;
+            min-height: 70vh;
+            padding: 0 0 80px;
+        }
+
+        /* ── Page-level tab bar ── */
+        .ft-page-tabs-wrap {
+            background: #fff;
+            border-bottom: 1px solid rgba(0,13,45,0.08);
+            position: sticky;
+            top: 57px; /* header height */
+            z-index: 100;
+        }
+        .ft-page-tabs {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+        .ft-page-tabs::-webkit-scrollbar { display: none; }
+        .ft-page-tab {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 16px 24px;
+            border: none;
+            background: transparent;
+            color: var(--slate);
+            cursor: pointer;
+            position: relative;
+            white-space: nowrap;
+            transition: color 0.15s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid transparent;
+            margin-bottom: -1px;
+        }
+        .ft-page-tab:hover { color: var(--near-black); }
+        .ft-page-tab.active {
+            color: var(--navy);
+            font-weight: 600;
+            border-bottom-color: var(--blue);
+        }
+        .ft-page-tab svg { opacity: 0.5; }
+        .ft-page-tab.active svg { opacity: 1; }
+
+        /* ── Tool panels ── */
+        .ft-tool-panel {
+            display: none;
+        }
+        .ft-tool-panel.active {
+            display: block;
+        }
+        .ft-panel-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 24px 0;
+        }
+
+        /* ─────────────────────────────── */
+        /*  PREETI CONVERTER               */
+        /* ─────────────────────────────── */
+        .pc-sub-tabs {
+            display: flex;
+            gap: 0;
+            background: #fff;
+            border: 1px solid rgba(0,13,45,0.1);
+            border-radius: 10px;
+            padding: 4px;
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+        .pc-sub-tab {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 7px;
+            border: none;
+            background: transparent;
+            color: var(--slate);
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+        .pc-sub-tab.active {
+            background: var(--navy);
+            color: #fff;
+            box-shadow: 0 1px 4px rgba(0,13,45,0.2);
+        }
+        .pc-sub-tab:not(.active):hover {
+            background: rgba(0,13,45,0.05);
+            color: var(--near-black);
+        }
+        .pc-status {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            display: none;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .pc-status.show { display: flex; }
+        .pc-status.error { background: rgba(192,57,43,0.06); border: 1px solid rgba(192,57,43,0.18); color: var(--error); }
+        .pc-status.success { background: rgba(26,122,74,0.06); border: 1px solid rgba(26,122,74,0.18); color: var(--success); }
+        .pc-status.info { background: rgba(0,71,172,0.06); border: 1px solid rgba(0,71,172,0.15); color: var(--blue); }
+
+        .pc-panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            align-items: start;
+        }
+        @media (max-width: 768px) { .pc-panels { grid-template-columns: 1fr; } }
+
+        .pc-panel {
+            background: #fff;
+            border: 1px solid rgba(0,13,45,0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .pc-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px 12px;
+            border-bottom: 1px solid rgba(0,13,45,0.06);
+            background: rgba(0,13,45,0.015);
+        }
+        .pc-panel-title {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: var(--slate);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .pc-title-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(0,13,45,0.15); }
+        .pc-title-dot.on { background: var(--blue); }
+        .pc-actions { display: flex; gap: 6px; align-items: center; }
+        .pc-action-btn {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 11px;
+            border-radius: 6px;
+            border: 1px solid rgba(0,13,45,0.12);
+            background: #fff;
+            color: var(--slate);
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s, color 0.15s;
+            white-space: nowrap;
+        }
+        .pc-action-btn:hover { border-color: var(--blue); color: var(--blue); background: rgba(0,71,172,0.03); }
+        .pc-action-btn:disabled { opacity: 0.35; cursor: default; pointer-events: none; }
+        .pc-action-btn.ok { border-color: var(--success); color: var(--success); background: rgba(26,122,74,0.05); }
+        .pc-textarea {
+            width: 100%; box-sizing: border-box;
+            min-height: 300px;
+            padding: 16px 18px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--near-black);
+            border: none; outline: none;
+            resize: vertical;
+            background: transparent;
+        }
+        .pc-textarea::placeholder { color: var(--gray); }
+        .pc-textarea[readonly] { background: rgba(0,13,45,0.01); color: var(--doc-gray); }
+        .pc-panel-footer {
+            padding: 10px 18px;
+            border-top: 1px solid rgba(0,13,45,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0,13,45,0.015);
+        }
+        .pc-char-count { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--gray); }
+        .pc-char-count span { color: var(--slate); font-weight: 500; }
+
+        /* Upload mode */
+        .pc-upload-label {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 14px; cursor: pointer; min-height: 300px; padding: 40px 24px;
+            transition: background 0.2s; width: 100%; box-sizing: border-box;
+        }
+        .pc-upload-label:hover, .pc-upload-label.drag-over { background: rgba(0,71,172,0.03); }
+        .pc-upload-icon {
+            width: 52px; height: 52px;
+            background: rgba(0,13,45,0.05); border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .pc-upload-label:hover .pc-upload-icon { background: rgba(0,71,172,0.1); transform: translateY(-2px); }
+        .pc-upload-title { font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--near-black); text-align: center; }
+        .pc-upload-sub { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--slate); text-align: center; line-height: 1.5; }
+        .pc-upload-types { display: flex; gap: 6px; margin-top: 2px; }
+        .pc-upload-type-badge { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; padding: 3px 8px; border-radius: 4px; background: rgba(0,13,45,0.06); color: var(--slate); }
+        .pc-upload-input { display: none; }
+
+        .pc-file-loaded { padding: 32px 24px; display: none; flex-direction: column; gap: 16px; min-height: 300px; }
+        .pc-file-card { background: rgba(0,13,45,0.03); border: 1px solid rgba(0,13,45,0.08); border-radius: 10px; padding: 16px 18px; display: flex; align-items: center; gap: 14px; }
+        .pc-file-icon-wrap { width: 40px; height: 40px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #fff; }
+        .pc-file-meta { flex: 1; min-width: 0; }
+        .pc-file-name { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; color: var(--near-black); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .pc-file-size { font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--slate); margin-top: 2px; }
+        .pc-file-remove { background: none; border: 1px solid rgba(0,13,45,0.1); border-radius: 6px; padding: 5px 10px; font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--slate); cursor: pointer; transition: border-color 0.15s, color 0.15s; flex-shrink: 0; }
+        .pc-file-remove:hover { border-color: var(--error); color: var(--error); }
+        .pc-file-preview { flex: 1; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--slate); line-height: 1.6; background: rgba(0,13,45,0.02); border: 1px solid rgba(0,13,45,0.06); border-radius: 8px; padding: 12px 14px; max-height: 180px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; }
+
+        .pc-btn-row { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 20px 0 8px; }
+        .pc-btn {
+            font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600;
+            padding: 13px 36px; border-radius: 10px; border: none;
+            background: var(--navy); color: #fff; cursor: pointer;
+            display: flex; align-items: center; gap: 9px;
+            transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+            box-shadow: 0 2px 8px rgba(0,13,45,0.3); letter-spacing: 0.01em;
+        }
+        .pc-btn:hover:not(:disabled) { background: #001852; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,13,45,0.35); }
+        .pc-btn:active:not(:disabled) { transform: translateY(0); }
+        .pc-btn:disabled { opacity: 0.45; cursor: default; }
+        .pc-btn.spinning .pc-btn-icon svg { animation: spin 0.7s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ─────────────────────────────── */
+        /*  LEGAL DICTIONARY               */
+        /* ─────────────────────────────── */
+        .dict-search-wrap {
+            background: #fff;
+            border: 1px solid rgba(0,13,45,0.1);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .dict-search-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 20px;
+        }
+        .dict-search-icon { color: var(--slate); opacity: 0.5; flex-shrink: 0; }
+        .dict-search-input {
+            flex: 1;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--near-black);
+            border: none;
+            outline: none;
+            padding: 18px 0;
+            background: transparent;
+            caret-color: var(--blue);
+        }
+        .dict-search-input::placeholder { color: var(--gray); }
+        .dict-search-badge {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(0,13,45,0.3);
+            flex-shrink: 0;
+            padding: 4px 10px;
+            border: 1px solid rgba(0,13,45,0.1);
+            border-radius: 6px;
+        }
+
+        .dict-status-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .dict-count {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            color: var(--slate);
+        }
+        .dict-count strong { color: var(--near-black); font-weight: 600; }
+
+        .dict-lang-toggle { display: flex; gap: 4px; background: rgba(0,13,45,0.05); border-radius: 8px; padding: 3px; }
+        .dict-lang-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 6px; border: none; background: transparent; color: var(--slate); cursor: pointer; transition: background 0.15s, color 0.15s; }
+        .dict-lang-btn.active { background: #fff; color: var(--navy); box-shadow: 0 1px 3px rgba(0,13,45,0.1); font-weight: 600; }
+
+        .dict-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 14px;
+            min-height: 200px;
+        }
+        .dict-card {
+            background: #fff;
+            border: 1px solid rgba(0,13,45,0.08);
+            border-radius: 12px;
+            padding: 18px 20px;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+        }
+        .dict-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--blue); opacity: 0; transition: opacity 0.2s; }
+        .dict-card:hover { border-color: rgba(0,71,172,0.2); box-shadow: 0 4px 20px rgba(0,13,45,0.07); transform: translateY(-1px); }
+        .dict-card:hover::before { opacity: 1; }
+        .dict-card-nep { font-family: 'DM Sans', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; line-height: 1.4; }
+        .dict-card-eng { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; color: var(--blue); margin-bottom: 10px; letter-spacing: 0.01em; }
+        .dict-card-defn { font-family: 'DM Sans', sans-serif; font-size: 0.83rem; color: var(--slate); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .dict-card-ref { font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--gray); margin-top: 8px; }
+
+        .dict-empty { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--slate); text-align: center; padding: 60px 0; grid-column: 1 / -1; }
+        .dict-loading { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--slate); text-align: center; padding: 60px 0; grid-column: 1 / -1; }
+
+        .dict-show-more-wrap { text-align: center; margin-top: 24px; }
+        .dict-show-more {
+            font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+            padding: 10px 28px; border-radius: 8px;
+            border: 1.5px solid rgba(0,13,45,0.15);
+            background: #fff; color: var(--slate); cursor: pointer;
+            transition: border-color 0.15s, color 0.15s, background 0.15s;
+        }
+        .dict-show-more:hover { border-color: var(--blue); color: var(--blue); background: rgba(0,71,172,0.03); }
+
+        /* ─────────────────────────────── */
+        /*  DATE CONVERTER                 */
+        /* ─────────────────────────────── */
+        .dc-mode-wrap { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 28px; }
+        .dc-mode-tabs { display: flex; background: #fff; border: 1px solid rgba(0,13,45,0.12); border-radius: 12px; padding: 4px; gap: 2px; box-shadow: 0 1px 4px rgba(0,13,45,0.06); }
+        .dc-mode-tab { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; padding: 10px 28px; border-radius: 9px; border: none; background: transparent; color: var(--slate); cursor: pointer; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+        .dc-mode-tab.active { background: var(--navy); color: #fff; }
+        .dc-mode-tab:not(.active):hover { background: rgba(0,13,45,0.05); color: var(--near-black); }
+
+        .dc-card { background: #fff; border: 1px solid rgba(0,13,45,0.08); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,13,45,0.06), 0 1px 4px rgba(0,13,45,0.04); max-width: 860px; margin: 0 auto; }
+        .dc-input-section { padding: 36px 40px 32px; border-bottom: 1px solid rgba(0,13,45,0.07); }
+        .dc-input-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,13,45,0.35); margin-bottom: 16px; display: block; }
+        .dc-selectors { display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 12px; align-items: end; }
+        .dc-select-group { display: flex; flex-direction: column; gap: 6px; }
+        .dc-select-group label { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; color: var(--slate); }
+        .dc-select {
+            font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; color: var(--near-black);
+            background: #f8f7f6; border: 1.5px solid rgba(0,13,45,0.12); border-radius: 10px; padding: 12px 16px;
+            cursor: pointer; appearance: none; -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234D4D53' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+            transition: border-color 0.15s; width: 100%;
+        }
+        .dc-select:focus { outline: none; border-color: var(--blue); background-color: #fff; }
+        .dc-actions { display: flex; align-items: center; gap: 12px; margin-top: 20px; }
+        .dc-convert-btn { font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 12px 32px; background: var(--blue); color: #fff; border: none; border-radius: 10px; cursor: pointer; transition: background 0.15s, transform 0.1s; box-shadow: 0 2px 8px rgba(0,71,172,0.25); }
+        .dc-convert-btn:hover { background: #003d99; box-shadow: 0 4px 14px rgba(0,71,172,0.32); }
+        .dc-convert-btn:active { transform: translateY(1px); }
+        .dc-today-btn { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 11px 20px; background: transparent; color: var(--slate); border: 1.5px solid rgba(0,13,45,0.12); border-radius: 10px; cursor: pointer; transition: border-color 0.15s, color 0.15s, background 0.15s; }
+        .dc-today-btn:hover { border-color: rgba(0,13,45,0.25); color: var(--near-black); background: #f8f7f6; }
+
+        .dc-result-section { padding: 36px 40px; background: linear-gradient(160deg, #fdfcfb 0%, #f8f6f4 100%); min-height: 200px; display: flex; align-items: center; }
+        .dc-result-empty { font-family: 'DM Sans', sans-serif; font-size: 14px; color: rgba(0,13,45,0.25); text-align: center; width: 100%; padding: 20px 0; }
+        .dc-result { display: none; width: 100%; }
+        .dc-result.visible { display: flex; gap: 48px; align-items: center; }
+        .dc-result-main { flex: 1; }
+        .dc-result-converted-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,13,45,0.35); margin-bottom: 8px; }
+        .dc-result-day-name { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 400; color: var(--navy); line-height: 1.1; margin-bottom: 4px; }
+        .dc-result-day-nepali { font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--magenta); font-style: italic; margin-bottom: 12px; }
+        .dc-result-date-full { font-family: 'DM Serif Display', serif; font-size: clamp(1.1rem, 2.5vw, 1.55rem); color: var(--doc-gray); line-height: 1.3; margin-bottom: 6px; }
+        .dc-result-date-short { font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--slate); letter-spacing: 0.04em; }
+        .dc-result-copy-btn { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500; padding: 7px 16px; background: transparent; color: var(--blue); border: 1.5px solid rgba(0,71,172,0.2); border-radius: 8px; cursor: pointer; margin-top: 14px; transition: background 0.15s, border-color 0.15s; display: inline-block; }
+        .dc-result-copy-btn:hover { background: rgba(0,71,172,0.05); border-color: rgba(0,71,172,0.4); }
+
+        .dc-mini-calendar { width: 200px; flex-shrink: 0; }
+        .dc-cal-header { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; color: var(--slate); text-align: center; margin-bottom: 8px; }
+        .dc-cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+        .dc-cal-dayname { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 600; color: rgba(0,13,45,0.3); text-align: center; padding: 3px 0; }
+        .dc-cal-cell { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--slate); text-align: center; padding: 5px 2px; border-radius: 6px; line-height: 1; }
+        .dc-cal-cell.today { background: var(--navy); color: #fff; font-weight: 600; }
+        .dc-cal-cell.empty { color: transparent; }
+
+        .dc-also-shows { padding: 20px 40px 24px; border-top: 1px solid rgba(0,13,45,0.07); background: #fff; display: none; }
+        .dc-also-shows.visible { display: block; }
+        .dc-also-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(0,13,45,0.3); margin-bottom: 10px; }
+        .dc-also-content { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--doc-gray); }
+        .dc-also-content strong { color: var(--navy); }
+
+        .dc-error { display: none; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #c0392b; padding: 12px 16px; background: #fff5f5; border: 1px solid rgba(192,57,43,0.15); border-radius: 8px; margin-top: 16px; }
+        .dc-error.visible { display: block; }
+
+        /* ── Responsive ── */
+        @media (max-width: 680px) {
+            .dc-input-section, .dc-result-section, .dc-also-shows { padding: 24px 20px; }
+            .dc-selectors { grid-template-columns: 1fr 1fr; }
+            .dc-selectors .dc-select-group:nth-child(2) { grid-column: 1 / -1; }
+            .dc-result.visible { flex-direction: column; gap: 24px; }
+            .dc-mini-calendar { width: 100%; max-width: 280px; }
+        }
+        @media (max-width: 600px) {
+            .ft-hero { padding: 100px 0 40px; }
+            .pc-btn-row { flex-direction: column; }
+            .ft-panel-inner { padding: 28px 16px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- Hero -->
+<section class="ft-hero">
+    <div class="ft-hero-inner">
+        <div class="ft-eyebrow">
+            <span class="ft-eyebrow-dot"></span>
+            Eksana Tools
+        </div>
+        <h1>Free Legal Tools<br><em>for Nepal</em></h1>
+        <p class="ft-hero-desc">Browser-based utilities for Nepal's legal community — no login, no signup, no data sent to any server.</p>
+    </div>
+</section>
+
+<!-- Tab bar -->
+<div class="ft-page-tabs-wrap">
+    <div class="ft-page-tabs" role="tablist">
+        <button class="ft-page-tab active" role="tab" aria-selected="true" onclick="switchTool('preeti')" id="tab-preeti">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            Preeti Converter
+        </button>
+        <button class="ft-page-tab" role="tab" aria-selected="false" onclick="switchTool('dictionary')" id="tab-dictionary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Legal Dictionary
+        </button>
+        <button class="ft-page-tab" role="tab" aria-selected="false" onclick="switchTool('date')" id="tab-date">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Date Converter
+        </button>
+    </div>
+</div>
+
+<!-- Tool body -->
+<div class="ft-body">
+
+    <!-- ── PREETI CONVERTER PANEL ── -->
+    <div id="panel-preeti" class="ft-tool-panel active">
+        <div class="ft-panel-inner">
+
+            <div class="pc-status" id="pc-status"></div>
+
+            <div class="pc-sub-tabs">
+                <button class="pc-sub-tab active" id="pc-tab-paste" onclick="PC.switchMode('paste')">Paste Text</button>
+                <button class="pc-sub-tab" id="pc-tab-file" onclick="PC.switchMode('file')">Upload File</button>
+            </div>
+
+            <div class="pc-panels">
+                <!-- Input panel -->
+                <div class="pc-panel">
+                    <div class="pc-panel-header">
+                        <div class="pc-panel-title">
+                            <span class="pc-title-dot on"></span>
+                            Input — Preeti Encoded
+                        </div>
+                        <div class="pc-actions">
+                            <button class="pc-action-btn" onclick="PC.clearInput()">Clear</button>
+                        </div>
+                    </div>
+                    <!-- Paste mode -->
+                    <div id="pc-paste-mode">
+                        <textarea class="pc-textarea" id="pc-input-text"
+                            placeholder="Paste Preeti-encoded text here...&#10;&#10;e.g.  s]lznf uf]ljGb k|;fb / ljZjgfy kf}8]n"
+                            spellcheck="false"
+                            oninput="PC.updateInputCount()"></textarea>
+                        <div class="pc-panel-footer">
+                            <div class="pc-char-count">Characters: <span id="pc-input-count">0</span></div>
+                        </div>
+                    </div>
+                    <!-- File upload mode -->
+                    <div id="pc-file-mode" style="display:none;">
+                        <div id="pc-upload-area">
+                            <input type="file" class="pc-upload-input" id="pc-file-input" accept=".txt,.docx" onchange="PC.handleFileSelect(event)">
+                            <label for="pc-file-input" class="pc-upload-label" id="pc-upload-label">
+                                <div class="pc-upload-icon">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--slate);"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                </div>
+                                <div class="pc-upload-title">Drop file here or click to browse</div>
+                                <div class="pc-upload-sub">
+                                    Supports Preeti-encoded files up to 2 MB
+                                    <div class="pc-upload-types">
+                                        <span class="pc-upload-type-badge">.TXT</span>
+                                        <span class="pc-upload-type-badge">.DOCX</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="pc-file-loaded" id="pc-file-loaded">
+                            <div class="pc-file-card">
+                                <div class="pc-file-icon-wrap">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                </div>
+                                <div class="pc-file-meta">
+                                    <div class="pc-file-name" id="pc-file-name">—</div>
+                                    <div class="pc-file-size" id="pc-file-size">—</div>
+                                </div>
+                                <button class="pc-file-remove" onclick="PC.removeFile()">Remove</button>
+                            </div>
+                            <div class="pc-file-preview" id="pc-file-preview"></div>
+                            <div class="pc-panel-footer" style="border-top:none;padding:0;">
+                                <div class="pc-char-count">Characters: <span id="pc-file-char-count">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output panel -->
+                <div class="pc-panel">
+                    <div class="pc-panel-header">
+                        <div class="pc-panel-title">
+                            <span class="pc-title-dot" id="pc-output-dot"></span>
+                            Output — Unicode (Devanagari)
+                        </div>
+                        <div class="pc-actions">
+                            <button class="pc-action-btn" id="pc-copy-btn" onclick="PC.copyOutput()" disabled>Copy</button>
+                            <button class="pc-action-btn" id="pc-download-btn" onclick="PC.downloadOutput()" disabled>Download</button>
+                        </div>
+                    </div>
+                    <textarea class="pc-textarea" id="pc-output-text"
+                        placeholder="Converted Unicode text will appear here…"
+                        readonly spellcheck="false"></textarea>
+                    <div class="pc-panel-footer">
+                        <div class="pc-char-count">Characters: <span id="pc-output-count">0</span></div>
+                        <div id="pc-conv-time" style="font-family:'DM Sans',sans-serif;font-size:11px;color:var(--gray);display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pc-btn-row">
+                <button class="pc-btn" id="pc-convert-btn" onclick="PC.doConvert()">
+                    <span class="pc-btn-icon" id="pc-btn-icon">
+                        <svg id="pc-btn-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M15 6l6 6-6 6"/></svg>
+                    </span>
+                    Convert to Unicode
+                </button>
+            </div>
+
+        </div>
+    </div><!-- /preeti panel -->
+
+    <!-- ── LEGAL DICTIONARY PANEL ── -->
+    <div id="panel-dictionary" class="ft-tool-panel">
+        <div class="ft-panel-inner">
+
+            <div class="dict-search-wrap">
+                <div class="dict-search-inner">
+                    <svg class="dict-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="search" class="dict-search-input" id="dict-search-input"
+                        placeholder="Search in Nepali or English…"
+                        autocomplete="off" spellcheck="false">
+                    <span class="dict-search-badge" id="dict-total-badge">Loading…</span>
+                </div>
+            </div>
+
+            <div class="dict-status-bar">
+                <div class="dict-count" id="dict-count"></div>
+                <div class="dict-lang-toggle">
+                    <button class="dict-lang-btn active" id="dict-lang-both" onclick="DICT.setLang('both')">Both</button>
+                    <button class="dict-lang-btn" id="dict-lang-nep" onclick="DICT.setLang('nep')">नेपाली</button>
+                    <button class="dict-lang-btn" id="dict-lang-eng" onclick="DICT.setLang('eng')">English</button>
+                </div>
+            </div>
+
+            <div class="dict-grid" id="dict-grid">
+                <div class="dict-loading">Loading dictionary…</div>
+            </div>
+
+            <div class="dict-show-more-wrap" id="dict-more-wrap" style="display:none;">
+                <button class="dict-show-more" onclick="DICT.showMore()">Show more results</button>
+            </div>
+
+        </div>
+    </div><!-- /dictionary panel -->
+
+    <!-- ── DATE CONVERTER PANEL ── -->
+    <div id="panel-date" class="ft-tool-panel">
+        <div class="ft-panel-inner">
+
+            <div class="dc-mode-wrap">
+                <div class="dc-mode-tabs" role="tablist">
+                    <button class="dc-mode-tab active" id="dc-tab-bs-ad" role="tab" aria-selected="true" onclick="DC.setMode('bs-ad')">BS → AD</button>
+                    <button class="dc-mode-tab" id="dc-tab-ad-bs" role="tab" aria-selected="false" onclick="DC.setMode('ad-bs')">AD → BS</button>
+                </div>
+            </div>
+
+            <div class="dc-card">
+                <div class="dc-input-section">
+                    <span class="dc-input-label" id="dc-input-label">Enter Bikram Sambat (B.S.) Date</span>
+                    <div class="dc-selectors">
+                        <div class="dc-select-group">
+                            <label for="dc-sel-year">Year</label>
+                            <select id="dc-sel-year" class="dc-select" onchange="DC.onYearChange()"></select>
+                        </div>
+                        <div class="dc-select-group">
+                            <label for="dc-sel-month">Month</label>
+                            <select id="dc-sel-month" class="dc-select" onchange="DC.onMonthChange()"></select>
+                        </div>
+                        <div class="dc-select-group">
+                            <label for="dc-sel-day">Day</label>
+                            <select id="dc-sel-day" class="dc-select"></select>
+                        </div>
+                    </div>
+                    <div class="dc-error" id="dc-error"></div>
+                    <div class="dc-actions">
+                        <button class="dc-convert-btn" onclick="DC.convert()">Convert</button>
+                        <button class="dc-today-btn" onclick="DC.fillToday()">Today's Date</button>
+                    </div>
+                </div>
+
+                <div class="dc-result-section">
+                    <div class="dc-result-empty" id="dc-result-empty">Select a date and click Convert</div>
+                    <div class="dc-result" id="dc-result-display">
+                        <div class="dc-result-main">
+                            <div class="dc-result-converted-label" id="dc-result-label"></div>
+                            <div class="dc-result-day-name" id="dc-result-day"></div>
+                            <div class="dc-result-day-nepali" id="dc-result-day-ne"></div>
+                            <div class="dc-result-date-full" id="dc-result-full"></div>
+                            <div class="dc-result-date-short" id="dc-result-short"></div>
+                            <button class="dc-result-copy-btn" id="dc-copy-btn" onclick="DC.copyResult()">Copy Date</button>
+                        </div>
+                        <div class="dc-mini-calendar" id="dc-mini-cal">
+                            <div class="dc-cal-header" id="dc-cal-header"></div>
+                            <div class="dc-cal-grid" id="dc-cal-grid"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dc-also-shows" id="dc-also-shows">
+                    <div class="dc-also-label">Also</div>
+                    <div class="dc-also-content" id="dc-also-content"></div>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- /date panel -->
+
+</div><!-- /ft-body -->
+
+<div id="footer-placeholder"></div>
+<script src="../includes/include.js"></script>
+
+<!-- Mammoth.js for DOCX parsing (Preeti tab) -->
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js"></script>
+<!-- Fuse.js for dictionary search -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+
+<script>
+// ─── Tab switching ───────────────────────────────────────────────────────────
+var _activeTool = 'preeti';
+
+function switchTool(name) {
+    if (_activeTool === name) return;
+    document.getElementById('panel-' + _activeTool).classList.remove('active');
+    document.getElementById('tab-' + _activeTool).classList.remove('active');
+    document.getElementById('tab-' + _activeTool).setAttribute('aria-selected', 'false');
+
+    _activeTool = name;
+    document.getElementById('panel-' + name).classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+    document.getElementById('tab-' + name).setAttribute('aria-selected', 'true');
+
+    // Lazy init dictionary on first show
+    if (name === 'dictionary' && !DICT._loaded) DICT.init();
+    // Lazy init date converter on first show
+    if (name === 'date' && !DC._inited) DC.init();
+
+    // Handle hash
+    history.replaceState(null, '', '#' + name);
+}
+
+// Hash routing — deferred until all modules are defined (see bottom of script)
+
+
+// ─── PREETI CONVERTER ────────────────────────────────────────────────────────
+var PC = (function() {
+    var CHAR_MAP = {"0":"ण्","1":"ज्ञ","2":"द्द","3":"घ","4":"द्ध","5":"छ","6":"ट","7":"ठ","8":"ड","9":"ढ","~":"ञ्","!":"१","@":"२","#":"३","$":"४","%":"५","^":"६","&":"७","*":"८","(":"९",")":"०","_":"))","+":"ं"," ":" ","`":"ञ","-":"(","=":".","Q":"त्त","W":"ध्","E":"भ्","R":"च्","T":"त्","Y":"थ्","U":"ग्","I":"क्ष्","O":"इ","P":"ए","}":"ै","|":"्र","q":"त्र","w":"ध","e":"भ","r":"च","t":"त","y":"थ","u":"ग","i":"ष्","o":"य","p":"उ","[":"ृ","]":"े","\\":"्","A":"ब्","S":"क्","D":"म्","F":"ँ","G":"न्","H":"ज्","J":"व्","K":"प्","L":"ी",":":"स्","\"":"ू","a":"ब","s":"क","d":"म","f":"ा","g":"न","h":"ज","j":"व","k":"प","l":"ि",";":"स","'":"ु","Z":"श्","X":"ह्","C":"ऋ","V":"ख्","B":"द्य","N":"ल्","M":"ः","<":"?",">":"श्र","?":"रु","z":"श","x":"ह","c":"अ","v":"ख","b":"द","n":"ल",",":",",".":"।","/":"र","\u201E":"ध्र","\u2026":"'","\u02C6":"फ्","\u2030":"झ्","\u2039":"ङ्घ","\u2018":"ॅ","\u2022":"ड्ड","\u02DC":"ऽ","\u203A":"द्र","\u00A1":"ज्ञ्","\u00A2":"द्घ","\u00A3":"घ्","\u00A4":"झ्","\u00A5":"्र","\u00A7":"ट्ट","\u00A9":"र","\u00AA":"ङ","\u00AB":"्र","\u00B0":"ङ्ढ","\u00B1":"+","\u00B4":"झ","\u00B6":"ठ्ठ","\u00BF":"रू","\u00C5":"हृ","\u00C6":"\u201C","\u00CB":"ङ्ग","\u00CC":"न्न","\u00CD":"ङ्क","\u00CE":"ङ्ख","\u00D2":"\u00A8","\u00D6":"=","\u00D7":"\u00D7","\u00D8":"्य","\u00D9":";","\u00DA":"\u2018","\u00DB":"!","\u00DC":"%","\u00DD":"ट्ठ","\u00DF":"द्म","\u00E5":"द्व","\u00E6":"\u201D","\u00E7":"ॐ","\u00F7":"/"};
+    var POST_RULES = [["्ा",""],["(त्र|त्त)([^उभप]+?)m","$1m$2"],["त्रm","क्र"],["त्तm","क्त"],["([^उभप]+?)m","m$1"],["उm","ऊ"],["भm","झ"],["पm","फ"],["इ{","ई"],["ि((.्)*[^्])","$1ि"],["(.[ािीुूृेैोौंःँ]*?){","{$1"],["((.्)*){","{$1"],["{","र्"],["([ाीुूृेैोौंःँ]+?)(्(.्)*[^्])","$2$1"],["्([ाीुूृेैोौंःँ]+?)((.्)*[^्])","्$2$1"],["([ंँ])([ािीुूृेैोौः]*)","$2$1"],["ँँ","ँ"],["ंं","ं"],["ेे","े"],["ैै","ै"],["ुु","ु"],["ूू","ू"],["^ः",":"],["टृ","ट्ट"],["ेा","ाे"],["ैा","ाै"],["अाे","ओ"],["अाै","औ"],["अा","आ"],["एे","ऐ"],["ाे","ो"],["ाै","ौ"]];
+
+    var mode = 'paste';
+    var fileText = '', fileName = '', outFileName = '';
+    var MAX_SIZE = 2 * 1024 * 1024;
+
+    function $ (id) { return document.getElementById(id); }
+
+    function convertPreetiToUnicode(input) {
+        if (!input) return '';
+        var out = '';
+        for (var i = 0; i < input.length; i++) {
+            var ch = input[i];
+            out += (CHAR_MAP[ch] !== undefined) ? CHAR_MAP[ch] : ch;
+        }
+        POST_RULES.forEach(function(rule) {
+            var flags = rule[0].startsWith('^') ? 'gm' : 'g';
+            try { out = out.replace(new RegExp(rule[0], flags), rule[1]); } catch(e) {}
+        });
+        return out;
+    }
+
+    function showStatus(type, msg) {
+        var el = $('pc-status');
+        el.className = 'pc-status show ' + type;
+        el.textContent = msg;
+    }
+    function clearStatus() {
+        var el = $('pc-status');
+        el.className = 'pc-status';
+        el.innerHTML = '';
+    }
+
+    function formatBytes(b) {
+        if (b < 1024) return b + ' B';
+        if (b < 1048576) return (b/1024).toFixed(1) + ' KB';
+        return (b/1048576).toFixed(2) + ' MB';
+    }
+
+    return {
+        switchMode: function(m) {
+            mode = m;
+            $('pc-tab-paste').classList.toggle('active', m === 'paste');
+            $('pc-tab-file').classList.toggle('active', m === 'file');
+            $('pc-paste-mode').style.display = m === 'paste' ? 'block' : 'none';
+            $('pc-file-mode').style.display = m === 'file' ? 'block' : 'none';
+            clearStatus();
+        },
+        updateInputCount: function() {
+            $('pc-input-count').textContent = $('pc-input-text').value.length.toLocaleString();
+        },
+        clearInput: function() {
+            if (mode === 'paste') {
+                $('pc-input-text').value = '';
+                $('pc-input-count').textContent = '0';
+            } else {
+                this.removeFile();
+            }
+            $('pc-output-text').value = '';
+            $('pc-output-count').textContent = '0';
+            $('pc-copy-btn').disabled = true;
+            $('pc-download-btn').disabled = true;
+            $('pc-output-dot').classList.remove('on');
+            $('pc-conv-time').style.display = 'none';
+            clearStatus();
+        },
+        handleFileSelect: function(e) {
+            var f = e.target.files[0];
+            if (f) this.processFile(f);
+        },
+        processFile: function(file) {
+            clearStatus();
+            var ext = file.name.split('.').pop().toLowerCase();
+            if (!['txt','docx'].includes(ext)) { showStatus('error','Unsupported file type. Please upload .txt or .docx.'); return; }
+            if (file.size > MAX_SIZE) { showStatus('error','File too large (' + formatBytes(file.size) + '). Max 2 MB.'); return; }
+            showStatus('info','Reading file…');
+            var self = this;
+            if (ext === 'txt') {
+                var r = new FileReader();
+                r.onload = function(e) { fileText = e.target.result; fileName = file.name; outFileName = file.name.replace(/\.txt$/i,'_unicode.txt'); self.showFileLoaded(file, fileText); clearStatus(); };
+                r.onerror = function() { showStatus('error','Could not read file.'); };
+                r.readAsText(file,'windows-1252');
+            } else {
+                var r2 = new FileReader();
+                r2.onload = function(e) {
+                    if (typeof mammoth === 'undefined') { showStatus('error','DOCX parser not loaded.'); return; }
+                    mammoth.extractRawText({arrayBuffer: e.target.result}).then(function(res) {
+                        fileText = res.value; fileName = file.name; outFileName = file.name.replace(/\.docx$/i,'_unicode.txt');
+                        self.showFileLoaded(file, fileText); clearStatus();
+                    }).catch(function() { showStatus('error','Could not parse DOCX.'); });
+                };
+                r2.onerror = function() { showStatus('error','Could not read file.'); };
+                r2.readAsArrayBuffer(file);
+            }
+        },
+        showFileLoaded: function(file, text) {
+            $('pc-upload-label').style.display = 'none';
+            var fl = $('pc-file-loaded');
+            fl.style.display = 'flex';
+            $('pc-file-name').textContent = file.name;
+            $('pc-file-size').textContent = formatBytes(file.size);
+            $('pc-file-preview').textContent = text.slice(0,600) + (text.length > 600 ? '…' : '');
+            $('pc-file-char-count').textContent = text.length.toLocaleString();
+        },
+        removeFile: function() {
+            fileText = ''; fileName = ''; outFileName = '';
+            $('pc-file-input').value = '';
+            $('pc-upload-label').style.display = 'flex';
+            $('pc-file-loaded').style.display = 'none';
+            $('pc-file-preview').textContent = '';
+            $('pc-file-char-count').textContent = '0';
+            clearStatus();
+        },
+        doConvert: function() {
+            clearStatus();
+            var input = '';
+            if (mode === 'paste') {
+                input = $('pc-input-text').value;
+                if (!input.trim()) { showStatus('error','Please paste some Preeti-encoded text first.'); return; }
+            } else {
+                if (!fileText) { showStatus('error','Please upload a file first.'); return; }
+                input = fileText;
+            }
+            var btn = $('pc-convert-btn');
+            btn.disabled = true;
+            btn.classList.add('spinning');
+            setTimeout(function() {
+                var t0 = performance.now();
+                var result;
+                try { result = convertPreetiToUnicode(input); } catch(e) { showStatus('error','Conversion error. Please try again.'); btn.disabled = false; btn.classList.remove('spinning'); return; }
+                var elapsed = (performance.now() - t0).toFixed(1);
+                $('pc-output-text').value = result;
+                $('pc-output-count').textContent = result.length.toLocaleString();
+                $('pc-copy-btn').disabled = false;
+                $('pc-download-btn').disabled = false;
+                $('pc-output-dot').classList.add('on');
+                var tl = $('pc-conv-time');
+                tl.textContent = 'Converted in ' + elapsed + 'ms';
+                tl.style.display = 'block';
+                btn.disabled = false;
+                btn.classList.remove('spinning');
+                if (mode === 'file') showStatus('success','Converted — ' + result.length.toLocaleString() + ' Unicode characters.');
+            }, 30);
+        },
+        copyOutput: function() {
+            var text = $('pc-output-text').value;
+            if (!text) return;
+            var btn = $('pc-copy-btn');
+            navigator.clipboard.writeText(text).then(function() {
+                btn.classList.add('ok'); btn.textContent = 'Copied';
+                setTimeout(function() { btn.classList.remove('ok'); btn.textContent = 'Copy'; }, 2000);
+            }).catch(function() { $('pc-output-text').select(); document.execCommand('copy'); });
+        },
+        downloadOutput: function() {
+            var text = $('pc-output-text').value;
+            if (!text) return;
+            var fname = outFileName || 'converted_unicode.txt';
+            var blob = new Blob([text], {type:'text/plain;charset=utf-8'});
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url; a.download = fname; a.click();
+            URL.revokeObjectURL(url);
+        }
+    };
+})();
+
+// Drag & drop on upload label
+(function() {
+    var label = document.getElementById('pc-upload-label');
+    if (!label) return;
+    label.addEventListener('dragover', function(e) { e.preventDefault(); label.classList.add('drag-over'); });
+    label.addEventListener('dragleave', function() { label.classList.remove('drag-over'); });
+    label.addEventListener('drop', function(e) {
+        e.preventDefault(); label.classList.remove('drag-over');
+        var f = e.dataTransfer.files[0];
+        if (f) PC.processFile(f);
+    });
+})();
+
+// Ctrl+Enter to convert (when preeti tab is active)
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && _activeTool === 'preeti') {
+        e.preventDefault();
+        PC.doConvert();
+    }
+});
+
+
+// ─── LEGAL DICTIONARY ────────────────────────────────────────────────────────
+var DICT = (function() {
+    var _data = [];
+    var _fuse = null;
+    var _lang = 'both';
+    var _results = [];
+    var _shown = 0;
+    var PAGE = 24;
+    var _q = '';
+
+    function $ (id) { return document.getElementById(id); }
+
+    function renderCards(items) {
+        var grid = $('dict-grid');
+        if (!items.length) {
+            grid.innerHTML = '<div class="dict-empty">No results found for "<strong>' + escHtml(_q) + '</strong>".</div>';
+            $('dict-more-wrap').style.display = 'none';
+            $('dict-count').textContent = '0 results';
+            return;
+        }
+        var slice = items.slice(0, _shown);
+        var html = '';
+        slice.forEach(function(item) {
+            var t = item.item || item;
+            html += '<div class="dict-card">';
+            html += '<div class="dict-card-nep">' + escHtml(t.nep || '') + '</div>';
+            html += '<div class="dict-card-eng">' + escHtml(t.eng || '') + '</div>';
+            if (t.nepdefn) html += '<div class="dict-card-defn">' + escHtml(t.nepdefn) + '</div>';
+            if (t.ref) html += '<div class="dict-card-ref">' + escHtml(t.ref) + '</div>';
+            html += '</div>';
+        });
+        grid.innerHTML = html;
+        var total = items.length;
+        $('dict-count').innerHTML = '<strong>' + slice.length.toLocaleString() + '</strong> of ' + total.toLocaleString() + ' terms';
+        $('dict-more-wrap').style.display = (_shown < total) ? 'block' : 'none';
+    }
+
+    function escHtml(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function search(q) {
+        _q = q.trim();
+        _shown = PAGE;
+        if (!_q) {
+            // Show first PAGE items from data
+            var filtered = _lang === 'both' ? _data : _data.filter(function(t) {
+                return _lang === 'nep' ? t.nep : t.eng;
+            });
+            _results = filtered;
+            renderCards(filtered.map(function(t) { return {item: t}; }));
+            return;
+        }
+        var keys = _lang === 'both' ? ['nep','eng','nepdefn'] : _lang === 'nep' ? ['nep','nepdefn'] : ['eng'];
+        var fuse = new Fuse(_data, { keys: keys, threshold: 0.35, includeScore: true });
+        _results = fuse.search(_q);
+        renderCards(_results);
+    }
+
+    return {
+        _loaded: false,
+        _lang: 'both',
+        setLang: function(l) {
+            _lang = l;
+            ['both','nep','eng'].forEach(function(x) {
+                var btn = $('dict-lang-' + x);
+                if (btn) btn.classList.toggle('active', x === l);
+            });
+            search($('dict-search-input').value);
+        },
+        showMore: function() {
+            _shown += PAGE;
+            renderCards(_results);
+        },
+        init: function() {
+            if (this._loaded) return;
+            var self = this;
+            fetch('../data/dict.json').then(function(r) { return r.json(); }).then(function(data) {
+                _data = data;
+                self._loaded = true;
+                $('dict-total-badge').textContent = data.length.toLocaleString() + ' terms';
+                _results = data.map(function(t) { return {item: t}; });
+                _shown = PAGE;
+                renderCards(_results);
+
+                var input = $('dict-search-input');
+                var timer;
+                input.addEventListener('input', function() {
+                    clearTimeout(timer);
+                    timer = setTimeout(function() { search(input.value); }, 180);
+                });
+            }).catch(function() {
+                $('dict-grid').innerHTML = '<div class="dict-empty">Could not load dictionary. Please refresh.</div>';
+            });
+        }
+    };
+})();
+
+
+// ─── DATE CONVERTER ──────────────────────────────────────────────────────────
+var DC = (function() {
+    function $ (id) { return document.getElementById(id); }
+
+    var BS_DATA = {
+        1970:[31,31,32,31,31,31,30,29,30,29,30,30],1971:[31,31,32,31,32,30,30,29,30,29,30,30],1972:[31,32,31,32,31,30,30,30,29,29,30,30],1973:[30,32,31,32,31,30,30,30,29,30,29,31],1974:[31,31,32,30,31,31,30,29,30,29,30,30],1975:[31,31,32,32,30,31,30,29,30,29,30,30],1976:[31,32,31,32,31,30,30,30,29,29,30,31],1977:[30,32,31,32,31,31,29,30,29,30,29,31],1978:[31,31,32,31,31,31,30,29,30,29,30,30],1979:[31,31,32,32,31,30,30,29,30,29,30,30],1980:[30,32,31,32,31,30,30,30,29,29,30,31],1981:[31,31,31,32,31,31,29,30,30,29,30,30],1982:[31,31,32,31,31,31,30,29,30,29,30,30],1983:[31,31,32,32,31,30,30,29,30,29,30,30],1984:[31,32,31,32,31,30,30,30,29,29,30,31],1985:[31,31,31,32,31,31,29,30,30,29,30,30],1986:[31,31,32,31,31,31,30,29,30,29,30,30],1987:[31,32,31,32,31,30,30,29,30,29,30,30],1988:[31,32,31,32,31,30,30,30,29,29,30,31],1989:[31,31,31,32,31,31,30,29,30,29,30,30],1990:[30,31,32,31,31,31,30,29,30,29,30,30],1991:[31,32,31,32,31,30,30,29,30,29,30,30],1992:[31,32,31,32,31,30,30,30,29,30,29,30],1993:[31,31,31,32,31,31,30,29,30,29,30,30],1994:[31,31,31,32,31,31,30,29,30,29,30,30],1995:[31,31,31,32,31,31,30,29,30,29,30,30],1996:[31,31,31,32,31,31,30,29,30,29,30,30],1997:[31,31,31,32,31,31,30,29,30,29,30,30],1998:[31,31,31,32,31,31,30,29,30,29,30,30],1999:[31,31,31,32,31,31,30,29,30,29,30,30],2000:[30,32,31,32,31,30,30,30,29,30,29,31],2001:[31,31,32,31,31,31,30,29,30,29,30,30],2002:[31,31,32,32,31,30,30,29,30,29,30,30],2003:[31,32,31,32,31,30,30,30,29,29,30,31],2004:[30,32,31,32,31,30,30,30,29,30,29,31],2005:[31,31,32,31,31,31,30,29,30,29,30,30],2006:[31,31,32,32,31,30,30,29,30,29,30,30],2007:[31,32,31,32,31,30,30,30,29,29,30,31],2008:[31,31,31,32,31,31,29,30,30,29,29,31],2009:[31,31,32,31,31,31,30,29,30,29,30,30],2010:[31,31,32,32,31,30,30,29,30,29,30,30],2011:[31,32,31,32,31,30,30,30,29,29,30,31],2012:[31,31,31,32,31,31,29,30,30,29,30,30],2013:[31,31,32,31,31,31,30,29,30,29,30,30],2014:[31,31,32,32,31,30,30,29,30,29,30,30],2015:[31,32,31,32,31,30,30,30,29,29,30,31],2016:[31,31,31,32,31,31,29,30,30,29,30,30],2017:[31,31,32,31,31,31,30,29,30,29,30,30],2018:[31,32,31,32,31,30,30,29,30,29,30,30],2019:[31,32,31,32,31,30,30,30,29,30,29,31],2020:[31,31,31,32,31,31,30,29,30,29,30,30],2021:[31,31,32,31,31,31,30,29,30,29,30,30],2022:[31,32,31,32,31,30,30,30,29,29,30,30],2023:[31,32,31,32,31,30,30,30,29,30,29,31],2024:[31,31,31,32,31,31,30,29,30,29,30,30],2025:[31,31,32,31,31,31,30,29,30,29,30,30],2026:[31,32,31,32,31,30,30,30,29,29,30,31],2027:[30,32,31,32,31,30,30,30,29,30,29,31],2028:[31,31,32,31,31,31,30,29,30,29,30,30],2029:[31,31,32,31,32,30,30,29,30,29,30,30],2030:[31,32,31,32,31,30,30,30,29,29,30,31],2031:[30,32,31,32,31,30,30,30,29,30,29,31],2032:[31,31,32,31,31,31,30,29,30,29,30,30],2033:[31,31,32,32,31,30,30,29,30,29,30,30],2034:[31,32,31,32,31,30,30,30,29,29,30,31],2035:[30,32,31,32,31,31,29,30,30,29,29,31],2036:[31,31,32,31,31,31,30,29,30,29,30,30],2037:[31,31,32,32,31,30,30,29,30,29,30,30],2038:[31,32,31,32,31,30,30,30,29,29,30,31],2039:[31,31,31,32,31,31,29,30,30,29,30,30],2040:[31,31,32,31,31,31,30,29,30,29,30,30],2041:[31,31,32,32,31,30,30,29,30,29,30,30],2042:[31,32,31,32,31,30,30,30,29,29,30,31],2043:[31,31,31,32,31,31,29,30,30,29,30,30],2044:[31,31,32,31,31,31,30,29,30,29,30,30],2045:[31,32,31,32,31,30,30,29,30,29,30,30],2046:[31,32,31,32,31,30,30,30,29,29,30,31],2047:[31,31,31,32,31,31,30,29,30,29,30,30],2048:[31,31,32,31,31,31,30,29,30,29,30,30],2049:[31,32,31,32,31,30,30,30,29,29,30,30],2050:[31,32,31,32,31,30,30,30,29,30,29,31],2051:[31,31,31,32,31,31,30,29,30,29,30,30],2052:[31,31,32,31,31,31,30,29,30,29,30,30],2053:[31,32,31,32,31,30,30,30,29,29,30,30],2054:[31,32,31,32,31,30,30,30,29,30,29,31],2055:[31,31,32,31,31,31,30,29,30,29,30,30],2056:[31,31,32,31,32,30,30,29,30,29,30,30],2057:[31,32,31,32,31,30,30,30,29,29,30,31],2058:[30,32,31,32,31,30,30,30,29,30,29,31],2059:[31,31,32,31,31,31,30,29,30,29,30,30],2060:[31,31,32,32,31,30,30,29,30,29,30,30],2061:[31,32,31,32,31,30,30,30,29,29,30,31],2062:[30,32,31,32,31,31,29,30,29,30,29,31],2063:[31,31,32,31,31,31,30,29,30,29,30,30],2064:[31,31,32,32,31,30,30,29,30,29,30,30],2065:[31,32,31,32,31,30,30,30,29,29,30,31],2066:[31,31,31,32,31,31,29,30,30,29,29,31],2067:[31,31,32,31,31,31,30,29,30,29,30,30],2068:[31,31,32,32,31,30,30,29,30,29,30,30],2069:[31,32,31,32,31,30,30,30,29,29,30,31],2070:[31,31,31,32,31,31,29,30,30,29,30,30],2071:[31,31,32,31,31,31,30,29,30,29,30,30],2072:[31,32,31,32,31,30,30,29,30,29,30,30],2073:[31,32,31,32,31,30,30,30,29,29,30,31],2074:[31,31,31,32,31,31,30,29,30,29,30,30],2075:[31,31,32,31,31,31,30,29,30,29,30,30],2076:[31,32,31,32,31,30,30,30,29,29,30,30],2077:[31,32,31,32,31,30,30,30,29,30,29,31],2078:[31,31,31,32,31,31,30,29,30,29,30,30],2079:[31,31,32,31,31,31,30,29,30,29,30,30],2080:[31,32,31,32,31,30,30,30,29,29,30,30],2081:[31,32,31,32,31,30,30,30,29,30,29,31],2082:[31,31,32,31,31,31,30,29,30,29,30,30],2083:[31,31,32,31,31,31,30,29,30,29,30,30],2084:[31,32,31,32,31,30,30,30,29,29,30,31],2085:[30,32,31,32,31,30,30,30,29,30,29,31],2086:[31,31,32,31,31,31,30,29,30,29,30,30],2087:[31,31,32,31,31,31,30,30,29,30,30,30],2088:[30,31,32,32,30,31,30,30,29,30,30,30],2089:[30,32,31,32,31,30,30,30,29,30,30,30],2090:[30,32,31,32,31,30,30,30,29,30,30,30]
+    };
+    var BS_EPOCH_AD = new Date(1943,3,14);
+    var BS_EPOCH_YEAR = 2000;
+    var BS_MONTHS = [{en:'Baishak',ne:'बैशाख'},{en:'Jestha',ne:'जेठ'},{en:'Ashadh',ne:'असार'},{en:'Shrawan',ne:'साउन'},{en:'Bhadra',ne:'भदौ'},{en:'Ashwin',ne:'असोज'},{en:'Kartik',ne:'कार्तिक'},{en:'Mangsir',ne:'मंसिर'},{en:'Poush',ne:'पुस'},{en:'Magh',ne:'माघ'},{en:'Falgun',ne:'फागुन'},{en:'Chaitra',ne:'चैत'}];
+    var AD_MONTHS_LONG = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var AD_MONTHS_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var DAY_NAMES_EN = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var DAY_NAMES_NE = ['आइतबार','सोमबार','मंगलबार','बुधबार','बिहीबार','शुक्रबार','शनिबार'];
+    var _mode = 'bs-ad';
+    var _lastResult = '';
+
+    function bsToAd(y,m,d) {
+        if (!BS_DATA[y]) return null;
+        var md = BS_DATA[y];
+        if (m<1||m>12||d<1||d>md[m-1]) return null;
+        var total = 0;
+        for (var yr=BS_EPOCH_YEAR; yr<y; yr++) { if (!BS_DATA[yr]) return null; total += BS_DATA[yr].reduce(function(a,b){return a+b;},0); }
+        for (var mo=0; mo<m-1; mo++) total += md[mo];
+        total += d-1;
+        var ad = new Date(BS_EPOCH_AD.getTime());
+        ad.setDate(ad.getDate()+total);
+        return ad;
+    }
+    function adToBs(y,m,d) {
+        var target = new Date(y,m,d);
+        var diff = target.getTime()-BS_EPOCH_AD.getTime();
+        if (diff<0) return null;
+        var total = Math.floor(diff/86400000);
+        var bsY = BS_EPOCH_YEAR;
+        while (true) { if (!BS_DATA[bsY]) return null; var yt=BS_DATA[bsY].reduce(function(a,b){return a+b;},0); if (total<yt) break; total-=yt; bsY++; }
+        var months = BS_DATA[bsY];
+        var bsM=1,bsD=1;
+        for (var i=0;i<12;i++) { if (total<months[i]){bsM=i+1;bsD=total+1;break;} total-=months[i]; }
+        return {year:bsY,month:bsM,day:bsD};
+    }
+    function populateBsYears() {
+        var sel=$('dc-sel-year'); sel.innerHTML='';
+        var approx=new Date().getFullYear()+56;
+        Object.keys(BS_DATA).map(Number).sort(function(a,b){return a-b;}).forEach(function(y){
+            var o=document.createElement('option'); o.value=y; o.textContent=y;
+            if (y===approx||y===2082) o.selected=true;
+            sel.appendChild(o);
+        });
+    }
+    function populateAdYears() {
+        var sel=$('dc-sel-year'); sel.innerHTML='';
+        var cur=new Date().getFullYear();
+        for (var y=1913;y<=2034;y++){var o=document.createElement('option');o.value=y;o.textContent=y;if(y===cur)o.selected=true;sel.appendChild(o);}
+    }
+    function populateBsMonths() {
+        var sel=$('dc-sel-month'); sel.innerHTML='';
+        BS_MONTHS.forEach(function(m,i){var o=document.createElement('option');o.value=i+1;o.textContent=(i+1)+'. '+m.en+' ('+m.ne+')';sel.appendChild(o);});
+    }
+    function populateAdMonths() {
+        var sel=$('dc-sel-month'); sel.innerHTML='';
+        AD_MONTHS_LONG.forEach(function(m,i){var o=document.createElement('option');o.value=i;o.textContent=m;sel.appendChild(o);});
+        sel.value=new Date().getMonth();
+    }
+    function populateDays() {
+        var sel=$('dc-sel-day');
+        var cur=parseInt(sel.value)||1;
+        sel.innerHTML='';
+        var max=31;
+        var y=parseInt($('dc-sel-year').value), m=parseInt($('dc-sel-month').value);
+        if (_mode==='bs-ad'&&BS_DATA[y]&&m>=1&&m<=12) max=BS_DATA[y][m-1];
+        else if (_mode==='ad-bs') max=new Date(y,m+1,0).getDate();
+        for (var d=1;d<=max;d++){var o=document.createElement('option');o.value=d;o.textContent=d;sel.appendChild(o);}
+        if (cur<=max) sel.value=cur;
+    }
+    function hideResult() {
+        $('dc-result-empty').style.display='block';
+        $('dc-result-display').classList.remove('visible');
+        $('dc-also-shows').classList.remove('visible');
+        $('dc-error').classList.remove('visible');
+    }
+    function buildCalGrid(grid,firstDay,daysInMonth,target) {
+        var days=['Su','Mo','Tu','We','Th','Fr','Sa'];
+        grid.innerHTML='';
+        days.forEach(function(d){var el=document.createElement('div');el.className='dc-cal-dayname';el.textContent=d;grid.appendChild(el);});
+        for (var i=0;i<firstDay;i++){var el=document.createElement('div');el.className='dc-cal-cell empty';el.textContent='.';grid.appendChild(el);}
+        for (var d=1;d<=daysInMonth;d++){var el=document.createElement('div');el.className='dc-cal-cell'+(d===target?' today':'');el.textContent=d;grid.appendChild(el);}
+    }
+    function showResult() { $('dc-result-empty').style.display='none'; $('dc-result-display').classList.add('visible'); }
+
+    return {
+        _inited: false,
+        init: function() {
+            if (this._inited) return;
+            this._inited = true;
+            this.setMode('bs-ad');
+            this.fillToday();
+        },
+        onYearChange: function() { populateDays(); },
+        onMonthChange: function() { populateDays(); },
+        setMode: function(m) {
+            _mode=m;
+            $('dc-tab-bs-ad').classList.toggle('active',m==='bs-ad');
+            $('dc-tab-ad-bs').classList.toggle('active',m==='ad-bs');
+            $('dc-input-label').textContent=m==='bs-ad'?'Enter Bikram Sambat (B.S.) Date':'Enter Gregorian (A.D.) Date';
+            if (m==='bs-ad'){populateBsYears();populateBsMonths();}else{populateAdYears();populateAdMonths();}
+            populateDays(); hideResult();
+        },
+        fillToday: function() {
+            var today=new Date();
+            if (_mode==='bs-ad'){
+                var bs=adToBs(today.getFullYear(),today.getMonth(),today.getDate());
+                if (!bs) return;
+                $('dc-sel-year').value=bs.year; populateBsMonths(); $('dc-sel-month').value=bs.month; populateDays(); $('dc-sel-day').value=bs.day;
+            } else {
+                $('dc-sel-year').value=today.getFullYear(); populateAdMonths(); $('dc-sel-month').value=today.getMonth(); populateDays(); $('dc-sel-day').value=today.getDate();
+            }
+            this.convert();
+        },
+        convert: function() {
+            var err=$('dc-error'); err.classList.remove('visible');
+            var y=parseInt($('dc-sel-year').value), m=parseInt($('dc-sel-month').value), d=parseInt($('dc-sel-day').value);
+            if (_mode==='bs-ad'){
+                var ad=bsToAd(y,m,d);
+                if(!ad){err.textContent='Invalid date.';err.classList.add('visible');return;}
+                var dow=ad.getDay();
+                var mName=AD_MONTHS_LONG[ad.getMonth()];
+                var fullDate=mName+' '+ad.getDate()+', '+ad.getFullYear();
+                var shortDate=ad.getDate().toString().padStart(2,'0')+'/'+(ad.getMonth()+1).toString().padStart(2,'0')+'/'+ad.getFullYear();
+                $('dc-result-label').textContent='Converted to A.D. (Gregorian)';
+                $('dc-result-day').textContent=DAY_NAMES_EN[dow];
+                $('dc-result-day-ne').textContent=DAY_NAMES_NE[dow];
+                $('dc-result-full').textContent=fullDate;
+                $('dc-result-short').textContent=shortDate;
+                var firstDay=new Date(ad.getFullYear(),ad.getMonth(),1).getDay();
+                var daysInM=new Date(ad.getFullYear(),ad.getMonth()+1,0).getDate();
+                $('dc-cal-header').textContent=AD_MONTHS_SHORT[ad.getMonth()]+' '+ad.getFullYear();
+                buildCalGrid($('dc-cal-grid'),firstDay,daysInM,ad.getDate());
+                var bsMN=BS_MONTHS[m-1];
+                $('dc-also-content').innerHTML='Input: <strong>B.S. '+y+' '+bsMN.en+' '+d+'</strong> &nbsp;·&nbsp; '+bsMN.ne+' '+d+', '+y;
+                $('dc-also-shows').classList.add('visible');
+                _lastResult=fullDate+' (A.D.) — '+DAY_NAMES_EN[dow];
+            } else {
+                var bs=adToBs(y,m,d);
+                if(!bs){err.textContent='Date out of supported range (AD 1913–2034).';err.classList.add('visible');return;}
+                var inputDate=new Date(y,m,d); var dow=inputDate.getDay();
+                var bsMN=BS_MONTHS[bs.month-1];
+                var fullDate=bsMN.en+' '+bs.day+', '+bs.year+' B.S.';
+                $('dc-result-label').textContent='Converted to B.S. (Bikram Sambat)';
+                $('dc-result-day').textContent=DAY_NAMES_EN[dow];
+                $('dc-result-day-ne').textContent=DAY_NAMES_NE[dow];
+                $('dc-result-full').textContent=fullDate;
+                $('dc-result-short').textContent=bsMN.ne+' '+bs.day+', '+bs.year;
+                var firstAd=bsToAd(bs.year,bs.month,1);
+                var firstDay=firstAd?firstAd.getDay():0;
+                var daysInM=BS_DATA[bs.year]?BS_DATA[bs.year][bs.month-1]:30;
+                $('dc-cal-header').textContent=bsMN.en+' '+bs.year;
+                buildCalGrid($('dc-cal-grid'),firstDay,daysInM,bs.day);
+                var adMN=AD_MONTHS_LONG[m];
+                $('dc-also-content').innerHTML='Input: <strong>'+adMN+' '+d+', '+y+' A.D.</strong>';
+                $('dc-also-shows').classList.add('visible');
+                _lastResult=fullDate+' — '+DAY_NAMES_EN[dow];
+            }
+            showResult();
+        },
+        copyResult: function() {
+            var btn=$('dc-copy-btn');
+            navigator.clipboard.writeText(_lastResult).then(function(){
+                btn.textContent='Copied!';
+                setTimeout(function(){btn.textContent='Copy Date';},1800);
+            }).catch(function(){btn.textContent='Copy Date';});
+        }
+    };
+})();
+
+// Hash routing — runs after all modules are defined
+(function() {
+    var hash = location.hash.replace('#', '');
+    if (hash === 'dictionary' || hash === 'date') {
+        switchTool(hash);
+    }
+})();
+</script>
+</body>
+</html>

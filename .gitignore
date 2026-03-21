@@ -1,0 +1,22 @@
+node_modules/
+package-lock.json
+temporary screenshots/
+.puppeteer-profile/
+
+# Dev tools (local only — now in scripts/)
+scripts/screenshot.mjs
+scripts/serve.mjs
+package.json
+
+# Claude Code internals
+.agent/
+.agents/
+.claude/
+skills-lock.json
+
+# Internal brand/design docs (now in docs/)
+docs/
+scripts/preeti2unicode/
+
+# Source/draft content
+pages/blogs/*.md

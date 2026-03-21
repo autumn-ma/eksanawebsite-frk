@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use Eksana: AI-powered Nepal Law Research Guide</title>
+     <meta
+            name="description"
+            content="Learn how to search NKP Najirs, use our AI case summarizer, and navigate Nepal's Supreme Court judgments with ease. Your step-by-step guide!"
+        />
+    <link rel="canonical" href="https://eksana.org/pages/how-to-use" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/eksana-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* ── PAGE HEADER OVERRIDE ─── */
+        .legal-page-header {
+            padding: 150px 0 96px;
+            background: #000D2D;
+            background-image:
+                linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            position: relative;
+            overflow: hidden;
+            min-height: unset;
+            display: block;
+            text-align: left;
+        }
+        .legal-page-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+        .legal-page-header::after {
+            display: none;
+        }
+        .legal-page-header .container {
+            position: relative;
+            z-index: 1;
+        }
+        .legal-page-header h1 {
+            color: #ffffff;
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+        .legal-page-header p {
+            color: rgba(255, 255, 255, 0.55);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        /* ── CONTENT BG ─── */
+        .legal-content {
+            background: #f5f5f7;
+            padding: 64px 0 96px;
+        }
+
+        /* ── SECTION CARD ─── */
+        .legal-section {
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 13, 45, 0.07);
+            padding: 48px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 12px rgba(0, 13, 45, 0.05);
+        }
+
+        /* ── SECTION HEADINGS ─── */
+        .legal-section h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: #000D2D;
+            letter-spacing: -0.01em;
+            margin: 0 0 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 13, 45, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .legal-section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.6em;
+            background: #0047AC;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        /* ── SUB-HEADINGS ─── */
+        .legal-section h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0047AC;
+            margin: 32px 0 10px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+        /* First h3 in a section needs less top margin */
+        .legal-section h3:first-of-type {
+            margin-top: 8px;
+        }
+
+        /* ── BODY TEXT ─── */
+        .legal-section p,
+        .legal-section li {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.975rem;
+            line-height: 1.8;
+            color: #4D4D53;
+            margin-bottom: 14px;
+        }
+
+        /* ── MEDIA: IMAGES ─── */
+        .legal-section img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            margin: 16px 0 24px;
+            box-shadow: 0 4px 24px rgba(0, 13, 45, 0.10), 0 1px 4px rgba(0, 13, 45, 0.06);
+            border: 1px solid rgba(0, 13, 45, 0.07);
+        }
+
+        /* ── SUPADEMO EMBED ─── */
+        .supademo-embed-wrapper {
+            width: 100%;
+            margin: 20px 0 32px;
+            position: relative;
+            padding-bottom: 48.25%; /* 772/1600 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 40px rgba(0, 13, 45, 0.14), 0 2px 8px rgba(0, 13, 45, 0.07);
+            border: 1px solid rgba(0, 13, 45, 0.08);
+        }
+        .supademo-embed-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: none;
+        }
+        @media (max-width: 720px) {
+            .legal-section { padding: 28px 24px; }
+        }
+
+        /* ── CHAT EXAMPLE ─── */
+        .chat-example {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 13, 45, 0.07);
+        }
+        .chat-example p {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #4D4D53;
+            margin-bottom: 16px;
+        }
+        .chat-example p:last-child { margin-bottom: 0; }
+        .chat-example strong {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #000D2D;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* ── FAQ NUMBERED ITEMS ─── */
+        .legal-section > div > h3,
+        .faq-section h3 {
+            counter-increment: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-glow2"></div>
+            <div class="container">
+                <div class="page-hero-inner">
+                    <div class="page-hero-label">
+                        <span class="page-hero-bar"></span>
+                        Guide &amp; FAQ
+                    </div>
+                    <h1 class="page-hero-title">How to Use</h1>
+                    <p class="page-hero-sub">Your guide to mastering the Eksana legal research platform.</p>
+                </div>
+            </div>
+        </section>
+        <section class="legal-content">
+            <div class="container">
+                <div class="legal-section">
+                    <h2>Judgement Search</h2>
+
+                    <h3>Phonetic Typing</h3>
+                    <p>Use phonetic typing to search for judgements in Nepali script by typing in Roman characters. The interactive tour below walks you through how phonetic input works in the search bar.</p>
+                    <div style="position:relative;width:100%;padding-bottom:48.25%;height:0;overflow:hidden;border-radius:10px;margin:20px 0 32px;box-shadow:0 8px 40px rgba(0,13,45,0.14),0 2px 8px rgba(0,13,45,0.07);border:1px solid rgba(0,13,45,0.08);">
+                        <iframe src="https://app.supademo.com/embed/cmk81es8w08aske4xha0steuc" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen allow="clipboard-write; fullscreen"></iframe>
+                    </div>
+
+                    <h3>Advanced Filters</h3>
+                    <p>Use the advanced filters below the search bar to narrow results by Registration/Nirnaya Number, Case Type, Bench (judge names), and decision year range. The interactive tour below walks you through each filter.</p>
+                    <div style="position:relative;width:100%;padding-bottom:48.25%;height:0;overflow:hidden;border-radius:10px;margin:20px 0 32px;box-shadow:0 8px 40px rgba(0,13,45,0.14),0 2px 8px rgba(0,13,45,0.07);border:1px solid rgba(0,13,45,0.08);">
+                        <iframe src="https://app.supademo.com/embed/cmk8avxoz0bb5ke4xygp89adz" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen allow="clipboard-write; fullscreen"></iframe>
+                    </div>
+
+                    <h3>Judgement Viewer</h3>
+                    <p>Once you select a judgement from the search results, the Judgement Viewer loads the full text alongside an AI-generated Case Brief, cited acts, and an in-document chat assistant. The interactive tour below explores the viewer.</p>
+                    <div style="position:relative;width:100%;padding-bottom:48.25%;height:0;overflow:hidden;border-radius:10px;margin:20px 0 32px;box-shadow:0 8px 40px rgba(0,13,45,0.14),0 2px 8px rgba(0,13,45,0.07);border:1px solid rgba(0,13,45,0.08);">
+                        <iframe src="https://app.supademo.com/embed/cmk8g4w9w0d0oke4x6vmo6i9a" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen allow="clipboard-write; fullscreen"></iframe>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>General Search: Acts, Rules & Regulations</h2>
+                    <p>To search through Acts, Rules & Regulation, you will need to click the following button.</p>
+                    <img src="../assets/images/image7.png" alt="Acts and Rules Button" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>The blue arrow expands and collapses the left lane. When you expand it, you can see the description that says "Acts and Rules". You need to select it to be able to search through Acts, Rules & Regulations.<br>
+                    Once you click it, you will see something like the following:</p>
+                    <img src="../assets/images/image8.png" alt="Acts Search Interface" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>There is a dropdown that allows you to choose what you are looking to search.<br>
+                    Once you have selected what you are looking to search, you can type in keywords related to the Acts or Rules & Regulation, and it will give you the results based on the document that matches the keyword.<br>
+                    Please do not input questions in this field.<br>
+                    In the example below, we have entered "Supreme Court" and searched through the Rules & Regulations" database. The output is as follows:</p>
+                    <img src="../assets/images/image9.png" alt="Acts Search Results" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>Now, you can select the appropriate document you want to view. You should land in a page that looks something like the following:</p>
+                    <img src="../assets/images/image10.png" alt="Document Viewer" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>On the document's right side, an AI chat assistant is provided to you that you can use to ask any questions about the particular document. Refrain from asking questions outside of the document. In the screenshot shown, we asked two questions, and got the following responses:</p>
+                    <div class="chat-example">
+                        <p><strong>You</strong><br>
+                        How many bench are there in supreme court.</p>
+                        <p><strong>Assistant</strong><br>
+                        सर्वोच्च अदालत नियमावली, २०७४ को नियम २१ अनुसार, सर���वोच्च अदालतमा देहाय बमोजिमका पाँच प्रकारका इजलासहरू रहने व्यवस्था छ:<br>
+                        १. संवैधानिक इजलास<br>
+                        २. बृहत् पूर्ण इजलास<br>
+                        ३. पूर्ण इजलास<br>
+                        ४. संयुक्त इजलास<br>
+                        ५. एक न्यायाधीशको इजलास</p>
+                        <p><strong>You</strong><br>
+                        How many judges are there in these benches?</p>
+                        <p><strong>Assistant</strong><br>
+                        सर्वोच्च अदालत नियमावली, २०७४ अनुसार विभिन्न इजलासमा न्यायाधीशहरूको संख्या देहाय बमोजिम रहेको ��:<br>
+                        • बृहत् पूर्ण इजलास (Fuller Bench): नियम २२(१) बमोजिम, यस इजलासमा पाँच जना वा सोभन्दा बढी न्यायाधीशहरू रहन्छन्।<br>
+                        • पूर्ण इजलास (Full Bench): नियम २३(१) बमोजिम, यस इजलासमा तीन जना न्यायाधीशहरू रहन्छन्।<br>
+                        • संयुक्त इजलास (Joint Bench): नियम २४(१) बमोजिम, यस इजलासमा दुई जना न्यायाधीशहरू रहन्छन्।<br>
+                        • एक न्यायाधीशको इजलास (Single Judge Bench): नियम २५(१) बमोजिम, यस इजलासमा एक जना न्यायाधीश रहन्छन्।<br>
+                        • संवैधानिक इजलास (Constitutional Bench): यस नियमावलीको नियम २१(२) ले संवैधानिक इजलासको गठन र सञ्चालन "सर्वोच्च अदालत (संवैधानिक इजलास सञ्चालन) नियमावली, २०७२" बमोजिम हुने उल्लेख गरेको छ। तसर्थ, यस इजलासमा न्यायाधीशको संख्या उक्त नियमावलीमा तोकिए बमोजिम हुन्छ।</p>
+                    </div>
+                </div>
+
+                <div class="legal-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <h3>1. When I load a najir, I get the following on the right side. It says the Summary is being generated. What does it mean?</h3>
+                    <img src="../assets/images/image11.png" alt="Summary Generation" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>We have a database of 60k Najirs that includes all the digitized najirs from Supreme Court and NKP. For some of the Najirs, summary has not been extracted so when you click them, you see the Najir and can read it, but on the right side all the Case Brief is being extracted for the first time. It is completely normal and unfortunately takes about 2 minutes. Once it is loaded, you will not face the same issue again for the same Najir.</p>
+                    
+                    <h3>2. I only know the Nirnaya Number of a case. How do I look for that particular najir?</h3>
+                    <p>In that case, leave the search field blank, and use the nirnaya number in the Registration/Nirnaya No. field and hit Apply Filters. Shown Below:</p>
+                    <img src="../assets/images/image12.png" alt="Search by Nirnaya Number" style="width:100%; border-radius: 8px; margin: 16px 0;">
+
+                    <h3>3. How do I look for the Act or Rules & Regulation and the Najir side by side</h3>
+                    <p>This particular feature is only available when you are viewing a particular Najir. When a Najir is loaded, the right side of the webpage contains "Case Brief" as shown below:</p>
+                    <img src="../assets/images/image13.png" alt="Case Brief View" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>Expand on the "Acts Cited", and select the attachment icon. If you select the Act, the section of the Najir where the Act is mentioned gets highlighted. If you select the attachment icon, the Act loads with the particular section . You will be able to see something like the following:</p>
+                    <img src="../assets/images/image14.png" alt="Side-by-side View" style="width:100%; border-radius: 8px; margin: 16px 0;">
+                    <p>This is also applicable for Rules/Regulations Cited. If we do not have the act or rules & regulation that was cited, then you will not see the attachment icon.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../includes/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Netlify configuration for eksana.org
+# Clean URL rewrites: allows /pages/blog to serve pages/blog.html without a redirect.
+# Internal links use .html for local file:// compatibility; Netlify serves both forms.
+
+[build]
+  publish = "."
+
+# Rewrite clean URL requests → serve the .html file (URL stays clean, no redirect)
+[[redirects]]
+  from = "/pages/legal/:page"
+  to   = "/pages/legal/:page.html"
+  status = 200
+
+[[redirects]]
+  from = "/pages/blogs/:page"
+  to   = "/pages/blogs/:page.html"
+  status = 200
+
+[[redirects]]
+  from = "/pages/:page"
+  to   = "/pages/:page.html"
+  status = 200

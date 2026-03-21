@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Insights — Blog | Eksana</title>
+    <meta name="description" content="Guides, analysis, and commentary on Nepal's evolving legal landscape from the Eksana team.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        :root {
+            --bl-navy:    #000D2D;
+            --bl-blue:    #0047AC;
+            --bl-paper:   #E8DEE7;
+            --bl-bronze:  #594A36;
+            --bl-near-black: #0F0F11;
+            --bl-slate:   #4D4D53;
+            --bl-gray:    #BBBBBD;
+            --bl-doc-gray: #2D2D31;
+        }
+
+        /* ── HERO ───────────────────────────────── */
+        .bl-hero {
+            background: var(--bl-navy);
+            background-image:
+                linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+            background-size: 28px 28px;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .bl-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 28px 28px;
+            pointer-events: none;
+        }
+        .bl-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0; right: 0;
+            height: 60px;
+            background: #ffffff;
+            clip-path: ellipse(55% 100% at 50% 100%);
+        }
+        .bl-hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .bl-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 20px;
+        }
+        .bl-hero-eyebrow-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--bl-blue);
+            flex-shrink: 0;
+        }
+        .bl-hero-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.6rem);
+            font-weight: 400;
+            line-height: 1.15;
+            color: #ffffff;
+            margin: 0 0 20px;
+            letter-spacing: -0.02em;
+        }
+        .bl-hero-title em {
+            font-style: italic;
+            color: rgba(255,255,255,0.65);
+        }
+        .bl-hero-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.5);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* ── BLOG GRID ──────────────────────────── */
+        .bl-section {
+            background: #ffffff;
+            padding: 72px 0 96px;
+        }
+        .bl-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .bl-filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        .bl-filter-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--bl-slate);
+            margin-right: 4px;
+        }
+        .bl-filter-pill {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--bl-slate);
+            background: rgba(0,13,45,0.07);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.18s, color 0.18s, border-color 0.18s;
+        }
+        .bl-filter-pill:hover,
+        .bl-filter-pill.active {
+            background: var(--bl-blue);
+            color: #fff;
+        }
+
+        .bl-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        @media (max-width: 1400px) {
+            .bl-grid { gap: 22px; }
+        }
+        @media (max-width: 900px) {
+            .bl-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 580px) {
+            .bl-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── CARD ───────────────────────────────── */
+        .bl-card {
+            background: #ffffff;
+            border-radius: 12px;
+            border: 1px solid rgba(0,13,45,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.22s cubic-bezier(0.34,1.56,0.64,1),
+                        box-shadow 0.22s ease,
+                        border-color 0.22s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .bl-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,13,45,0.12), 0 2px 8px rgba(0,13,45,0.06);
+            border-color: rgba(0,71,172,0.25);
+        }
+        .bl-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            background: var(--bl-navy);
+            position: relative;
+            overflow: hidden;
+        }
+        .bl-card-img-inner {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .bl-card-img-bg {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 30% 50%, rgba(0,71,172,0.35) 0%, transparent 70%),
+                              radial-gradient(circle at 80% 20%, rgba(89,74,54,0.2) 0%, transparent 60%);
+        }
+        .bl-card-img-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .bl-card-img-icon {
+            position: relative;
+            z-index: 1;
+            font-size: 2.2rem;
+            opacity: 0.6;
+        }
+        .bl-card-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .bl-card-cat {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: rgba(0,71,172,0.09);
+            color: var(--bl-blue);
+            align-self: flex-start;
+        }
+        .bl-card-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.35;
+            color: var(--bl-near-black);
+            margin: 0;
+        }
+        .bl-card-excerpt {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.65;
+            color: var(--bl-slate);
+            margin: 0;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .bl-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: auto;
+        }
+        .bl-card-meta-item {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 11px;
+            color: var(--bl-gray);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .bl-card-meta-sep {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: var(--bl-gray);
+            flex-shrink: 0;
+        }
+        .bl-card-cta {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--bl-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 4px;
+            letter-spacing: 0.02em;
+            transition: gap 0.15s ease;
+        }
+        .bl-card:hover .bl-card-cta {
+            gap: 9px;
+        }
+        .bl-card-cta-arrow {
+            font-size: 14px;
+            line-height: 1;
+            transition: transform 0.15s ease;
+        }
+        .bl-card:hover .bl-card-cta-arrow {
+            transform: translateX(3px);
+        }
+
+        /* Featured card (first post) spans 2 cols */
+        .bl-card--featured {
+            grid-column: span 2;
+            flex-direction: row;
+        }
+        .bl-card--featured .bl-card-img-inner {
+            width: 280px;
+            min-width: 280px;
+            height: auto;
+        }
+        .bl-card--featured .bl-card-title {
+            font-size: 1.45rem;
+        }
+        .bl-card--featured .bl-card-excerpt {
+            -webkit-line-clamp: 4;
+        }
+        @media (max-width: 900px) {
+            .bl-card--featured {
+                grid-column: span 2;
+                flex-direction: column;
+            }
+            .bl-card--featured .bl-card-img-inner {
+                width: 100%;
+                height: 180px;
+            }
+        }
+        @media (max-width: 580px) {
+            .bl-card--featured {
+                grid-column: span 1;
+                flex-direction: column;
+            }
+            .bl-card--featured .bl-card-img-inner {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="page-hero-glow2"></div>
+        <div class="container">
+            <div class="page-hero-inner">
+                <div class="page-hero-label">
+                    <span class="page-hero-bar"></span>
+                    From the Eksana Team
+                </div>
+                <h1 class="page-hero-title">Perspectives on<br><em>Nepal's Legal Landscape</em></h1>
+                <p class="page-hero-sub">Practical guides, landmark case analysis, and commentary on laws shaping Nepal's legal ecosystem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="bl-section">
+        <div class="bl-container">
+            <div class="bl-filter-bar">
+                <span class="bl-filter-label">Topics:</span>
+                <span class="bl-filter-pill active">All</span>
+                <span class="bl-filter-pill">Business Law</span>
+                <span class="bl-filter-pill">Civil Documents</span>
+                <span class="bl-filter-pill">Legal Updates</span>
+                <span class="bl-filter-pill">Constitutional Law</span>
+                <span class="bl-filter-pill">Legal Tech</span>
+            </div>
+
+            <div class="bl-grid">
+
+                <!-- Featured: Business Registration (spans 2 cols) -->
+                <a href="blogs/blog-business-registration.html" class="bl-card bl-card--featured">
+                    <div class="bl-card-img-inner">
+                        <img src="../assets/images/companyregistration.png" alt="Company Registration in Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div class="bl-card-body">
+                        <span class="bl-card-cat">Business Law</span>
+                        <h2 class="bl-card-title">Complete Guide to Business Law &amp; Company Registration in Nepal 2026</h2>
+                        <p class="bl-card-excerpt">Starting a business in Nepal has never been more accessible. With recent digital reforms and streamlined processes, entrepreneurs can now register their companies faster than ever before — here's everything you need to know.</p>
+                        <div class="bl-card-meta">
+                            <span class="bl-card-meta-item">March 10, 2026</span>
+                            <span class="bl-card-meta-sep"></span>
+                            <span class="bl-card-meta-item">10 min read</span>
+                        </div>
+                        <span class="bl-card-cta">Read Article <span class="bl-card-cta-arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- Why Eksana -->
+                <a href="blogs/blog-why-eksana.html" class="bl-card">
+                    <div class="bl-card-img-inner">
+                        <img src="../assets/images/smarterlegalresearch.png" alt="Smarter Legal Research" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div class="bl-card-body">
+                        <span class="bl-card-cat">Legal Tech</span>
+                        <h2 class="bl-card-title">Why Nepal Needs Smarter Legal Research</h2>
+                        <p class="bl-card-excerpt">Legal research in Nepal is still heavily dependent on manual searches through print volumes, scattered PDFs, and fragmented online resources. Here's the problem Eksana is trying to solve.</p>
+                        <div class="bl-card-meta">
+                            <span class="bl-card-meta-item">March 5, 2026</span>
+                            <span class="bl-card-meta-sep"></span>
+                            <span class="bl-card-meta-item">3 min read</span>
+                        </div>
+                        <span class="bl-card-cta">Read Article <span class="bl-card-cta-arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- Legal Developments -->
+                <a href="blogs/blog-legal-developments.html" class="bl-card">
+                    <div class="bl-card-img-inner">
+                        <img src="../assets/images/keylegaldevelopments.png" alt="Key Legal Developments in Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div class="bl-card-body">
+                        <span class="bl-card-cat">Legal Updates</span>
+                        <h2 class="bl-card-title">Key Legal Developments in Nepal to Watch in 2025–26</h2>
+                        <p class="bl-card-excerpt">The legal landscape in Nepal is undergoing rapid change — 121 new laws planned, landmark Supreme Court decisions, and sweeping corporate law reforms. Here's what practitioners need to know.</p>
+                        <div class="bl-card-meta">
+                            <span class="bl-card-meta-item">January 15, 2026</span>
+                            <span class="bl-card-meta-sep"></span>
+                            <span class="bl-card-meta-item">4 min read</span>
+                        </div>
+                        <span class="bl-card-cta">Read Article <span class="bl-card-cta-arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- Election Commission -->
+                <a href="blogs/blog-election-commission.html" class="bl-card">
+                    <div class="bl-card-img-inner">
+                        <img src="../assets/images/electioncommission.png" alt="Election Commission of Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div class="bl-card-body">
+                        <span class="bl-card-cat">Constitutional Law</span>
+                        <h2 class="bl-card-title">Role of the Election Commission of Nepal: Powers, Functions &amp; Legal Authority</h2>
+                        <p class="bl-card-excerpt">Nepal's democracy stands on the foundation of free and fair elections, and at the heart of this process sits the Election Commission of Nepal — an independent constitutional body with sweeping authority.</p>
+                        <div class="bl-card-meta">
+                            <span class="bl-card-meta-item">February 5, 2026</span>
+                            <span class="bl-card-meta-sep"></span>
+                            <span class="bl-card-meta-item">10 min read</span>
+                        </div>
+                        <span class="bl-card-cta">Read Article <span class="bl-card-cta-arrow">→</span></span>
+                    </div>
+                </a>
+
+                <!-- National ID -->
+                <a href="blogs/blog-national-id.html" class="bl-card">
+                    <div class="bl-card-img-inner">
+                        <img src="../assets/images/nationalidcard.png" alt="National Identity Card Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
+                    </div>
+                    <div class="bl-card-body">
+                        <span class="bl-card-cat">Civil Documents</span>
+                        <h2 class="bl-card-title">How to Apply for National Identity Card in Nepal (Step-by-Step Guide)</h2>
+                        <p class="bl-card-excerpt">Nepal's National Identity Card has become an essential document for every citizen aged 16 and above. This comprehensive guide walks you through every step — from online pre-enrollment to collecting your card.</p>
+                        <div class="bl-card-meta">
+                            <span class="bl-card-meta-item">February 28, 2026</span>
+                            <span class="bl-card-meta-sep"></span>
+                            <span class="bl-card-meta-item">6 min read</span>
+                        </div>
+                        <span class="bl-card-cta">Read Article <span class="bl-card-cta-arrow">→</span></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="../includes/include.js"></script>
+</body>
+</html>
