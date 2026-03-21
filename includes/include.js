@@ -2,7 +2,7 @@
 
 // Auto-detect base path: GitHub Pages serves from /reponame/, production from /
 function getBasePath() {
-    if (window.location.hostname.endsWith('github.io')) {
+    if (window.location.hostname.endsWith('eksana.org')) {
         const parts = window.location.pathname.split('/').filter(Boolean);
         return parts.length > 0 ? '/' + parts[0] : '';
     }

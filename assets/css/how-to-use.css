@@ -1,0 +1,176 @@
+/* ── How To Use page styles ───────────────────────────────────────────────── */
+
+/* ── PAGE HEADER OVERRIDE ─── */
+.legal-page-header {
+    padding: 150px 0 96px;
+    background: #000D2D;
+    background-image:
+        linear-gradient(rgba(160, 215, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(160, 215, 255, 0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    position: relative;
+    overflow: hidden;
+    min-height: unset;
+    display: block;
+    text-align: left;
+}
+.legal-page-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+.legal-page-header::after {
+    display: none;
+}
+.legal-page-header .container {
+    position: relative;
+    z-index: 1;
+}
+.legal-page-header h1 {
+    color: #ffffff;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+.legal-page-header p {
+    color: rgba(255, 255, 255, 0.55);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* ── CONTENT BG ─── */
+.legal-content {
+    background: #f5f5f7;
+    padding: 64px 0 96px;
+}
+
+/* ── SECTION CARD ─── */
+.legal-section {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 13, 45, 0.07);
+    padding: 48px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0, 13, 45, 0.05);
+}
+
+/* ── SECTION HEADINGS ─── */
+.legal-section h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #000D2D;
+    letter-spacing: -0.01em;
+    margin: 0 0 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 13, 45, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.legal-section h2::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1.6em;
+    background: #0047AC;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* ── SUB-HEADINGS ─── */
+.legal-section h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0047AC;
+    margin: 32px 0 10px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+/* First h3 in a section needs less top margin */
+.legal-section h3:first-of-type {
+    margin-top: 8px;
+}
+
+/* ── BODY TEXT ─── */
+.legal-section p,
+.legal-section li {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.975rem;
+    line-height: 1.8;
+    color: #4D4D53;
+    margin-bottom: 14px;
+}
+
+/* ── MEDIA: IMAGES ─── */
+.legal-section img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    margin: 16px 0 24px;
+    box-shadow: 0 4px 24px rgba(0, 13, 45, 0.10), 0 1px 4px rgba(0, 13, 45, 0.06);
+    border: 1px solid rgba(0, 13, 45, 0.07);
+}
+
+/* ── SUPADEMO EMBED ─── */
+.supademo-embed-wrapper {
+    width: 100%;
+    margin: 20px 0 32px;
+    position: relative;
+    padding-bottom: 48.25%; /* 772/1600 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 40px rgba(0, 13, 45, 0.14), 0 2px 8px rgba(0, 13, 45, 0.07);
+    border: 1px solid rgba(0, 13, 45, 0.08);
+}
+.supademo-embed-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+@media (max-width: 720px) {
+    .legal-section { padding: 28px 24px; }
+}
+
+/* ── CHAT EXAMPLE ─── */
+.chat-example {
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin: 20px 0;
+    border: 1px solid rgba(0, 13, 45, 0.07);
+}
+.chat-example p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #4D4D53;
+    margin-bottom: 16px;
+}
+.chat-example p:last-child { margin-bottom: 0; }
+.chat-example strong {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #000D2D;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* ── FAQ NUMBERED ITEMS ─── */
+.legal-section > div > h3,
+.faq-section h3 {
+    counter-increment: none;
+}
