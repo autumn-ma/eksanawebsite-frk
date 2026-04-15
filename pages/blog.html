@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://eksana.org/blog" />
+    <link rel="icon" type="image/svg+xml" href="../assets/images/eksana-logo.svg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/blog.css">
 </head>
@@ -45,7 +47,7 @@
             <div class="bl-grid">
 
                 <!-- Featured: Business Registration (spans 2 cols) -->
-                <a href="blogs/blog-business-registration.html" class="bl-card bl-card--featured">
+                <a href="/blog/blog-business-registration" class="bl-card bl-card--featured" data-category="Business Law">
                     <div class="bl-card-img-inner">
                         <img src="../assets/images/companyregistration.png" alt="Company Registration in Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
@@ -63,7 +65,7 @@
                 </a>
 
                 <!-- Why Eksana -->
-                <a href="blogs/blog-why-eksana.html" class="bl-card">
+                <a href="/blog/blog-why-eksana" class="bl-card" data-category="Legal Tech">
                     <div class="bl-card-img-inner">
                         <img src="../assets/images/smarterlegalresearch.png" alt="Smarter Legal Research" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
@@ -81,7 +83,7 @@
                 </a>
 
                 <!-- Legal Developments -->
-                <a href="blogs/blog-legal-developments.html" class="bl-card">
+                <a href="/blog/blog-legal-developments" class="bl-card" data-category="Legal Updates">
                     <div class="bl-card-img-inner">
                         <img src="../assets/images/keylegaldevelopments.png" alt="Key Legal Developments in Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
@@ -99,7 +101,7 @@
                 </a>
 
                 <!-- Election Commission -->
-                <a href="blogs/blog-election-commission.html" class="bl-card">
+                <a href="/blog/blog-election-commission" class="bl-card" data-category="Constitutional Law">
                     <div class="bl-card-img-inner">
                         <img src="../assets/images/electioncommission.png" alt="Election Commission of Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
@@ -117,7 +119,7 @@
                 </a>
 
                 <!-- National ID -->
-                <a href="blogs/blog-national-id.html" class="bl-card">
+                <a href="/blog/blog-national-id" class="bl-card" data-category="Civil Documents">
                     <div class="bl-card-img-inner">
                         <img src="../assets/images/nationalidcard.png" alt="National Identity Card Nepal" style="width:100%;height:100%;object-fit:cover;display:block;">
                     </div>
@@ -140,5 +142,28 @@
 
     <div id="footer-placeholder"></div>
     <script src="../includes/include.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var pills = document.querySelectorAll('.bl-filter-pill');
+            var cards = document.querySelectorAll('.bl-card');
+
+            pills.forEach(function(pill) {
+                pill.addEventListener('click', function() {
+                    pills.forEach(function(p) { p.classList.remove('active'); });
+                    pill.classList.add('active');
+
+                    var category = pill.textContent.trim();
+
+                    cards.forEach(function(card) {
+                        if (category === 'All' || card.dataset.category === category) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

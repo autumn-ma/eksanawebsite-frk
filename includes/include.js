@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <nav class="nav">
                         <div class="nav-links">
                             <a href="${_BASE}/#product" class="nav-link">Product</a>
-                            <a href="${_BASE}/pages/free-tools.html" class="nav-link">Free Tools</a>
-                            <a href="${_BASE}/pages/how-to-use.html" class="nav-link">How to Use</a>
-                            <a href="${_BASE}/pages/blog.html" class="nav-link">Blog</a>
-                            <a href="${_BASE}/pages/team.html" class="nav-link">Meet The Team</a>
-                            <a href="${_BASE}/pages/contact.html" class="nav-link">Contact Us</a>
+                            <a href="${_BASE}/free-tools" class="nav-link">Free Tools</a>
+                            <a href="${_BASE}/how-to-use" class="nav-link">How to Use</a>
+                            <a href="${_BASE}/blog" class="nav-link">Blog</a>
+                            <a href="${_BASE}/team" class="nav-link">Meet The Team</a>
+                            <a href="${_BASE}/contact" class="nav-link">Contact Us</a>
                             <a href="https://app.eksana.org" class="nav-link nav-link-cta">Get Started</a>
                         </div>
                         <a href="https://app.eksana.org" class="login-btn">Get Started</a>
@@ -52,7 +52,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="footer-main">
                         <div class="footer-brand">
                             <div class="footer-logo">
-                               <img src="${logoPath}" alt="Eksana Logo" class="logo-image-footer">
+                               <a href="${_BASE}/">
+                                   <img src="${logoPath}" alt="Eksana Logo" class="logo-image-footer">
+                               </a>
                             </div>
                             <p class="footer-description">
                                 Navigating Nepal's legal system with clarity and accessibility. Transforming scattered legal information into actionable insights for lawyers, judges, and researchers.
@@ -91,24 +93,24 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <h4>Product</h4>
                                 <ul class="footer-links">
                                     <li><a href="${_BASE}/#features">Features</a></li>
-                                    <li><a href="${_BASE}/pages/how-to-use.html">How To Use</a></li>
-                                    <li><a href="${_BASE}/pages/free-tools.html">Free Tools</a></li>
+                                    <li><a href="${_BASE}/how-to-use">How To Use</a></li>
+                                    <li><a href="${_BASE}/free-tools">Free Tools</a></li>
                                 </ul>
                             </div>
                             <div class="footer-section">
                                 <h4>Company</h4>
                                 <ul class="footer-links">
-                                    <li><a href="${_BASE}/pages/team.html">Our Team</a></li>
-                                    <li><a href="${_BASE}/pages/blog.html">Blog</a></li>
+                                    <li><a href="${_BASE}/team">Our Team</a></li>
+                                    <li><a href="${_BASE}/blog">Blog</a></li>
                                 </ul>
                             </div>
                             <div class="footer-section">
                                 <h4>Legal</h4>
                                 <ul class="footer-links">
-                                    <li><a href="${_BASE}/pages/legal/privacy.html">Privacy Policy</a></li>
-                                    <li><a href="${_BASE}/pages/legal/terms.html">Terms of Use</a></li>
-                                    <li><a href="${_BASE}/pages/legal/disclaimer.html">Disclaimer</a></li>
-                                    <li><a href="${_BASE}/pages/legal/security.html">Security</a></li>
+                                    <li><a href="${_BASE}/legal/privacy">Privacy Policy</a></li>
+                                    <li><a href="${_BASE}/legal/terms">Terms of Use</a></li>
+                                    <li><a href="${_BASE}/legal/disclaimer">Disclaimer</a></li>
+                                    <li><a href="${_BASE}/legal/security">Security</a></li>
                                 </ul>
                             </div>
                         </div>
